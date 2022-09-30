@@ -13,6 +13,8 @@
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
 		26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1128DDB07300CFBA06 /* Assets.xcassets */; };
 		26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */; };
+		26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */; };
+		26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		26CC9E1128DDB07300CFBA06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PergiYukDataModel.xcdatamodel; sourceTree = "<group>"; };
+		26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				26CC9E1128DDB07300CFBA06 /* Assets.xcassets */,
 				26CC9E1328DDB07300CFBA06 /* Preview Content */,
 				06F2206828DDC01700128CAB /* Dylan.swift */,
+				26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */,
+				26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */,
 			);
 			path = PergiYuk;
 			sourceTree = "<group>";
@@ -143,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
+				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
 			);
@@ -347,6 +355,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */,
+			);
+			currentVersion = 26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */;
+			path = PergiYukDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 26CC9E0228DDB07300CFBA06 /* Project object */;
 }
