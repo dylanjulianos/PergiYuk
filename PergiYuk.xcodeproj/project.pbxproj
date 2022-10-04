@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
+		1985285C28EADF34003AAEBF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985285B28EADF34003AAEBF /* SignUpView.swift */; };
+		1985286528EC1DA5003AAEBF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286428EC1DA5003AAEBF /* SignInView.swift */; };
+		1985286A28EC2FE1003AAEBF /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286928EC2FE1003AAEBF /* BlueButton.swift */; };
+		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
+		1985285B28EADF34003AAEBF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1985286428EC1DA5003AAEBF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		1985286928EC2FE1003AAEBF /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
@@ -40,6 +48,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1985285D28EC15A2003AAEBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1985285B28EADF34003AAEBF /* SignUpView.swift */,
+				1985286428EC1DA5003AAEBF /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1985286328EC1CB1003AAEBF /* Text */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		1985286728EC2F91003AAEBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1985286B28EC303A003AAEBF /* TextField */,
+				1985286828EC2F9D003AAEBF /* Button */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1985286828EC2F9D003AAEBF /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1985286928EC2FE1003AAEBF /* BlueButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		1985286B28EC303A003AAEBF /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +108,9 @@
 		26CC9E0C28DDB07300CFBA06 /* PergiYuk */ = {
 			isa = PBXGroup;
 			children = (
+				1985286728EC2F91003AAEBF /* Extensions */,
+				1985286328EC1CB1003AAEBF /* Text */,
+				1985285D28EC15A2003AAEBF /* Views */,
 				26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */,
 				26CC9E0F28DDB07300CFBA06 /* ContentView.swift */,
 				19E9675428DDB3CF008FD86C /* Model.swift */,
@@ -152,9 +204,13 @@
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
+				1985285C28EADF34003AAEBF /* SignUpView.swift in Sources */,
+				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
 				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
+				1985286528EC1DA5003AAEBF /* SignInView.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
+				1985286A28EC2FE1003AAEBF /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
