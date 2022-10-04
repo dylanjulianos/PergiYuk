@@ -13,8 +13,8 @@ class CoreDataController: ObservableObject {
     
     init() {
         container.loadPersistentStores { desc, error in
-            if let error = error {
-                print("Core Data failed to load: \(error.localizedDescription)")
+            if let error = error as NSError?{
+                print("Unresolved error \(error), \(error.userInfo)")
             }
         }
     }
