@@ -5,22 +5,17 @@
 //  Created by Anastasia Agustine on 30/09/22.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-class CoreDataManager{
+class CoreDataController: ObservableObject {
+    let container = NSPersistentContainer(name: "PergiYukDataModel")
     
-    static let shared = CoreDataManager()
-    let container: NSPersistentContainer
-    let context: NSManagedObjectContext
-    
-    private init(){
-        container = NSPersistentContainer(name: "PergiYukDataModel")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+    init() {
+        container.loadPersistentStores { desc, error in
+            if let error = error {
+                print("Core Data failed to load: \(error.localizedDescription)")
             }
-        })
-        context = container.viewContext
+        }
     }
 }
