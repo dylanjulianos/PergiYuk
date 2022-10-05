@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
+		2637F41A28ED72CF00534388 /* GroupChatParty+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637F41428ED72CF00534388 /* GroupChatParty+CoreDataClass.swift */; };
+		2637F41B28ED72CF00534388 /* GroupChatParty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637F41528ED72CF00534388 /* GroupChatParty+CoreDataProperties.swift */; };
+		2637F41C28ED72CF00534388 /* VacationParty+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637F41628ED72CF00534388 /* VacationParty+CoreDataClass.swift */; };
+		2637F41D28ED72CF00534388 /* VacationParty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637F41728ED72CF00534388 /* VacationParty+CoreDataProperties.swift */; };
+		2637F41E28ED72CF00534388 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637F41828ED72CF00534388 /* User+CoreDataClass.swift */; };
+		2637F41F28ED72CF00534388 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637F41928ED72CF00534388 /* User+CoreDataProperties.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
 		26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1128DDB07300CFBA06 /* Assets.xcassets */; };
@@ -20,6 +26,12 @@
 /* Begin PBXFileReference section */
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2637F41428ED72CF00534388 /* GroupChatParty+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupChatParty+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2637F41528ED72CF00534388 /* GroupChatParty+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupChatParty+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2637F41628ED72CF00534388 /* VacationParty+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VacationParty+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2637F41728ED72CF00534388 /* VacationParty+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VacationParty+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2637F41828ED72CF00534388 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2637F41928ED72CF00534388 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +52,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2637F40B28ED695900534388 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				2637F41428ED72CF00534388 /* GroupChatParty+CoreDataClass.swift */,
+				2637F41528ED72CF00534388 /* GroupChatParty+CoreDataProperties.swift */,
+				2637F41628ED72CF00534388 /* VacationParty+CoreDataClass.swift */,
+				2637F41728ED72CF00534388 /* VacationParty+CoreDataProperties.swift */,
+				2637F41828ED72CF00534388 /* User+CoreDataClass.swift */,
+				2637F41928ED72CF00534388 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +84,7 @@
 		26CC9E0C28DDB07300CFBA06 /* PergiYuk */ = {
 			isa = PBXGroup;
 			children = (
+				2637F40B28ED695900534388 /* CoreDataModel */,
 				26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */,
 				26CC9E0F28DDB07300CFBA06 /* ContentView.swift */,
 				19E9675428DDB3CF008FD86C /* Model.swift */,
@@ -151,10 +177,16 @@
 			files = (
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
+				2637F41F28ED72CF00534388 /* User+CoreDataProperties.swift in Sources */,
+				2637F41B28ED72CF00534388 /* GroupChatParty+CoreDataProperties.swift in Sources */,
+				2637F41D28ED72CF00534388 /* VacationParty+CoreDataProperties.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
+				2637F41E28ED72CF00534388 /* User+CoreDataClass.swift in Sources */,
+				2637F41C28ED72CF00534388 /* VacationParty+CoreDataClass.swift in Sources */,
+				2637F41A28ED72CF00534388 /* GroupChatParty+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

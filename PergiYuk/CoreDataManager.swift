@@ -9,13 +9,24 @@ import CoreData
 import Foundation
 
 class CoreDataController: ObservableObject {
-    let container = NSPersistentContainer(name: "PergiYukDataModel")
+    let container: NSPersistentContainer
+//    @Published var savedParty: [VacationParty] = []
     
     init() {
-        container.loadPersistentStores { desc, error in
+        container = NSPersistentContainer(name: "PergiYukDataModel")
+        container.loadPersistentStores { (desc, error) in
             if let error = error as NSError?{
                 print("Unresolved error \(error), \(error.userInfo)")
             }
+        }
+    }
+    
+    func saveData(){
+        do {
+            try container.viewContext.save()
+            
+        } catch let error {
+            print("Failed saving: \(error)")
         }
     }
 }
