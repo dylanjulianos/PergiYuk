@@ -11,6 +11,7 @@
 		1985285C28EADF34003AAEBF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985285B28EADF34003AAEBF /* SignUpView.swift */; };
 		1985286528EC1DA5003AAEBF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286428EC1DA5003AAEBF /* SignInView.swift */; };
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
+		1985286F28EC3309003AAEBF /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286E28EC3309003AAEBF /* BlueButton.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 		1985285B28EADF34003AAEBF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1985286428EC1DA5003AAEBF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1985286E28EC3309003AAEBF /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlueButton.swift; path = PergiYuk/Extensions/TextField/BlueButton.swift; sourceTree = SOURCE_ROOT; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 				1985286B28EC303A003AAEBF /* TextField */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1985286828EC2F9D003AAEBF /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1985286E28EC3309003AAEBF /* BlueButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		1985286B28EC303A003AAEBF /* TextField */ = {
@@ -183,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
+				1985286F28EC3309003AAEBF /* BlueButton.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				1985285C28EADF34003AAEBF /* SignUpView.swift in Sources */,
