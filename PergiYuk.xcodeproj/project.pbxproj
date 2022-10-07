@@ -11,7 +11,6 @@
 		1985285C28EADF34003AAEBF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985285B28EADF34003AAEBF /* SignUpView.swift */; };
 		1985286528EC1DA5003AAEBF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286428EC1DA5003AAEBF /* SignInView.swift */; };
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
-		1985286F28EC3309003AAEBF /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286E28EC3309003AAEBF /* BlueButton.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		264364C128F0076700E4BA1C /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264364C028F0076700E4BA1C /* BlueButton.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
@@ -53,8 +52,6 @@
 		1985285D28EC15A2003AAEBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1985285B28EADF34003AAEBF /* SignUpView.swift */,
-				1985286428EC1DA5003AAEBF /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -62,18 +59,8 @@
 		1985286728EC2F91003AAEBF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1985286B28EC303A003AAEBF /* TextField */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		1985286B28EC303A003AAEBF /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				264364C028F0076700E4BA1C /* BlueButton.swift */,
-				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
-			);
-			path = TextField;
 			sourceTree = "<group>";
 		};
 		264364BF28F0073700E4BA1C /* Recovered References */ = {
@@ -82,6 +69,118 @@
 				1985286E28EC3309003AAEBF /* BlueButton.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		264364C328F0080700E4BA1C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		264364C428F0080E00E4BA1C /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				264364D028F00A3C00E4BA1C /* UI */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		264364C528F0082400E4BA1C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		264364C628F0086000E4BA1C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				264364C728F0086000E4BA1C /* Model */,
+				264364C828F0087700E4BA1C /* Pages */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		264364C728F0086000E4BA1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		264364C828F0087700E4BA1C /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				264364CF28F009C300E4BA1C /* Verification */,
+				264364CE28F009B000E4BA1C /* On Boarding */,
+				264364CD28F0099A00E4BA1C /* Create Vacation Party */,
+				264364CC28F0096300E4BA1C /* Vacation Party Detail */,
+				264364CB28F0094F00E4BA1C /* Home Page */,
+				264364CA28F008F000E4BA1C /* Login */,
+				264364C928F008EA00E4BA1C /* Sign Up */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		264364C928F008EA00E4BA1C /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				1985285B28EADF34003AAEBF /* SignUpView.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		264364CA28F008F000E4BA1C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1985286428EC1DA5003AAEBF /* SignInView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		264364CB28F0094F00E4BA1C /* Home Page */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Home Page";
+			sourceTree = "<group>";
+		};
+		264364CC28F0096300E4BA1C /* Vacation Party Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Vacation Party Detail";
+			sourceTree = "<group>";
+		};
+		264364CD28F0099A00E4BA1C /* Create Vacation Party */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Create Vacation Party";
+			sourceTree = "<group>";
+		};
+		264364CE28F009B000E4BA1C /* On Boarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "On Boarding";
+			sourceTree = "<group>";
+		};
+		264364CF28F009C300E4BA1C /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		264364D028F00A3C00E4BA1C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				264364C028F0076700E4BA1C /* BlueButton.swift */,
+				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		26CC9E0128DDB07300CFBA06 = {
@@ -104,6 +203,10 @@
 		26CC9E0C28DDB07300CFBA06 /* PergiYuk */ = {
 			isa = PBXGroup;
 			children = (
+				264364C628F0086000E4BA1C /* Feature */,
+				264364C528F0082400E4BA1C /* Helper */,
+				264364C428F0080E00E4BA1C /* Themes */,
+				264364C328F0080700E4BA1C /* Utilities */,
 				1985286728EC2F91003AAEBF /* Extensions */,
 				1985285D28EC15A2003AAEBF /* Views */,
 				26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */,
@@ -197,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
-				1985286F28EC3309003AAEBF /* BlueButton.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				1985285C28EADF34003AAEBF /* SignUpView.swift in Sources */,
