@@ -96,8 +96,8 @@
 		264364C628F0086000E4BA1C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				264364C728F0086000E4BA1C /* Model */,
 				264364C828F0087700E4BA1C /* Pages */,
+				264364C728F0086000E4BA1C /* Model */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -112,6 +112,7 @@
 		264364C828F0087700E4BA1C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				26EDC6C228F01A2A00B77B0A /* Profile */,
 				264364CF28F009C300E4BA1C /* Verification */,
 				264364CE28F009B000E4BA1C /* On Boarding */,
 				264364CD28F0099A00E4BA1C /* Create Vacation Party */,
@@ -227,6 +228,13 @@
 				26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26EDC6C228F01A2A00B77B0A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
