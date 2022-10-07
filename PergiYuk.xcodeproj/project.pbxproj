@@ -74,6 +74,7 @@
 		264364C328F0080700E4BA1C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				26EDC6C328F025C900B77B0A /* Core Data */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -214,10 +215,8 @@
 				26CC9E0F28DDB07300CFBA06 /* ContentView.swift */,
 				19E9675428DDB3CF008FD86C /* Model.swift */,
 				26CC9E1128DDB07300CFBA06 /* Assets.xcassets */,
-				26CC9E1328DDB07300CFBA06 /* Preview Content */,
 				06F2206828DDC01700128CAB /* Dylan.swift */,
-				26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */,
-				26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */,
+				26CC9E1328DDB07300CFBA06 /* Preview Content */,
 			);
 			path = PergiYuk;
 			sourceTree = "<group>";
@@ -235,6 +234,15 @@
 			children = (
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		26EDC6C328F025C900B77B0A /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */,
+				26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
