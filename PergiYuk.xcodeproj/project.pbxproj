@@ -13,6 +13,7 @@
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
 		1985286F28EC3309003AAEBF /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286E28EC3309003AAEBF /* BlueButton.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
+		264364C128F0076700E4BA1C /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264364C028F0076700E4BA1C /* BlueButton.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
 		26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1128DDB07300CFBA06 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1985286E28EC3309003AAEBF /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlueButton.swift; path = PergiYuk/Extensions/TextField/BlueButton.swift; sourceTree = SOURCE_ROOT; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		264364C028F0076700E4BA1C /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,20 +67,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1985286828EC2F9D003AAEBF /* Button */ = {
+		1985286B28EC303A003AAEBF /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				264364C028F0076700E4BA1C /* BlueButton.swift */,
+				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		264364BF28F0073700E4BA1C /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				1985286E28EC3309003AAEBF /* BlueButton.swift */,
 			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		1985286B28EC303A003AAEBF /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
-			);
-			path = TextField;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		26CC9E0128DDB07300CFBA06 = {
@@ -86,6 +89,7 @@
 			children = (
 				26CC9E0C28DDB07300CFBA06 /* PergiYuk */,
 				26CC9E0B28DDB07300CFBA06 /* Products */,
+				264364BF28F0073700E4BA1C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +204,7 @@
 				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
 				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
+				264364C128F0076700E4BA1C /* BlueButton.swift in Sources */,
 				1985286528EC1DA5003AAEBF /* SignInView.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
 			);
