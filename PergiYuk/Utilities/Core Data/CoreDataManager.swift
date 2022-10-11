@@ -15,6 +15,8 @@ class CoreDataController: ObservableObject {
         container.loadPersistentStores { desc, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
+            } else {
+                print("Core Data loaded.")
             }
         }
     }
