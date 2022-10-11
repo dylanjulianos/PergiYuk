@@ -13,6 +13,7 @@ struct PergiYukApp: App {
     var body: some Scene {
         WindowGroup {
             SignUpView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
