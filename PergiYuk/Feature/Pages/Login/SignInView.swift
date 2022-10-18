@@ -11,6 +11,7 @@ struct SignInView: View {
     
     @State var email: String = ""
     @State var pass: String = ""
+    @State var isShowingExploreView: Bool = false
     
     var body: some View {
         NavigationView {
@@ -28,12 +29,14 @@ struct SignInView: View {
                             .foregroundColor(.blue)
                     }
                 }.frame(width: 370)
-                Button {
-                    signIn()
-                } label: {
-                    Text("Sign In")
-                        .frame(width: 335)
-                }.buttonStyle(BlueButton())
+                
+                NavigationLink(destination: ExploreView(), isActive: $isShowingExploreView){ EmptyView() }
+                    Button {
+                        isShowingExploreView = true
+                    } label: {
+                        Text("Sign in")
+                            .frame(width:335)
+                    }.buttonStyle(BlueButton())
                     .padding()
                 HStack {
                     Text("New to Travel Buddy?")
@@ -41,6 +44,7 @@ struct SignInView: View {
                 }
             }.padding()
         }.navigationBarHidden(true)
+//            .navigation
     }
     
     func signIn(){

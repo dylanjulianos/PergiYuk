@@ -11,82 +11,70 @@ struct ExploreView: View {
     
     @State private var searchText: String = ""
     @State private var isEditing = false
+    @EnvironmentObject var exploreViewModel: ExploreViewModel
     
     var body: some View {
+        
         NavigationView{
-            VStack{
-                Text("Where are you going?")
-                    .font(.system(size: 35, weight: .semibold))
-                TextField("Search", text: $searchText)
-                    .padding(7)
+            ZStack(alignment: .topLeading){
+                Image("rectangle-home")
+                    .resizable()
+                    .frame(width: 450, height: 240)
+                    .ignoresSafeArea()
+
+                VStack{
+                    Text("Where are you going?")
+                        .font(.system(size: 35, weight: .semibold))
+                        .foregroundColor(.white)
+                    HStack{
+                        Image(systemName: "magnifyingglass")
+                        TextField("Search", text: $searchText)
+                            .onTapGesture {
+                                self.isEditing = true
+                            }
+                    }
+                    
+                    .padding(9)
                     .padding(.horizontal)
-                    .padding(.vertical,5)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.horizontal,20)
-                    .onTapGesture {
-                        self.isEditing = true
-                    }
-                if isEditing {
-                    Button(action: {
-                        self.isEditing = false
-                        self.searchText = ""
-                        
-                    }) {
-                        Text("Cancel")
-                    }
-                    .padding(.trailing, 10)
-                    .transition(.move(edge: .trailing))
-                }
-                ScrollView{
+                    .padding(.vertical,2.5)
+                    .background(Rectangle()
+                        .fill(.white)
+                        .border(Color.gray, width: 1)
+                        .cornerRadius(8))
+                    .padding(.horizontal,30)
                     HStack{
                         Text("For You")
-                            .font(.system(size: 25, weight: .semibold))
-                            .padding()
-                            .padding(.horizontal)
+                            .padding(.horizontal,40)
                         Spacer()
-                        Button {
-                            
-                        } label: {
-                            Text("Show more")
-                                .padding()
-                        }
                     }
-                    Text("Card view")
-                    HStack{
-                        Text("Available Party")
-                            .font(.system(size: 25, weight: .semibold))
-                            .padding()
-                            .padding(.horizontal)
+                    ScrollView{
+                        ForEach(exploreViewModel.parties){
+                            party in TripCardRowView(card: party)
+                        }
                         Spacer()
-                        Button {
-                            
-                        } label: {
-                            Text("Show more")
-                                .padding()
-                        }
                     }
-                    Spacer()
                 }
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
                         Text("Travel Mates")
+                            .foregroundColor(.white)
+                            .bold()
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
                             
                         } label: {
-                            //                            Image(systemName: "")
-                            Text("Notif")
+                                                        Image(systemName: "bell.fill")
+                                .foregroundColor(.white)
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
                             
                         } label: {
-                            Text("Add")
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.white)
                         }
-                        
                     }
                 }
             }
@@ -97,6 +85,7 @@ struct ExploreView: View {
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
         ExploreView()
+            .environmentObject(ExploreViewModel())
     }
 }
 
