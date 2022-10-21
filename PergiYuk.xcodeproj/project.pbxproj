@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0656568B28EC15AB009FD951 /* UserProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656568A28EC15AB009FD951 /* UserProfileDetailsView.swift */; };
-		0656569028EC1975009FD951 /* UserInterestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656568F28EC1975009FD951 /* UserInterestModel.swift */; };
-		0656569228EC1A73009FD951 /* UserBadgesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656569128EC1A73009FD951 /* UserBadgesModel.swift */; };
+		063CBF922902CB800093C8DB /* ProfileTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063CBF912902CB800093C8DB /* ProfileTabBarView.swift */; };
+		0656568B28EC15AB009FD951 /* ProfileDetailsBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656568A28EC15AB009FD951 /* ProfileDetailsBarViewModel.swift */; };
 		0656569428EC1EF7009FD951 /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0656569328EC1EF6009FD951 /* Metropolis-SemiBold.otf */; };
 		0656569A28ED7D76009FD951 /* UserHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656569928ED7D76009FD951 /* UserHistoryView.swift */; };
 		0656569C28ED82F2009FD951 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656569B28ED82F2009FD951 /* EditProfileView.swift */; };
+		065656A028F01398009FD951 /* UserAboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656569F28F01398009FD951 /* UserAboutMeView.swift */; };
 		06F19B5628EC14FE00C0B6B3 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F19B5528EC14FE00C0B6B3 /* UserProfileView.swift */; };
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
@@ -25,14 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0656568A28EC15AB009FD951 /* UserProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetailsView.swift; sourceTree = "<group>"; };
-		0656568F28EC1975009FD951 /* UserInterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterestModel.swift; sourceTree = "<group>"; };
-		0656569128EC1A73009FD951 /* UserBadgesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesModel.swift; sourceTree = "<group>"; };
+		063CBF912902CB800093C8DB /* ProfileTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarView.swift; sourceTree = "<group>"; };
+		0656568A28EC15AB009FD951 /* ProfileDetailsBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsBarViewModel.swift; sourceTree = "<group>"; };
 		0656569328EC1EF6009FD951 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../../metropolis/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		0656569528EC373D009FD951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0656569628EC38E0009FD951 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		0656569928ED7D76009FD951 /* UserHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistoryView.swift; sourceTree = "<group>"; };
 		0656569B28ED82F2009FD951 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		0656569F28F01398009FD951 /* UserAboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAboutMeView.swift; sourceTree = "<group>"; };
 		06F19B5528EC14FE00C0B6B3 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		0656568928EC1582009FD951 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0656568A28EC15AB009FD951 /* UserProfileDetailsView.swift */,
+				0656568A28EC15AB009FD951 /* ProfileDetailsBarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -67,43 +67,72 @@
 		0656568C28EC1668009FD951 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0656568E28EC167D009FD951 /* UserHobbies */,
-				0656568D28EC1677009FD951 /* UserBadges */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0656568D28EC1677009FD951 /* UserBadges */ = {
+		065656A128F0162F009FD951 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				0656569128EC1A73009FD951 /* UserBadgesModel.swift */,
+				06F19B5328EC14D600C0B6B3 /* Pages */,
+				0656568C28EC1668009FD951 /* Model */,
 			);
-			path = UserBadges;
+			path = Feature;
 			sourceTree = "<group>";
 		};
-		0656568E28EC167D009FD951 /* UserHobbies */ = {
+		065656A228F01655009FD951 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				0656568F28EC1975009FD951 /* UserInterestModel.swift */,
 			);
-			path = UserHobbies;
+			path = Helper;
 			sourceTree = "<group>";
 		};
-		06F19B5328EC14D600C0B6B3 /* View */ = {
+		065656A328F0165B009FD951 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		065656A428F0166B009FD951 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		065656A528F01671009FD951 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		065656A628F01755009FD951 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06F19B5528EC14FE00C0B6B3 /* UserProfileView.swift */,
+				0656569928ED7D76009FD951 /* UserHistoryView.swift */,
+				0656569B28ED82F2009FD951 /* EditProfileView.swift */,
+				0656569F28F01398009FD951 /* UserAboutMeView.swift */,
+				063CBF912902CB800093C8DB /* ProfileTabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06F19B5328EC14D600C0B6B3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				06F19B5428EC14E600C0B6B3 /* Profile */,
 			);
-			path = View;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		06F19B5428EC14E600C0B6B3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				065656A628F01755009FD951 /* View */,
 				0656568928EC1582009FD951 /* ViewModel */,
-				06F19B5528EC14FE00C0B6B3 /* UserProfileView.swift */,
-				0656569928ED7D76009FD951 /* UserHistoryView.swift */,
-				0656569B28ED82F2009FD951 /* EditProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -128,10 +157,13 @@
 		26CC9E0C28DDB07300CFBA06 /* PergiYuk */ = {
 			isa = PBXGroup;
 			children = (
+				065656A128F0162F009FD951 /* Feature */,
+				065656A328F0165B009FD951 /* Themes */,
+				065656A228F01655009FD951 /* Helper */,
+				065656A428F0166B009FD951 /* Utilities */,
+				065656A528F01671009FD951 /* Extensions */,
 				0656569628EC38E0009FD951 /* Metropolis-SemiBold.otf */,
 				0656569528EC373D009FD951 /* Info.plist */,
-				0656568C28EC1668009FD951 /* Model */,
-				06F19B5328EC14D600C0B6B3 /* View */,
 				26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */,
 				26CC9E0F28DDB07300CFBA06 /* ContentView.swift */,
 				19E9675428DDB3CF008FD86C /* Model.swift */,
@@ -223,17 +255,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0656569228EC1A73009FD951 /* UserBadgesModel.swift in Sources */,
-				0656568B28EC15AB009FD951 /* UserProfileDetailsView.swift in Sources */,
+				0656568B28EC15AB009FD951 /* ProfileDetailsBarViewModel.swift in Sources */,
 				06F19B5628EC14FE00C0B6B3 /* UserProfileView.swift in Sources */,
+				065656A028F01398009FD951 /* UserAboutMeView.swift in Sources */,
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
+				063CBF922902CB800093C8DB /* ProfileTabBarView.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				0656569C28ED82F2009FD951 /* EditProfileView.swift in Sources */,
 				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
 				0656569A28ED7D76009FD951 /* UserHistoryView.swift in Sources */,
-				0656569028EC1975009FD951 /* UserInterestModel.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
