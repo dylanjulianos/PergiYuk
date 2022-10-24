@@ -26,7 +26,7 @@ struct CustomTextField: View {
                 TextField(placeHolder, text: $value)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.6)))
-                    .padding(.vertical,9)
+//                    .padding(.vertical,9)
                     .padding(.horizontal,15)
                     .textInputAutocapitalization(.never)
             }

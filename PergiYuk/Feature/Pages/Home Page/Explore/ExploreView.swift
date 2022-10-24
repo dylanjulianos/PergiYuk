@@ -11,6 +11,7 @@ struct ExploreView: View {
     
     @State private var searchText: String = ""
     @State private var isEditing = false
+    @State private var isShowingCreatePartyView = false
     @EnvironmentObject var exploreViewModel: ExploreViewModel
     
     var body: some View {
@@ -60,25 +61,25 @@ struct ExploreView: View {
                             .foregroundColor(.white)
                             .bold()
                     }
+                    
+                    
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
-                            
+
                         } label: {
-                                                        Image(systemName: "bell.fill")
+                            Image(systemName: "bell.fill")
                                 .foregroundColor(.white)
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
-                        Button {
-                            
-                        } label: {
+                        NavigationLink(destination: CreatePartyView()) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.white)
                         }
                     }
                 }
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 

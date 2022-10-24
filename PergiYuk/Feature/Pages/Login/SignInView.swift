@@ -19,6 +19,7 @@ struct SignInView: View {
                 Image("Travel Buddy")
                     .padding()
                 CustomTextField(placeHolder: "Email Address", value: $email)
+                    .padding(.vertical,9)
                 CustomTextField(placeHolder: "Password", value: $pass)
                 HStack{
                     Spacer()
@@ -29,14 +30,14 @@ struct SignInView: View {
                             .foregroundColor(.blue)
                     }
                 }.frame(width: 370)
-                
-                NavigationLink(destination: ExploreView(), isActive: $isShowingExploreView){ EmptyView() }
-                    Button {
-                        isShowingExploreView = true
-                    } label: {
-                        Text("Sign in")
+                Button(action: {
+                    print("Floating Button Click")
+                }, label: {
+                    NavigationLink(destination: ExploreView()) {
+                         Text("Sign in")
                             .frame(width:335)
-                    }.buttonStyle(BlueButton())
+                     }
+                }).buttonStyle(BlueButton())
                     .padding()
                 HStack {
                     Text("New to Travel Buddy?")
@@ -44,7 +45,6 @@ struct SignInView: View {
                 }
             }.padding()
         }.navigationBarHidden(true)
-//            .navigation
     }
     
     func signIn(){
