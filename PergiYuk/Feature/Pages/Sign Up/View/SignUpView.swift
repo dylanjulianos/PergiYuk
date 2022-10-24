@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.managedObjectContext) var moc
     
     @State var name: String = ""
     @State var email: String = ""
@@ -52,7 +53,6 @@ struct SignUpView: View {
         }.navigationBarHidden(true)
     }
     func signUp(){
-        
     }
 }
 
