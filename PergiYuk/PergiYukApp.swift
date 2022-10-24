@@ -9,11 +9,9 @@ import SwiftUI
 
 @main
 struct PergiYukApp: App {
-    @StateObject private var dataController = CoreDataController()
     var body: some Scene {
         WindowGroup {
             SignUpView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

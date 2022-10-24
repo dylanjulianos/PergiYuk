@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
+    @ObservedObject var coreDataManager = CoreDataController()
     
     @State var email: String = ""
     @State var pass: String = ""
@@ -44,6 +45,10 @@ struct SignInView: View {
     }
     
     func signIn(){
+        @FetchRequest(
+            sortDescriptors: [],
+            predicate: NSPredicate(format: "email == %@", email)
+        ) var user: FetchedResults<User>
         
     }
     func forgotPass(){

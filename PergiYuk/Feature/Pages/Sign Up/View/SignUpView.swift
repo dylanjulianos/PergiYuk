@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @Environment(\.managedObjectContext) var moc
+    @ObservedObject var viewModel = SignUpViewModel()
     
     @State var name: String = ""
     @State var email: String = ""
@@ -34,12 +34,13 @@ struct SignUpView: View {
                     .font(.system(size: 14))
                     .frame(width: 340)
                 
-                Button {
-                    signUp()
-                } label: {
-                    Text("Sign Up")
-                        .frame(width: 335)
-                }.buttonStyle(BlueButton())
+                    Button {
+                        signUp()
+                    } label: {
+                        Text("Sign Up")
+                            .frame(width: 335)
+                    }.buttonStyle(BlueButton())
+                
                 
                 HStack{
                     Text("Already joined?").bold()
@@ -49,15 +50,20 @@ struct SignUpView: View {
                         .foregroundColor(.blue)
                         .font(.system(size: 17, weight: .bold))
                 }
-            }.padding()
-        }.navigationBarHidden(true)
+            }
+            .padding()
+        }
+        .navigationBarHidden(true)
+        .onAppear()
     }
+
     func signUp(){
+        //add user
+        willMoveToSignIn = viewModel.checkSignUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
-    
     static var previews: some View {
         SignUpView()
     }

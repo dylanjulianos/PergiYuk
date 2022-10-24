@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension SignInView {
+    @MainActor class SignInViewModel: ObservableObject {
+        
+    }
+}
+
+
