@@ -6,11 +6,24 @@
 //
 
 import Foundation
+import SwiftUI
 
-extension SignInView {
-    @MainActor class SignInViewModel: ObservableObject {
+class SignInViewModel: ObservableObject {
+    @ObservedObject var coreData = CoreDataController()
+    
+    
+    func checkSignIn(email: String, password: String) -> Bool{
+        let result = coreData.fetchOneUserByEmail(text: email)
+        
+        if result && coreData.user.password == password{
+            print("success login")
+            // Do some logic
+            
+            return true
+        } else {
+            print("Unable to login, please make sure your email and password is correct")
+            return false
+        }
         
     }
 }
-
-

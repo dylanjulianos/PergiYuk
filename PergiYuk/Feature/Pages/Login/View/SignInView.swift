@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @ObservedObject var coreDataManager = CoreDataController()
+    @ObservedObject var viewModel = SignInViewModel()
     
     @State var email: String = ""
     @State var pass: String = ""
@@ -30,7 +30,7 @@ struct SignInView: View {
                     }
                 }.frame(width: 370)
                 Button {
-                    signIn()
+                    viewModel.checkSignIn(email: email, password: pass)
                 } label: {
                     Text("Sign In")
                         .frame(width: 335)
