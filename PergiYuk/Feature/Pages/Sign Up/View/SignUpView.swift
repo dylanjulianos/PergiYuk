@@ -35,7 +35,7 @@ struct SignUpView: View {
                     .frame(width: 340)
                 
                     Button {
-                        signUp()
+                        viewModel.checkSignUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
                     } label: {
                         Text("Sign Up")
                             .frame(width: 335)
@@ -55,11 +55,6 @@ struct SignUpView: View {
         }
         .navigationBarHidden(true)
         .onAppear()
-    }
-
-    func signUp(){
-        //add user
-        willMoveToSignIn = viewModel.checkSignUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
     }
 }
 
