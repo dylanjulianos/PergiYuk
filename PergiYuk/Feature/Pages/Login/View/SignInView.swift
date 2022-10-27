@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct SignInView: View {
-    
+
     @State var email: String = ""
     @State var pass: String = ""
-    
+    @State var isShowingExploreView: Bool = false
+    @EnvironmentObject var routePosition: Routing
+
     var body: some View {
         NavigationView {
             VStack{
                 Image("Travel Buddy")
                     .padding()
                 CustomTextField(placeHolder: "Email Address", value: $email)
+                    .padding(.vertical,9)
                 CustomTextField(placeHolder: "Password", value: $pass)
                 HStack{
                     Spacer()
@@ -29,25 +32,32 @@ struct SignInView: View {
                     }
                 }.frame(width: 370)
                 Button {
-                    signIn()
+                    routePosition.current = .explore
                 } label: {
-                    Text("Sign In")
-                        .frame(width: 335)
+//                    Navigator.navigate(.explore){
+                        Text("Sign in")
+                            .frame(width: 337)
+//                    }
                 }.buttonStyle(BlueButton())
                     .padding()
                 HStack {
                     Text("New to Travel Buddy?")
-                    NavigationLink("Sign Up", destination: SignUpView())
+                    Button {
+                        routePosition.current = .signUp
+                    } label: {
+                        Text("Sign Up")
+                    }
+
                 }
             }.padding()
         }.navigationBarHidden(true)
     }
-    
+
     func signIn(){
-        
+
     }
     func forgotPass(){
-        
+
     }
 }
 

@@ -15,6 +15,7 @@ struct SignUpView: View {
     @State var pass: String = ""
     @State var conf: String = ""
     @State private var willMoveToSignIn: Bool = false
+    @EnvironmentObject var routePosition: Routing
  
     var body: some View {
         NavigationView {
@@ -23,8 +24,11 @@ struct SignUpView: View {
                 Image("Travel Buddy")
                     .padding(.bottom,30)
                 CustomTextField(placeHolder: "Full Name", value: $name)
+                    .padding(.vertical,9)
                 CustomTextField(placeHolder: "Email Address", value: $email)
+                    .padding(.vertical,9)
                 CustomTextField(placeHolder: "Phone Number", value: $phone)
+                    .padding(.vertical,9)
                 CustomTextField(placeHolder: "Password", value: $pass)
                 CustomTextField(placeHolder: "Confirm Password", value: $conf)
                 Text("By signing up, you agree to our Terms & Conditions and Privacy Policy")
@@ -34,7 +38,7 @@ struct SignUpView: View {
                     .frame(width: 340)
                 
                 Button {
-                    signUp()
+                    routePosition.current = .signUp
                 } label: {
                     Text("Sign Up")
                         .frame(width: 335)
@@ -44,9 +48,12 @@ struct SignUpView: View {
                     Text("Already joined?").bold()
                         .padding(.vertical,12)
                         .foregroundColor(.gray)
-                    NavigationLink("Sign In", destination: SignInView())
-                        .foregroundColor(.blue)
-                        .font(.system(size: 17, weight: .bold))
+                    Button {
+                        routePosition.current = .signIn
+                    } label: {
+                        Text("Sign in")
+                    }
+
                 }
             }.padding()
         }.navigationBarHidden(true)
