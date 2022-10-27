@@ -135,6 +135,7 @@
 		264364C728F0086000E4BA1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				267F0AA2290A872500B9BC78 /* TripCardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,7 +234,6 @@
 				267F0A9D290A872500B9BC78 /* ViewModel */,
 				267F0A9F290A872500B9BC78 /* ExploreView.swift */,
 				267F0AA0290A872500B9BC78 /* TripCardRowView.swift */,
-				267F0AA1290A872500B9BC78 /* Model */,
 				267F0AA3290A872500B9BC78 /* CreatePartyView.swift */,
 			);
 			path = Explore;
@@ -245,14 +245,6 @@
 				267F0A9E290A872500B9BC78 /* ExploreViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		267F0AA1290A872500B9BC78 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				267F0AA2290A872500B9BC78 /* TripCardModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		268F714128F56B5000BD0D40 /* View */ = {
