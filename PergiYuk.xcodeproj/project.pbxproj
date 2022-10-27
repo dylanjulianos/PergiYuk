@@ -24,6 +24,8 @@
 		267F0AA8290A872500B9BC78 /* CreatePartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA3290A872500B9BC78 /* CreatePartyView.swift */; };
 		267F0AB1290A888800B9BC78 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AB0290A888800B9BC78 /* SignUpView.swift */; };
 		267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AB2290A889300B9BC78 /* SignInView.swift */; };
+		267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0ABA290A89A300B9BC78 /* SignUpViewModel.swift */; };
+		267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0ABC290A89C700B9BC78 /* SignInViewModel.swift */; };
 		268F714428F56B8700BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		268F714628F56BA900BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
@@ -51,6 +53,8 @@
 		267F0AA3290A872500B9BC78 /* CreatePartyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePartyView.swift; sourceTree = "<group>"; };
 		267F0AB0290A888800B9BC78 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		267F0AB2290A889300B9BC78 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		267F0ABA290A89A300B9BC78 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		267F0ABC290A89C700B9BC78 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 		267F0AAC290A882600B9BC78 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				267F0AB9290A898200B9BC78 /* View Model */,
 				267F0AAE290A883A00B9BC78 /* View */,
 			);
 			path = Login;
@@ -244,6 +249,7 @@
 		267F0AAD290A883300B9BC78 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
+				267F0AB8290A897C00B9BC78 /* View Model */,
 				267F0AAF290A884100B9BC78 /* View */,
 			);
 			path = "Sign Up";
@@ -263,6 +269,22 @@
 				267F0AB0290A888800B9BC78 /* SignUpView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		267F0AB8290A897C00B9BC78 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				267F0ABA290A89A300B9BC78 /* SignUpViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		267F0AB9290A898200B9BC78 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				267F0ABC290A89C700B9BC78 /* SignInViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		26CC9E0128DDB07300CFBA06 = {
@@ -405,9 +427,11 @@
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				1985285C28EADF34003AAEBF /* (null) in Sources */,
 				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
+				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
 				267F0AA4290A872500B9BC78 /* ExploreViewModel.swift in Sources */,
+				267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */,
 				267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */,
 				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */,
