@@ -151,11 +151,11 @@
 		264364C828F0087700E4BA1C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				267F0AE1290A970E00B9BC78 /* New Group */,
 				267F0AAD290A883300B9BC78 /* Sign Up */,
 				267F0AAC290A882600B9BC78 /* Login */,
 				267F0A9B290A872500B9BC78 /* Home Page */,
 				0648471B2907E4C8003C4B5B /* My Party */,
-				26EDC6C228F01A2A00B77B0A /* Profile */,
 				264364CF28F009C300E4BA1C /* Verification */,
 				264364CE28F009B000E4BA1C /* On Boarding */,
 				264364CD28F0099A00E4BA1C /* Create Vacation Party */,
@@ -327,6 +327,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		267F0AE1290A970E00B9BC78 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
@@ -369,13 +376,6 @@
 				26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		26EDC6C228F01A2A00B77B0A /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		26EDC6C328F025C900B77B0A /* Core Data */ = {
