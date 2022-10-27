@@ -26,4 +26,8 @@ class SignInViewModel: ObservableObject {
         }
         
     }
+    
+    func forgotPass(){
+        print("To be implemented")
+    }
 }

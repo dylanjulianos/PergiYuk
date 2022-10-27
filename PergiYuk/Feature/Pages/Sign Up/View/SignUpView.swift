@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @ObservedObject var viewModel = SignUpViewModel()
     
     @State var name: String = ""
     @State var email: String = ""
@@ -38,7 +39,13 @@ struct SignUpView: View {
                     .frame(width: 340)
                 
                 Button {
-                    routePosition.current = .signUp
+                    let result = viewModel.checkSignUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
+                    
+                    print(result)
+                    
+                    if result {
+                        routePosition.current = .signIn
+                    }
                 } label: {
                     Text("Sign Up")
                         .frame(width: 335)
