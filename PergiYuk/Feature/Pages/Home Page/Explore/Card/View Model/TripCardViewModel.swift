@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExploreViewModel : ObservableObject{
+class TripCardViewModel : ObservableObject{
     
     @Published var parties: [TripCardModel] = []
     

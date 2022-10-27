@@ -12,7 +12,7 @@ struct ExploreView: View {
     @State private var searchText: String = ""
     @State private var isEditing = false
     @State private var isShowingCreatePartyView = false
-    @EnvironmentObject var exploreViewModel: ExploreViewModel
+    @EnvironmentObject var tripCardViewModel: TripCardViewModel
     
     var body: some View {
         
@@ -49,7 +49,7 @@ struct ExploreView: View {
                         Spacer()
                     }
                     ScrollView{
-                        ForEach(exploreViewModel.parties){
+                        ForEach(tripCardViewModel.parties){
                             party in TripCardRowView(card: party)
                         }
                         Spacer()
@@ -86,7 +86,7 @@ struct ExploreView: View {
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
         ExploreView()
-            .environmentObject(ExploreViewModel())
+            .environmentObject(TripCardViewModel())
     }
 }
 

@@ -17,7 +17,7 @@
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		264364C128F0076700E4BA1C /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264364C028F0076700E4BA1C /* BlueButton.swift */; };
-		267F0AA4290A872500B9BC78 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9E290A872500B9BC78 /* ExploreViewModel.swift */; };
+		267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */; };
 		267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9F290A872500B9BC78 /* ExploreView.swift */; };
 		267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA0290A872500B9BC78 /* TripCardRowView.swift */; };
 		267F0AA7290A872500B9BC78 /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA2290A872500B9BC78 /* TripCardModel.swift */; };
@@ -46,7 +46,7 @@
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		264364C028F0076700E4BA1C /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
-		267F0A9E290A872500B9BC78 /* ExploreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardViewModel.swift; sourceTree = "<group>"; };
 		267F0A9F290A872500B9BC78 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		267F0AA0290A872500B9BC78 /* TripCardRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardRowView.swift; sourceTree = "<group>"; };
 		267F0AA2290A872500B9BC78 /* TripCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardModel.swift; sourceTree = "<group>"; };
@@ -221,20 +221,11 @@
 		267F0A9C290A872500B9BC78 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				267F0A9D290A872500B9BC78 /* ViewModel */,
-				267F0A9F290A872500B9BC78 /* ExploreView.swift */,
-				267F0AA0290A872500B9BC78 /* TripCardRowView.swift */,
-				267F0AA3290A872500B9BC78 /* CreatePartyView.swift */,
+				267F0AC2290A8B3200B9BC78 /* Create Party */,
+				267F0ABF290A8A6500B9BC78 /* Card */,
+				267F0ABE290A8A5700B9BC78 /* View */,
 			);
 			path = Explore;
-			sourceTree = "<group>";
-		};
-		267F0A9D290A872500B9BC78 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				267F0A9E290A872500B9BC78 /* ExploreViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		267F0AAC290A882600B9BC78 /* Login */ = {
@@ -285,6 +276,55 @@
 				267F0ABC290A89C700B9BC78 /* SignInViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		267F0ABE290A8A5700B9BC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				267F0A9F290A872500B9BC78 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		267F0ABF290A8A6500B9BC78 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				267F0AC1290A8A8B00B9BC78 /* View Model */,
+				267F0AC0290A8A8200B9BC78 /* View */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		267F0AC0290A8A8200B9BC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				267F0AA0290A872500B9BC78 /* TripCardRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		267F0AC1290A8A8B00B9BC78 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		267F0AC2290A8B3200B9BC78 /* Create Party */ = {
+			isa = PBXGroup;
+			children = (
+				267F0AC3290A8B4600B9BC78 /* View */,
+			);
+			path = "Create Party";
+			sourceTree = "<group>";
+		};
+		267F0AC3290A8B4600B9BC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				267F0AA3290A872500B9BC78 /* CreatePartyView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		26CC9E0128DDB07300CFBA06 = {
@@ -430,7 +470,7 @@
 				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
-				267F0AA4290A872500B9BC78 /* ExploreViewModel.swift in Sources */,
+				267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */,
 				267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */,
 				267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */,
 				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
