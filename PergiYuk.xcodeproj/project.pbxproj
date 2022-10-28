@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060ADDC5290C2C6F004F33C6 /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060ADDC4290C2C60004F33C6 /* Metropolis-SemiBold.otf */; };
 		0648471F2907E4FB003C4B5B /* MyPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648471E2907E4FB003C4B5B /* MyPartyView.swift */; };
 		064847212907E530003C4B5B /* PartyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847202907E530003C4B5B /* PartyDetailView.swift */; };
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060ADDC4290C2C60004F33C6 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../../Downloads/metropolis 2/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
+		060ADDC6290C2C88004F33C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0648471A2907E4B3003C4B5B /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../../metropolis 2/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		0648471E2907E4FB003C4B5B /* MyPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPartyView.swift; sourceTree = "<group>"; };
 		064847202907E530003C4B5B /* PartyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailView.swift; sourceTree = "<group>"; };
@@ -372,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				0648471A2907E4B3003C4B5B /* Metropolis-SemiBold.otf */,
+				060ADDC4290C2C60004F33C6 /* Metropolis-SemiBold.otf */,
 				26CC9E0C28DDB07300CFBA06 /* PergiYuk */,
 				26CC9E0B28DDB07300CFBA06 /* Products */,
 			);
@@ -388,6 +392,7 @@
 		26CC9E0C28DDB07300CFBA06 /* PergiYuk */ = {
 			isa = PBXGroup;
 			children = (
+				060ADDC6290C2C88004F33C6 /* Info.plist */,
 				264364C628F0086000E4BA1C /* Feature */,
 				264364C528F0082400E4BA1C /* Helper */,
 				264364C428F0080E00E4BA1C /* Themes */,
@@ -479,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060ADDC5290C2C6F004F33C6 /* Metropolis-SemiBold.otf in Resources */,
 				26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */,
 				26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */,
 			);
@@ -653,6 +659,7 @@
 				DEVELOPMENT_TEAM = S6BK56652F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PergiYuk/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -683,6 +690,7 @@
 				DEVELOPMENT_TEAM = S6BK56652F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PergiYuk/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
