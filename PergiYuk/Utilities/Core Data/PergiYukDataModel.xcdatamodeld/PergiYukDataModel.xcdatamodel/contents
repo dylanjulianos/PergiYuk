@@ -4,7 +4,7 @@
         <attribute name="groupChatId" optional="YES" attributeType="String"/>
         <attribute name="partyDescription" optional="YES" attributeType="String"/>
         <attribute name="partyId" optional="YES" attributeType="String"/>
-        <attribute name="partyImageUrl" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="partyImageUrl" optional="YES" attributeType="String" customClassName="[String]"/>
         <attribute name="userId" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="groupChat" inverseEntity="VacationParty"/>
     </entity>
@@ -22,12 +22,19 @@
         <attribute name="username" optional="YES" attributeType="String"/>
         <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="users" inverseEntity="VacationParty"/>
     </entity>
-    <entity name="VacationParty" representedClassName="VacationParty" syncable="YES" codeGenerationType="class">
-        <attribute name="maximumUser" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="partyDescription" optional="YES" attributeType="String"/>
-        <attribute name="partyId" optional="YES" attributeType="String" valueTransformerName="" customClassName="[String]"/>
-        <attribute name="partyImageUrl" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+    <entity name="UserRoleInParty" representedClassName="UserRoleInParty" syncable="YES" codeGenerationType="class">
         <attribute name="role" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="VacationParty" representedClassName="VacationParty" syncable="YES" codeGenerationType="class">
+        <attribute name="budget" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="destination" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String" customClassName="[String]"/>
+        <attribute name="maximumUser" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="partyId" optional="YES" attributeType="String" valueTransformerName="" customClassName="[String]"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
         <relationship name="groupChat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupChatParty" inverseName="vacationParty" inverseEntity="GroupChatParty"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="vacationParty" inverseEntity="User"/>
     </entity>
