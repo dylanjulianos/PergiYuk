@@ -26,6 +26,10 @@ class CreatePartyViewModel: ObservableObject {
         
     }
     
+    func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
+        print("Create new party")
+    }
+    
     func forgotPass(){
         print("To be implemented")
     }

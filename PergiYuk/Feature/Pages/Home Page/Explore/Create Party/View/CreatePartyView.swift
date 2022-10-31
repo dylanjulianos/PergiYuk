@@ -52,7 +52,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct CreatePartyView: View {
-    @EnvironmentObject var createPartyViewModel: CreatePartyViewModel
+    @EnvironmentObject var viewModel: CreatePartyViewModel
     @EnvironmentObject var tripCardViewModel: TripCardViewModel
     
     @State private var partyName: String = ""
@@ -107,6 +107,7 @@ struct CreatePartyView: View {
             
             Button {
                 createPressed()
+                viewModel.
                 isDismiss.callAsFunction()
                 
             } label: {
