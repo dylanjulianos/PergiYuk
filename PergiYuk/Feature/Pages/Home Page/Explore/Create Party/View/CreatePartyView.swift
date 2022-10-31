@@ -52,8 +52,9 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct CreatePartyView: View {
-    
+    @EnvironmentObject var createPartyViewModel: CreatePartyViewModel
     @EnvironmentObject var tripCardViewModel: TripCardViewModel
+    
     @State private var partyName: String = ""
     @State private var partyDestination: String = ""
     @State private var partyDate: String = ""
