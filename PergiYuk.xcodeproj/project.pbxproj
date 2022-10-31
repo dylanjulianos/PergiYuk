@@ -40,6 +40,7 @@
 		26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */; };
 		26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */; };
 		26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */; };
+		26F37F20290FB69000F9E656 /* CreatePartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F37F1F290FB69000F9E656 /* CreatePartyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PergiYukDataModel.xcdatamodel; sourceTree = "<group>"; };
 		26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		26F37F1F290FB69000F9E656 /* CreatePartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +328,7 @@
 		267F0AC2290A8B3200B9BC78 /* Create Party */ = {
 			isa = PBXGroup;
 			children = (
+				26F37F1E290FB67B00F9E656 /* View Model */,
 				267F0AC3290A8B4600B9BC78 /* View */,
 			);
 			path = "Create Party";
@@ -421,6 +424,14 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		26F37F1E290FB67B00F9E656 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				26F37F1F290FB69000F9E656 /* CreatePartyViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -496,6 +507,7 @@
 				267F0AA8290A872500B9BC78 /* CreatePartyView.swift in Sources */,
 				267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */,
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
+				26F37F20290FB69000F9E656 /* CreatePartyViewModel.swift in Sources */,
 				267F0AA7290A872500B9BC78 /* TripCardModel.swift in Sources */,
 				267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
