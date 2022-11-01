@@ -20,13 +20,10 @@
         <attribute name="userDescription" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="partyRole" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRoleInParty" inverseName="user" inverseEntity="UserRoleInParty"/>
         <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="users" inverseEntity="VacationParty"/>
     </entity>
     <entity name="UserRoleInParty" representedClassName="UserRoleInParty" syncable="YES" codeGenerationType="class">
         <attribute name="role" optional="YES" attributeType="String"/>
-        <relationship name="party" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="partyUserRoles" inverseEntity="VacationParty"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="partyRole" inverseEntity="User"/>
     </entity>
     <entity name="VacationParty" representedClassName="VacationParty" syncable="YES" codeGenerationType="class">
         <attribute name="budget" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -39,7 +36,6 @@
         <attribute name="partyId" optional="YES" attributeType="String" valueTransformerName="" customClassName="[String]"/>
         <attribute name="startDate" optional="YES" attributeType="String"/>
         <relationship name="groupChat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupChatParty" inverseName="vacationParty" inverseEntity="GroupChatParty"/>
-        <relationship name="partyUserRoles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserRoleInParty" inverseName="party" inverseEntity="UserRoleInParty"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="vacationParty" inverseEntity="User"/>
     </entity>
 </model>

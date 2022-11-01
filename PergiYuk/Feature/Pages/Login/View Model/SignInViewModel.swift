@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 class SignInViewModel: ObservableObject {
-    @ObservedObject var coreData = CoreDataController()
+    let userRepo = UserRepository.shared
     
     
     func checkSignIn(email: String, password: String) -> Bool{
-        let result = coreData.fetchOneUserByEmail(text: email)
+        let result = userRepo.getUser(text: email)
         
-        if result && coreData.user.password == password{
+        if result.password == password{
             print("success login")
             // Do some logic
             
