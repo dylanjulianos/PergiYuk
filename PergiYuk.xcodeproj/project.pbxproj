@@ -11,6 +11,7 @@
 		064847212907E530003C4B5B /* PartyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847202907E530003C4B5B /* PartyDetailView.swift */; };
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
 		064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847242907E54E003C4B5B /* CommunityCardView.swift */; };
+		0672559A2910E95F00384C96 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067255992910E95F00384C96 /* TabBarView.swift */; };
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
 		06FED7EA290FD77F002AF4D1 /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0648471A2907E4B3003C4B5B /* Metropolis-SemiBold.otf */; };
 		06FED7EB290FD783002AF4D1 /* FuturaMediumbt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06FED7E8290FD72F002AF4D1 /* FuturaMediumbt.ttf */; };
@@ -51,6 +52,7 @@
 		064847202907E530003C4B5B /* PartyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailView.swift; sourceTree = "<group>"; };
 		064847222907E53F003C4B5B /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
 		064847242907E54E003C4B5B /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
+		067255992910E95F00384C96 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		06FED7E8290FD72F002AF4D1 /* FuturaMediumbt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaMediumbt.ttf; path = ../../futura/FuturaMediumbt.ttf; sourceTree = "<group>"; };
 		06FED7E9290FD759002AF4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +114,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		067255962910E92500384C96 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				067255982910E93400384C96 /* View */,
+				067255972910E92E00384C96 /* ViewModel */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		067255972910E92E00384C96 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		067255982910E93400384C96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				067255992910E95F00384C96 /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1985285D28EC15A2003AAEBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +195,7 @@
 		264364C828F0087700E4BA1C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				067255962910E92500384C96 /* TabBar */,
 				267F0AE1290A970E00B9BC78 /* Profile */,
 				267F0AAD290A883300B9BC78 /* Sign Up */,
 				267F0AAC290A882600B9BC78 /* Login */,
@@ -511,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				268F714428F56B8700BD0D40 /* (null) in Sources */,
+				0672559A2910E95F00384C96 /* TabBarView.swift in Sources */,
 				064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */,
 				267F0AA8290A872500B9BC78 /* CreatePartyView.swift in Sources */,
 				267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */,
