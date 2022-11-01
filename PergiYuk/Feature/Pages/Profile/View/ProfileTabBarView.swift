@@ -39,7 +39,7 @@ struct TabBar: View {
             }, label: {
                 ZStack {
                     Text("About Me") .font(.custom("Metropolis-SemiBold", size: 14))
-                        .foregroundColor(self.selected == 0 ? Color.blue : Color.black)
+                        .foregroundColor(self.selected == 0 ? Color("TMPrimaryColor") : Color.black)
                     
                     Capsule()
                         .fill(Color.clear)
@@ -52,7 +52,7 @@ struct TabBar: View {
             }, label: {
                 ZStack {
                     Text("My History") .font(.custom("Metropolis-SemiBold", size: 14))
-                        .foregroundColor(self.selected == 1 ? Color.blue : Color.black)
+                        .foregroundColor(self.selected == 1 ? Color("TMPrimaryColor") : Color.black)
                     
                     Capsule()
                         .fill(Color.clear)

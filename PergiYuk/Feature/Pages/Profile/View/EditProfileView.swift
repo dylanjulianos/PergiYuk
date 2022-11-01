@@ -65,7 +65,7 @@ extension EditProfileView {
             //Title
             Text("Edit Profile")
                 .font(.custom("Metropolis-SemiBold", size: 34))
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
                 .padding()
                 .padding(.bottom, 10)
             
@@ -82,6 +82,7 @@ extension EditProfileView {
                         //Camera Button
                         Circle()
                             .frame(width: 40, height: 40)
+                            .foregroundColor(Color("TMPrimaryColor"))
                             .overlay(
                             Image(systemName: "camera.fill")
                                 .frame(width: 40, height: 40)
@@ -96,7 +97,7 @@ extension EditProfileView {
                 //Display Name
                 Text("Display Name")
                     .font(.custom("Metropolis-SemiBold", size: 14))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("TMPrimaryColor"))
                     .padding(.leading)
                     .padding(.top, 10)
                 
@@ -112,7 +113,7 @@ extension EditProfileView {
                 //Email
                 Text("Email")
                     .font(.custom("Metropolis-SemiBold", size: 14))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("TMPrimaryColor"))
                     .padding(.leading)
                 
                 ZStack {
@@ -127,7 +128,7 @@ extension EditProfileView {
                 //Phone Number
                 Text("Phone Number")
                     .font(.custom("Metropolis-SemiBold", size: 14))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("TMPrimaryColor"))
                     .padding(.leading)
                 
                 ZStack {
@@ -142,7 +143,7 @@ extension EditProfileView {
             VStack(alignment: .leading) {
                 Text("Interest")
                     .font(.custom("Metropolis-SemiBold", size: 14))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("TMPrimaryColor"))
                     .padding(.leading)
                 
                 Section(header: Text("")) {
@@ -157,7 +158,7 @@ extension EditProfileView {
                             Text("Add")
                                 .bold()
                                 .frame(width: 100, height: 32)
-                                .background(Color.blue)
+                                .background(Color("TMPrimaryColor"))
                                 .cornerRadius(10)
                                 .foregroundColor(.white)
                                 .font(.custom("Metropolis-SemiBold", size: 14))
@@ -188,7 +189,7 @@ extension EditProfileView {
                 //Social Media Instagram
                 Text("Social Media")
                     .font(.custom("Metropolis-SemiBold", size: 14))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("TMPrimaryColor"))
                     .padding(.leading)
                 
                 HStack {
