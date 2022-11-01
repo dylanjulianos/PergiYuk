@@ -10,26 +10,22 @@ import SwiftUI
 
 
 class SignUpViewModel: ObservableObject {
-    @ObservedObject var coreData = CoreDataController()
-    
+    let userRepo = UserRepository.shared
     
     func checkSignUp(email: String, name: String, phoneNum: String, password: String, conf: String) -> Bool{
         if password != conf {
             print("please match your password")
             return false
         }
-        let result = coreData.fetchOneUserByEmail(text: email)
-        if result {
+        let result = userRepo.getUser(text: email)
+        if result == nil{
             print("Such email already exist.")
             return false
         } else {
-            let newUser = User(context: coreData.container.viewContext)
-            newUser.name = name
-            newUser.password = password
-            newUser.email = email
-            newUser.phoneNumber = phoneNum
-            coreData.saveData()
-            coreData.fetchAllUser()
+            // Add user
+            
+            
+//            coreData.fetchAllUser()
             return true
         }
     }

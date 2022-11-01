@@ -87,18 +87,20 @@ struct CreatePartyView: View {
                         .padding(8)
             }.sheet(isPresented: $showSheet) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
-        }
+            }
 
             VStack(alignment: .leading){
                 Text("Party Name")
                     .padding(.horizontal)
                 CustomTextField(placeHolder: "Insert Party Name", value: $partyName)
             }.padding(.vertical,9)
+            
             VStack(alignment: .leading){
                 Text("Destination")
                     .padding(.horizontal)
                 CustomTextField(placeHolder: "Insert Party Destination", value: $partyDestination)
             }.padding(.vertical,4)
+            
             VStack(alignment: .leading){
                 Text("Date")
                     .padding(.horizontal)
@@ -107,9 +109,8 @@ struct CreatePartyView: View {
             
             Button {
                 createPressed()
-                viewModel.
+                viewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
                 isDismiss.callAsFunction()
-                
             } label: {
 //                Navigator.navigate(.explore){
                     Text("Create Vacation Party")

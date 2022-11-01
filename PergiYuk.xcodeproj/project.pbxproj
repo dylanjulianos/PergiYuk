@@ -20,6 +20,8 @@
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		264364C128F0076700E4BA1C /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264364C028F0076700E4BA1C /* BlueButton.swift */; };
+		266ACAEE291105CD005E7268 /* VacationPartyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266ACAED291105CD005E7268 /* VacationPartyRepository.swift */; };
+		266ACAF0291106AD005E7268 /* SeederCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266ACAEF291106AD005E7268 /* SeederCoreDataStore.swift */; };
 		267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */; };
 		267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9F290A872500B9BC78 /* ExploreView.swift */; };
 		267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA0290A872500B9BC78 /* TripCardRowView.swift */; };
@@ -35,15 +37,16 @@
 		267F0AF5290A981B00B9BC78 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AF0290A981B00B9BC78 /* UserProfileView.swift */; };
 		267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AF1290A981B00B9BC78 /* ProfileTabBarView.swift */; };
 		267F0AF9290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AF8290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift */; };
+		26840147290FD8DE00CA1708 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26840146290FD8DE00CA1708 /* UserRepository.swift */; };
 		268F714428F56B8700BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		268F714628F56BA900BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
 		26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1128DDB07300CFBA06 /* Assets.xcassets */; };
 		26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1428DDB07300CFBA06 /* Preview Assets.xcassets */; };
-		26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */; };
 		26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */; };
 		26F37F20290FB69000F9E656 /* CreatePartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F37F1F290FB69000F9E656 /* CreatePartyViewModel.swift */; };
+		26F37F22290FCEE600F9E656 /* PergiYukDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,8 @@
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		264364C028F0076700E4BA1C /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		266ACAED291105CD005E7268 /* VacationPartyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyRepository.swift; sourceTree = "<group>"; };
+		266ACAEF291106AD005E7268 /* SeederCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeederCoreDataStore.swift; sourceTree = "<group>"; };
 		267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardViewModel.swift; sourceTree = "<group>"; };
 		267F0A9F290A872500B9BC78 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		267F0AA0290A872500B9BC78 /* TripCardRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardRowView.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		267F0AF0290A981B00B9BC78 /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		267F0AF1290A981B00B9BC78 /* ProfileTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabBarView.swift; sourceTree = "<group>"; };
 		267F0AF8290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsBarViewModel.swift; sourceTree = "<group>"; };
+		26840146290FD8DE00CA1708 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PergiYukDataModel.xcdatamodel; sourceTree = "<group>"; };
 		26CF2DED28E6F5C900B26B12 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		26F37F1F290FB69000F9E656 /* CreatePartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewModel.swift; sourceTree = "<group>"; };
+		26F37F21290FCB9800F9E656 /* PergiYukDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PergiYukDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +194,8 @@
 		264364C728F0086000E4BA1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				26840145290FD89600CA1708 /* DataStore */,
+				26840144290FD88E00CA1708 /* Repository */,
 				267F0AA2290A872500B9BC78 /* TripCardModel.swift */,
 			);
 			path = Model;
@@ -203,7 +212,6 @@
 				0648471B2907E4C8003C4B5B /* My Party */,
 				264364CF28F009C300E4BA1C /* Verification */,
 				264364CE28F009B000E4BA1C /* On Boarding */,
-				264364CD28F0099A00E4BA1C /* Create Vacation Party */,
 				264364CC28F0096300E4BA1C /* Vacation Party Detail */,
 			);
 			path = Pages;
@@ -214,13 +222,6 @@
 			children = (
 			);
 			path = "Vacation Party Detail";
-			sourceTree = "<group>";
-		};
-		264364CD28F0099A00E4BA1C /* Create Vacation Party */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Create Vacation Party";
 			sourceTree = "<group>";
 		};
 		264364CE28F009B000E4BA1C /* On Boarding */ = {
@@ -402,6 +403,23 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		26840144290FD88E00CA1708 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				26840146290FD8DE00CA1708 /* UserRepository.swift */,
+				266ACAED291105CD005E7268 /* VacationPartyRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		26840145290FD89600CA1708 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				266ACAEF291106AD005E7268 /* SeederCoreDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F37F22290FCEE600F9E656 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				268F714428F56B8700BD0D40 /* (null) in Sources */,
 				0672559A2910E95F00384C96 /* TabBarView.swift in Sources */,
 				064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */,
@@ -548,20 +567,22 @@
 				267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
+				26840147290FD8DE00CA1708 /* UserRepository.swift in Sources */,
 				1985285C28EADF34003AAEBF /* (null) in Sources */,
 				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
 				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
+				266ACAF0291106AD005E7268 /* SeederCoreDataStore.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
 				267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */,
 				267F0AF3290A981B00B9BC78 /* UserAboutMeView.swift in Sources */,
 				267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */,
 				267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */,
-				26CF2DEC28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld in Sources */,
 				267F0AF9290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift in Sources */,
 				267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */,
 				064847212907E530003C4B5B /* PartyDetailView.swift in Sources */,
 				267F0AF4290A981B00B9BC78 /* UserHistoryView.swift in Sources */,
+				266ACAEE291105CD005E7268 /* VacationPartyRepository.swift in Sources */,
 				267F0AB1290A888800B9BC78 /* SignUpView.swift in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
 				0648471F2907E4FB003C4B5B /* MyPartyView.swift in Sources */,
@@ -779,6 +800,7 @@
 		26CF2DEA28E6F44100B26B12 /* PergiYukDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				26F37F21290FCB9800F9E656 /* PergiYukDataModel 2.xcdatamodel */,
 				26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */,
 			);
 			currentVersion = 26CF2DEB28E6F44100B26B12 /* PergiYukDataModel.xcdatamodel */;
