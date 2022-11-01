@@ -52,7 +52,7 @@ struct UserAboutMeView: View {
                     NavigationLink("Edit Profile", destination: EditProfileView())
                         .font(.custom("Metropolis-SemiBold", size: 14))
                         .padding()
-                        .background(Color.blue)
+                        .background(Color("TMPrimaryColor"))
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .frame(height: 30)

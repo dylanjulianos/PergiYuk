@@ -20,7 +20,7 @@ struct PartyDetailView: View {
         VStack(alignment: .leading) {
             Text("Hikingz")
                 .font(.custom("FuturaMediumbt", size: 34))
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
                 .padding(.leading, width * 0.26)
                 .padding(.bottom)
             
@@ -32,7 +32,7 @@ struct PartyDetailView: View {
             
             Text("Destination")
                 .font(.custom("Metropolis-SemiBold", size: 14))
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
                 .padding(.top, 8)
                 .padding(.bottom, 8)
             
@@ -46,7 +46,7 @@ struct PartyDetailView: View {
             
             Text("Date")
                 .font(.custom("Metropolis-SemiBold", size: 14))
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
                 .padding(.top, 8)
                 .padding(.bottom, 8)
             
@@ -60,7 +60,7 @@ struct PartyDetailView: View {
             
             Text("Party Members (2/4)")
                 .font(.custom("Metropolis-SemiBold", size: 14))
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
                 .padding(.top, 8)
                 .padding(.bottom, 8)
             
@@ -95,7 +95,7 @@ extension PartyDetailView {
                     .frame(width: 55, height: 55)
                     .clipShape(Circle())
                     .overlay(Circle()
-                        .stroke(Color.blue, lineWidth: 2))
+                        .stroke(Color("TMPrimaryColor"), lineWidth: 2))
             }
             .padding(.bottom, 8)
             
@@ -105,7 +105,7 @@ extension PartyDetailView {
             
             Text("Budget")
                 .font(.custom("Metropolis-SemiBold", size: 14))
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
                 .padding(.top, 8)
                 .padding(.bottom, 8)
             

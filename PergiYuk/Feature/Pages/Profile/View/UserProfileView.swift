@@ -42,7 +42,7 @@ extension UserProfileView {
             
             //Blue Background
             RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.blue)
+                .foregroundColor(Color("TMPrimaryColor"))
             
             VStack {
                 //Profile Picture

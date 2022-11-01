@@ -44,7 +44,7 @@ struct CommunityCardView: View {
                             .font(.custom("Metropolis-SemiBold", size: 14))
                             .foregroundColor(.white)
                             .frame(width: width * 0.8, height: 30)
-                            .background(Color.blue)
+                            .background(Color("TMPrimaryColor"))
                             .cornerRadius(8)
                     }
                 }

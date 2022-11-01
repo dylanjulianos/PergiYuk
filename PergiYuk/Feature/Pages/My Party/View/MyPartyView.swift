@@ -20,7 +20,7 @@ struct MyPartyView: View {
             HStack {
                 Text("My Party")
                     .font(.custom("FuturaMediumbt", size: 34))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("TMPrimaryColor"))
                 Spacer()
                 
                 Menu {
@@ -74,7 +74,7 @@ struct Option: View {
                 ZStack {
                     VStack {
                         Text("Available") .font(.custom("Metropolis-SemiBold", size: 14))
-                            .foregroundColor(self.selected == 0 ? Color.blue : Color.black)
+                            .foregroundColor(self.selected == 0 ? Color("TMPrimaryColor") : Color.black)
                         
                         Capsule()
                             .fill(self.selected == 0 ? Color.blue : Color.clear)
@@ -94,7 +94,7 @@ struct Option: View {
                 ZStack {
                     VStack {
                         Text("Pending") .font(.custom("Metropolis-SemiBold", size: 14))
-                            .foregroundColor(self.selected == 1 ? Color.blue : Color.black)
+                            .foregroundColor(self.selected == 1 ? Color("TMPrimaryColor") : Color.black)
                         
                         Capsule()
                             .fill(self.selected == 1 ? Color.blue : Color.clear)
