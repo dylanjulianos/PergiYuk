@@ -7,51 +7,48 @@
 
 import SwiftUI
 
+enum Tab: String, CaseIterable {
+    case map
+    case paperplane
+    case person
+}
+
 struct TabBarView: View {
     
     //MARK: - Properties
+    @Binding var selectedTab: Tab
     
-    init() {
-        customTabBar()
+    private var fillImage: String {
+        selectedTab.rawValue + ".fill"
     }
     
     //MARK: - Lifecycle
     
     var body: some View {
         VStack {
-            TabView {
-                ContentView()
-                    .tabItem {
-                        Label("Explore", systemImage: "map")
-                            .environment(\.symbolVariants, .none)
-                    }
-                MyPartyView()
-                    .tabItem {
-                        Label("My Party", systemImage: "person.3").environment(\.symbolVariants, .none)
-
-                    }
-                UserProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person")
-                            .environment(\.symbolVariants, .none)
-                    }
+            HStack {
+                ForEach(Tab.allCases, id: \.rawValue) { tab in
+                    Spacer()
+                    Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
+                        .scaleEffect(selectedTab == tab ? 1.25 : 1.0)
+                        .foregroundColor(selectedTab == tab ? .white : .white)
+                        .font(.system(size: 24))
+                        .onTapGesture {
+                            withAnimation(.easeIn(duration: 0.1)) {
+                                selectedTab = tab
+                            }
+                        }
+                    Spacer()
+                }
             }
-            .accentColor(.white)
         }
+        .frame(width: UIScreen.main.bounds.width, height: 60)
+        .background(Color("TMPrimaryColor"))
     }
 }
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
-    }
-}
-
-//MARK: - Extensions
-
-extension TabBarView {
-    func customTabBar() {
-        UITabBar.appearance().barTintColor = UIColor(named: "TMPrimaryColor")
-        UITabBar.appearance().unselectedItemTintColor = .systemGray3
+        TabBarView(selectedTab: .constant(.map))
     }
 }

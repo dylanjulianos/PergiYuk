@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab: Tab = .map
+    
     var body: some View {
-        Text("Hello, tim 15!")
-            .padding()
+        VStack {
+            Spacer()
+            TabBarView(selectedTab: $selectedTab)
+        }
     }
 }
 
