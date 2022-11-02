@@ -14,12 +14,13 @@ class VacationPartyRepository{
     var userRepo = UserRepository.shared
     
     static let shared = VacationPartyRepository()
+    
     var vacationParties: [VacationParty]?
     
     func createParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
         
-        let newParty = VacationParty(context: coreData.container.viewContext)
-        
+        let newParty = VacationParty(context: context)
+        newParty.partyId = UUID().uuidString
         newParty.name = title
         newParty.image = image
         newParty.destination = destination
@@ -27,7 +28,6 @@ class VacationPartyRepository{
         newParty.endDate = endDate
         newParty.budget = Int32(budget)
         newParty.maximumUser = 4
-        newParty.addToUsers(userRepo.user ?? User())
-        // Butuh tanya soal nil value kalau optional gini
+        if let user = userRepo.user { newParty.addToUsers(user) }
     }
 }
