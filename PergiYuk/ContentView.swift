@@ -9,13 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var selectedTab: Tab = .map
-    
+    @State var selectedTab: Tab = .map
+
     var body: some View {
-        VStack {
-            Spacer()
-            TabBarView(selectedTab: $selectedTab)
-        }
+        TabBarView()
     }
 }
 
