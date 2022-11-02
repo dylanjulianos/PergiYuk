@@ -23,28 +23,35 @@ struct TabBarView: View {
         selectedTab.rawValue + ".fill"
     }
     
-    func returningView() -> AnyView {
-        switch selectedTab {
-        case .map:
-            return AnyView(UserAboutMeView())
-            
-        case .paperplane:
-            return AnyView(MyPartyView())
-            
-        case .person:
-            return AnyView(UserProfileView())
-        }
+    private var iconName: String {
+        return selectedTab.rawValue
     }
+    
+    //MARK: - Selectors
+    
+//    func returningView() -> AnyView {
+//        switch selectedTab {
+//        case .map:
+//            return AnyView(UserAboutMeView())
+//            
+//        case .paperplane:
+//            return AnyView(MyPartyView())
+//            
+//        case .person:
+//            return AnyView(UserProfileView())
+//        }
+//    }
     
     //MARK: - Lifecycle
     
     var body: some View {
         VStack {
             Spacer()
-            ZStack {
-                VStack {
-                    HStack {
-                        ForEach(Tab.allCases, id: \.rawValue) { tab in
+            VStack {
+                HStack {
+                    ForEach(Tab.allCases, id: \.rawValue) { tab in
+                        Spacer()
+                        VStack {
                             Spacer()
                             Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
                                 .scaleEffect(selectedTab == tab ? 1.25 : 1.0)
@@ -55,13 +62,19 @@ struct TabBarView: View {
                                         selectedTab = tab
                                     }
                                 }
-                            Spacer()
+                            
+                            Text(selectedTab == tab ? iconName.capitalized : tab.rawValue.capitalized)
+                                .foregroundColor(.white)
+                                .font(.custom("Metropolis-SemiBold", size: 10))
+                                .offset(y: 10)
                         }
+                        .padding(.top)
+                        Spacer()
                     }
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 60)
-        .background(Color("TMPrimaryColor"))
+            .background(Color("TMPrimaryColor"))
         }
     }
 }

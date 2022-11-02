@@ -12,6 +12,8 @@
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
 		064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847242907E54E003C4B5B /* CommunityCardView.swift */; };
 		0672559A2910E95F00384C96 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067255992910E95F00384C96 /* TabBarView.swift */; };
+		06736F2F2912688000D2DEBC /* FuturaMediumbt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06736F2D2912686900D2DEBC /* FuturaMediumbt.ttf */; };
+		06736F302912688400D2DEBC /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06736F2E2912687C00D2DEBC /* Metropolis-SemiBold.otf */; };
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
 		1985285C28EADF34003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1985286528EC1DA5003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -53,6 +55,8 @@
 		064847222907E53F003C4B5B /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
 		064847242907E54E003C4B5B /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
 		067255992910E95F00384C96 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		06736F2D2912686900D2DEBC /* FuturaMediumbt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaMediumbt.ttf; path = ../../futura/FuturaMediumbt.ttf; sourceTree = "<group>"; };
+		06736F2E2912687C00D2DEBC /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../../metropolis 3/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		06FED7E9290FD759002AF4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
+				06736F2D2912686900D2DEBC /* FuturaMediumbt.ttf */,
+				06736F2E2912687C00D2DEBC /* Metropolis-SemiBold.otf */,
 				26CC9E0C28DDB07300CFBA06 /* PergiYuk */,
 				26CC9E0B28DDB07300CFBA06 /* Products */,
 			);
@@ -535,6 +541,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06736F302912688400D2DEBC /* Metropolis-SemiBold.otf in Resources */,
+				06736F2F2912688000D2DEBC /* FuturaMediumbt.ttf in Resources */,
 				26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */,
 				26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */,
 			);
