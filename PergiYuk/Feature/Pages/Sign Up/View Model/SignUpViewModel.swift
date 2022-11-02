@@ -13,19 +13,19 @@ class SignUpViewModel: ObservableObject {
     let userRepo = UserRepository.shared
     
     func checkSignUp(email: String, name: String, phoneNum: String, password: String, conf: String) -> Bool{
-        if password != conf {
-            print("please match your password")
-            return false
-        }
-        let result = userRepo.getUser(text: email)
-        if result == nil{
+        userRepo.getUser(text: email)
+        
+        if let _ = userRepo.user {
             print("Such email already exist.")
             return false
         } else {
-            // Add user
+            // Add user if password is correct
+            if password != conf {
+                print("please match your password")
+                return false
+            }
             
-            
-//            coreData.fetchAllUser()
+            userRepo.addUser(name: name, pswd: password, email: email, phoneNum: phoneNum)
             return true
         }
     }
