@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyPartyView: View {
     //MARK: - Properties
-    
+    static var cardD = TripCardModel(image: "destination.lombok", title: "Hiking Community", destination: "Lombok Island", startDate: "20/10/2022", endDate: "23/10/2022", budget: 4000000)
     @State var selected = 0
     var width = UIScreen.main.bounds.width
     
@@ -19,7 +19,7 @@ struct MyPartyView: View {
         VStack {
             HStack {
                 Text("My Party")
-                    .font(.custom("FuturaMediumbt", size: 34))
+                    .font(.custom("futura medium bt", size: 34))
                     .foregroundColor(Color("TMPrimaryColor"))
                 Spacer()
                 
@@ -38,7 +38,7 @@ struct MyPartyView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 if self.selected == 0 {
-                    PartyCardView()
+                    PartyCardView(card: MyPartyView.cardD)
                     
                     Divider()
                         .frame(width: width * 0.5, height: 1)
@@ -47,7 +47,7 @@ struct MyPartyView: View {
                     
                     CommunityCardView()
                 } else {
-                    PartyCardView()
+                    PartyCardView(card: MyPartyView.cardD)
                     
                     Divider()
                         .frame(width: width * 0.5, height: 1)

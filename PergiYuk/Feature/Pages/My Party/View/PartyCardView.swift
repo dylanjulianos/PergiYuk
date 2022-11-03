@@ -11,6 +11,8 @@ struct PartyCardView: View {
     
     //MARK: - Properties
     
+    let card: TripCardModel
+    
     var width = UIScreen.main.bounds.width
     var height = UIScreen.main.bounds.height
     
@@ -26,26 +28,26 @@ struct PartyCardView: View {
                             .font(.custom("FuturaMediumbt", size: 24))
                             .padding(.bottom)
                         
-                        Image("destination.lombok")
+                        Image("\(card.image)")
                             .resizable()
                             .cornerRadius(12)
                             .scaledToFit()
                             .frame(width: width * 0.8)
                         
-                        Text("Hikingz")
+                        Text("\(card.title)")
                             .font(.custom("Metropolis-SemiBold", size: 14))
                             .padding(.top, 8)
                             .padding(.bottom, 8)
                         
-                        Text("Lombok Island")
+                        Text("\(card.destination)")
                             .font(.custom("Metropolis-SemiBold", size: 14))
                             .padding(.bottom, 8)
                         
-                        Text("3/10/2022 - 6/10/2022 (4 Days)")
+                        Text("\(card.startDate) - \(card.endDate) ( Days)")
                             .font(.custom("Metropolis-SemiBold", size: 14))
                             .padding(.bottom, 8)
                         
-                        Text("Rp 3.000.000")
+                        Text("Rp \(card.budget)")
                             .font(.custom("Metropolis-SemiBold", size: 14))
                             .padding(.bottom, 8)
                         
@@ -63,7 +65,10 @@ struct PartyCardView: View {
 }
 
 struct PartyCardView_Previews: PreviewProvider {
+    
+    static var cardD = TripCardModel(image: "destination.lombok", title: "Hiking Community", destination: "Lombok Island", startDate: "20/10/2022", endDate: "23/10/2022", budget: 4000000)
+    
     static var previews: some View {
-        PartyCardView()
+        PartyCardView(card: cardD)
     }
 }
