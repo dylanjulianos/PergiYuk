@@ -10,21 +10,11 @@ import SwiftUI
 
 class CreatePartyViewModel: ObservableObject {
     var coreData = CoreDataManager.shared
-    let userRepo = UserDataStore.shared
-    let partyRepo = VacationPartyRepository.shared
+    let userRepo = UserDataStore(repository: UserRepositoryDummyData())
     
     func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
         
-        let user = userRepo.user
-        if ((user?.vacationParty) != nil){
-            print("Create new party")
-            partyRepo.createParty(image: image, title: title, destination: destination, startDate: startDate, endDate: endDate, budget: budget)
-        } else {
-            print("this user already have a party")
-        }
         
-        print("Successfully created new party of the user")
-        print(userRepo.user?.vacationParty ?? "No party")
     }
     
     func forgotPass(){

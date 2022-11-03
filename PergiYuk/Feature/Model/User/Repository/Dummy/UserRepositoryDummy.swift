@@ -12,14 +12,11 @@ class UserRepositoryDummyData: UserRepository{
     var users: [User] = []
     
     init() {
-        var dummyUser1 = User()
-        dummyUser1.name = "Okta"
+        let dummyUser1 = User(email: "okat@gmailc", name: "", password: "", phoneNumber: "")
         
-        var dummyUser2 = User()
-        dummyUser2.name = "Jack"
+        let dummyUser2 = User(email: "jack@gmailc", name: "", password: "", phoneNumber: "")
         
-        var dummyUser3 = User()
-        dummyUser3.name = "Eko"
+        let dummyUser3 = User(email: "ken@gmailc", name: "", password: "", phoneNumber: "")
         
         users.append(contentsOf: [dummyUser1,dummyUser2,dummyUser3])
     }
@@ -29,7 +26,10 @@ class UserRepositoryDummyData: UserRepository{
         
             guard let user = self.users.first(where: { eachUser in
                 return eachUser.email == email
-            }) else { promise(.failure(UserRepositoryError.UserAlreadyExists))  }
+            }) else {
+                promise(.failure(UserRepositoryError.UserAlreadyExists))
+                return
+            }
             
             promise(.success(user))
         }
@@ -51,7 +51,10 @@ class UserRepositoryDummyData: UserRepository{
         return Future<User,Error> { promise in
             guard let userIndex = self.users.firstIndex( where: { eachUser in
                 return eachUser.email == email
-            }) else { promise(.failure(UserRepositoryError.UserNotFound)) }
+            }) else {
+                promise(.failure(UserRepositoryError.UserNotFound))
+                return
+            }
             
             let removedUser = self.users.remove(at: userIndex)
             promise(.success(removedUser))

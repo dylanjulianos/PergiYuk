@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="GroupChatParty" representedClassName="GroupChatParty" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="22A5331f" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDGroupChatParty" representedClassName="CDGroupChatParty" syncable="YES" codeGenerationType="class">
         <attribute name="groupChatId" optional="YES" attributeType="String"/>
         <attribute name="partyDescription" optional="YES" attributeType="String"/>
         <attribute name="partyId" optional="YES" attributeType="String"/>
         <attribute name="partyImageUrl" optional="YES" attributeType="String" customClassName="[String]"/>
         <attribute name="userId" optional="YES" attributeType="Transformable" customClassName="[String]"/>
-        <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="groupChat" inverseEntity="VacationParty"/>
+        <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDVacationParty" inverseName="groupChat" inverseEntity="CDVacationParty"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+    <entity name="CDUser" representedClassName="CDUser" syncable="YES" codeGenerationType="class">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="password" optional="YES" attributeType="String"/>
-        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="email" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="password" attributeType="String"/>
+        <attribute name="phoneNumber" attributeType="String"/>
         <attribute name="profileImageUrl" optional="YES" attributeType="String"/>
         <attribute name="role" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
         <attribute name="userDescription" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="partyRole" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRoleInParty" inverseName="user" inverseEntity="UserRoleInParty"/>
-        <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="users" inverseEntity="VacationParty"/>
+        <relationship name="partyRole" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDUserRoleInParty" inverseName="user" inverseEntity="CDUserRoleInParty"/>
+        <relationship name="vacationParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDVacationParty" inverseName="users" inverseEntity="CDVacationParty"/>
     </entity>
-    <entity name="UserRoleInParty" representedClassName="UserRoleInParty" syncable="YES" codeGenerationType="class">
+    <entity name="CDUserRoleInParty" representedClassName="CDUserRoleInParty" syncable="YES" codeGenerationType="class">
         <attribute name="role" optional="YES" attributeType="String"/>
-        <relationship name="party" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VacationParty" inverseName="partyUserRoles" inverseEntity="VacationParty"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="partyRole" inverseEntity="User"/>
+        <relationship name="party" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDVacationParty" inverseName="partyUserRoles" inverseEntity="CDVacationParty"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="partyRole" inverseEntity="CDUser"/>
     </entity>
-    <entity name="VacationParty" representedClassName="VacationParty" syncable="YES" codeGenerationType="class">
+    <entity name="CDVacationParty" representedClassName="CDVacationParty" syncable="YES" codeGenerationType="class">
         <attribute name="budget" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="destination" optional="YES" attributeType="String"/>
@@ -38,8 +38,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="partyId" optional="YES" attributeType="String" valueTransformerName="" customClassName="[String]"/>
         <attribute name="startDate" optional="YES" attributeType="String"/>
-        <relationship name="groupChat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupChatParty" inverseName="vacationParty" inverseEntity="GroupChatParty"/>
-        <relationship name="partyUserRoles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserRoleInParty" inverseName="party" inverseEntity="UserRoleInParty"/>
-        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="vacationParty" inverseEntity="User"/>
+        <relationship name="groupChat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDGroupChatParty" inverseName="vacationParty" inverseEntity="CDGroupChatParty"/>
+        <relationship name="partyUserRoles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDUserRoleInParty" inverseName="party" inverseEntity="CDUserRoleInParty"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDUser" inverseName="vacationParty" inverseEntity="CDUser"/>
     </entity>
 </model>

@@ -24,49 +24,60 @@ struct SignUpView: View {
                 Spacer()
                 Image("Travel Buddy")
                     .padding(.bottom,30)
-                CustomTextField(placeHolder: "Full Name", value: $name)
-                    .padding(.vertical,9)
-                CustomTextField(placeHolder: "Email Address", value: $email)
-                    .padding(.vertical,9)
-                CustomTextField(placeHolder: "Phone Number", value: $phone)
-                    .padding(.vertical,9)
-                CustomTextField(placeHolder: "Password", value: $pass)
-                CustomTextField(placeHolder: "Confirm Password", value: $conf)
+                Group{
+                    CustomTextField(placeHolder: "Full Name", value: $name)
+                        .padding(.vertical,9)
+                    CustomTextField(placeHolder: "Email Address", value: $email)
+                        .padding(.vertical,9)
+                    CustomTextField(placeHolder: "Phone Number", value: $phone)
+                        .padding(.vertical,9)
+                    CustomTextField(placeHolder: "Password", value: $pass)
+                    CustomTextField(placeHolder: "Confirm Password", value: $conf)
+                }
+
                 Text("By signing up, you agree to our Terms & Conditions and Privacy Policy")
                     .padding(.horizontal,3.6)
                     .padding(.bottom)
                     .font(.system(size: 14))
                     .frame(width: 340)
                 
-                Button {
-                    let result = viewModel.checkSignUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
-                    
-                    print(result)
-                    
-                    if result {
-                        routePosition.current = .signIn
-                    }
-                } label: {
-                    Text("Sign Up")
-                        .frame(width: 335)
-                }.buttonStyle(BlueButton())
+                Text("\(viewModel.errorMessage)")
                 
-                HStack{
-                    Text("Already joined?").bold()
-                        .padding(.vertical,12)
-                        .foregroundColor(.gray)
-                    Button {
-                        routePosition.current = .signIn
-                    } label: {
-                        Text("Sign in")
+                Button {
+                    self.viewModel.signUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
+                } label: {
+                    HStack{
+                        if viewModel.signUpViewModelState == .loading{
+                            ProgressView().progressViewStyle(CircularProgressViewStyle())
+                        }
+                        
+                        Text("Sign Up")
+                            .frame(width: 335)
                     }
-
+                }.buttonStyle(BlueButton())
+                HStack{
+                    Text("Already Join ?")
+                    Button {
+                        self.routePosition.current = .signIn
+                    } label: {
+                        HStack{
+                            if viewModel.signUpViewModelState == .loading{
+                                ProgressView().progressViewStyle(CircularProgressViewStyle())
+                            }
+                            
+                            Text("Sign in")
+                                
+                        }
+                    }
                 }
             }.padding()
-        }.navigationBarHidden(true)
-    }
-    func signUp(){
-        
+        }
+        .navigationBarHidden(true)
+        .onReceive(viewModel.$signUpViewModelState) { state in
+            if state == .userCreated{
+                self.routePosition.current = .signIn
+            }
+        }
     }
 }
 
