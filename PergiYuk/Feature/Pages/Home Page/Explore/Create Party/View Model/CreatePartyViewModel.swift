@@ -10,7 +10,7 @@ import SwiftUI
 
 class CreatePartyViewModel: ObservableObject {
     var coreData = CoreDataManager.shared
-    let userRepo = UserRepository.shared
+    let userRepo = UserDataStore.shared
     let partyRepo = VacationPartyRepository.shared
     
     func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){

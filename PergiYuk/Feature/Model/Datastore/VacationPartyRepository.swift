@@ -10,8 +10,8 @@ import Foundation
 class VacationPartyRepository{
     let coreData = CoreDataManager.shared
     let context = CoreDataManager.shared.container.viewContext
-    var coreDataStore: SeederCoreDataStore?
-    var userRepo = UserRepository.shared
+    var coreDataStore: UserCoreDataRepository?
+    var userRepo = UserDataStore.shared
     
     static let shared = VacationPartyRepository()
     
