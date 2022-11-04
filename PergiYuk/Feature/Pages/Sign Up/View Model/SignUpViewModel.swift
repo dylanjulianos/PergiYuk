@@ -6,28 +6,47 @@
 //
 
 import Foundation
-import SwiftUI
+import Combine
+
 
 
 class SignUpViewModel: ObservableObject {
-    let userRepo = UserRepository.shared
+
+    enum SignUpViewModelState{
+        case idle
+        case loading
+        case error
+        case userCreated
+    }
     
-    func checkSignUp(email: String, name: String, phoneNum: String, password: String, conf: String) -> Bool{
-        userRepo.getUser(text: email)
-        
-        if let _ = userRepo.user {
-            print("Such email already exist.")
-            return false
-        } else {
-            // Add user if password is correct
-            if password != conf {
-                print("please match your password")
-                return false
+    @Published var signUpViewModelState: SignUpViewModelState = .idle
+    @Published var errorMessage: String = ""
+    var cancelables: Set<AnyCancellable> = []
+    
+    var dataStore: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
+    
+    init(){
+        // The subscribers doesnt need the return value
+        dataStore.user.sink { status in
+            switch status{
+            case .finished:
+                self.signUpViewModelState = .userCreated
+            case .failure(let error):
+                self.signUpViewModelState = .error
+                self.errorMessage = error.localizedDescription
             }
-            
-            userRepo.addUser(name: name, pswd: password, email: email, phoneNum: phoneNum)
-            return true
-        }
+        } receiveValue: { _ in }
+        .store(in: &cancelables)
+
+    }
+    
+    
+    func signUp(email: String, name: String, phoneNum: String, password: String, conf: String){
+        signUpViewModelState = .loading
+        
+        let newUser = User(email: email, name: name, password: password, phoneNumber: phoneNum)
+        
+        dataStore.addNew(newUser: newUser)
     }
 }
 
