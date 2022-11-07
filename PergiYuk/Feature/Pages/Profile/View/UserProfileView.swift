@@ -12,6 +12,8 @@ struct UserProfileView: View {
     //MARK: - Properties
     
     @State var currentProgress: CGFloat = 0.0
+    var width = UIScreen.main.bounds.width
+    var height = UIScreen.main.bounds.height
     
     //MARK: - Lifecycle
     
@@ -47,7 +49,8 @@ extension UserProfileView {
             VStack {
                 //Profile Picture
                 Circle()
-                    .frame(width: 164, height: 164, alignment: .center)
+//                    .frame(width: 164, height: 164, alignment: .center)
+                    .frame(width: width * 0.4, alignment: .center)
                     .foregroundColor(.orange)
                 
                 //Circular Progress Bar
@@ -63,7 +66,8 @@ extension UserProfileView {
                 
                 //Verification Status Message
                 RoundedRectangle(cornerRadius: 10)
-                    .frame(width: 220, height: 30)
+//                    .frame(width: 220, height: 30)
+                    .frame(width: width * 0.5, height: height * 0.04)
                     .foregroundColor(Color.orange)
                     .offset(y: -30)
                     .padding(.bottom, -20)
@@ -77,14 +81,15 @@ extension UserProfileView {
                 //User Name
                 Text("Dylan Juliano Santoso")
                     .font(.custom("Metropolis-SemiBold", size: 24))
-                    .frame(width: 300, height: 28)
+//                    .frame(width: 300, height: 28)
+                    .frame(width: width * 0.8, height: height * 0.03)
                     .foregroundColor(.white)
                     .padding(5)
                 
                 //User Email
                 Text("dylan.santoso" + "@binus.ac.id")
                     .font(Font.custom("Metropolis-Semibold", size: 14))
-                    .frame(width: 300, height: 28)
+                    .frame(width: width * 0.8, height: height * 0.04)
                     .foregroundColor(.white)
                     .padding(5)
                 
@@ -98,7 +103,6 @@ extension UserProfileView {
                     
                     Text("@justinbieber")
                         .font(Font.custom("Metropolis-Semibold", size: 14))
-                        .frame(width: 125, height: 28)
                         .foregroundColor(.white)
                     
                     Spacer()
@@ -111,10 +115,10 @@ extension UserProfileView {
                     
                     Text("@justinbieber")
                         .font(Font.custom("Metropolis-Semibold", size: 14))
-                        .frame(width: 125, height: 28)
                         .foregroundColor(.white)
                     Spacer()
                 }
+                .frame(width: width)
             }
             .offset(x: 0, y: 70)
         }
