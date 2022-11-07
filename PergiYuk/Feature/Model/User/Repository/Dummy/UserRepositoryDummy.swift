@@ -18,7 +18,9 @@ class UserRepositoryDummyData: UserRepository{
         
         let dummyUser3 = User(email: "ken@gmailc", name: "", password: "", phoneNumber: "")
         
-        users.append(contentsOf: [dummyUser1,dummyUser2,dummyUser3])
+        let dummyUser4 = User(email: "admin@gmailc", name: "", password: "", phoneNumber: "")
+        
+        users.append(contentsOf: [dummyUser1,dummyUser2,dummyUser3, dummyUser4])
     }
     
     func getUser(email: String) -> Future<User,Error> {
@@ -27,10 +29,9 @@ class UserRepositoryDummyData: UserRepository{
             guard let user = self.users.first(where: { eachUser in
                 return eachUser.email == email
             }) else {
-                promise(.failure(UserRepositoryError.UserAlreadyExists))
+                promise(.failure(UserRepositoryError.UserNotFound))
                 return
             }
-            
             promise(.success(user))
         }
     }

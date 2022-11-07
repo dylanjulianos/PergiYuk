@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SignInView: View {
+    @ObservedObject var viewModel = SignInViewModel()
     
     @State var email: String = ""
     @State var pass: String = ""
     @State var isShowingExploreView: Bool = false
     @EnvironmentObject var routePosition: Routing
+    
 
     var body: some View {
         NavigationView {
@@ -32,18 +34,14 @@ struct SignInView: View {
                     }
                 }.frame(width: 370)
                 Button {
-//                    let result = viewModel.checkSignIn(email: email, password: pass)
-//                    if result {
-//                        routePosition.current = .explore
-//                    }
+                    self.viewModel.signIn(email: email, password: pass)
                     
                 } label: {
-//                    Navigator.navigate(.explore){
                         Text("Sign in")
                             .frame(width: 337)
-//                    }
                 }.buttonStyle(BlueButton())
                     .padding()
+                Text("\(viewModel.errorMessage)")
                 HStack {
                     Text("New to Travel Buddy?")
                     Button {
@@ -55,6 +53,11 @@ struct SignInView: View {
                 }
             }.padding()
         }.navigationBarHidden(true)
+            .onReceive(viewModel.$signInViewModelState) { state in
+                if state == .userLoggedIn {
+                    routePosition.current = .explore
+                }
+            }
     }
 }
 
