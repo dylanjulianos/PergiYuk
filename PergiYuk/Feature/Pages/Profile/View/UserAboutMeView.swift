@@ -9,6 +9,11 @@ import SwiftUI
 
 struct UserAboutMeView: View {
     
+    //MARK: - Properties
+    
+    var width = UIScreen.main.bounds.width
+    var height = UIScreen.main.bounds.height
+    
     //MARK: - Lifecycle
     
     var body: some View {
@@ -21,7 +26,8 @@ struct UserAboutMeView: View {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .foregroundColor(.white)
                         .padding([.leading, .trailing])
-                        .frame(width: 360, height: 125)
+//                        .frame(width: 360, height: 125)
+                        .frame(width: width * 0.92, height: height * 0.15)
                         .shadow(radius: 1)
                         .overlay(
                         Text("Interest")
@@ -37,7 +43,8 @@ struct UserAboutMeView: View {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .foregroundColor(.white)
                         .padding([.leading, .trailing])
-                        .frame(width: 360, height: 125)
+//                        .frame(width: 360, height: 125)
+                        .frame(width: width * 0.92, height: height * 0.15)
                         .shadow(radius: 1)
                         .overlay(
                         Text("Badges")

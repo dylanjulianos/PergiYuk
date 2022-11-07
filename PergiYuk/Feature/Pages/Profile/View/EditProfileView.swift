@@ -15,9 +15,12 @@ struct EditProfileView: View {
     @State private var email: String = ""
     @State private var socialMedia1: String = ""
     @State private var socialMedia2: String = ""
+    @State var text = ""
     @ObservedObject var phoneNumber = NumbersOnly()
     @StateObject var viewModel = ProfileDetailsViewModel()
-    @State var text = ""
+    
+    var width = UIScreen.main.bounds.width
+    var height = UIScreen.main.bounds.height
     
     //MARK: - Lifecycle
     
@@ -67,12 +70,13 @@ extension EditProfileView {
                 .font(.custom("Metropolis-SemiBold", size: 34))
                 .foregroundColor(Color("TMPrimaryColor"))
                 .padding()
-                .padding(.bottom, 10)
+                .padding(.bottom, height * 0.01)
             
             ZStack {
                 //Display Picture
                 Circle()
-                    .frame(width: 164, height: 164)
+//                    .frame(width: 164, height: 164)
+                    .frame(width: width * 0.42)
                     .foregroundColor(.gray)
                 
                 HStack {
@@ -81,11 +85,12 @@ extension EditProfileView {
                     }, label: {
                         //Camera Button
                         Circle()
-                            .frame(width: 40, height: 40)
+//                            .frame(width: 40, height: 40)
+                            .frame(width: width * 0.1)
                             .foregroundColor(Color("TMPrimaryColor"))
                             .overlay(
                             Image(systemName: "camera.fill")
-                                .frame(width: 40, height: 40)
+                                .frame(width: width * 0.1)
                                 .foregroundColor(.white)
                             )
                     }
@@ -154,16 +159,18 @@ extension EditProfileView {
                     Button(action: {
                         addToList()
                     }, label: {
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .center) {
                             Text("Add")
                                 .bold()
-                                .frame(width: 100, height: 32)
+//                                .frame(width: 100, height: 32)
+                                .frame(width: width * 0.2, height: height * 0.04)
                                 .background(Color("TMPrimaryColor"))
                                 .cornerRadius(10)
                                 .foregroundColor(.white)
                                 .font(.custom("Metropolis-SemiBold", size: 14))
-                                .padding(.leading, 140)
-                                .padding(.bottom)
+//                                .padding(.leading, 140)
+                                .padding()
+                                .padding(.leading, width * 0.35)
                         }
                     })
                 }
@@ -174,7 +181,8 @@ extension EditProfileView {
                             ZStack(alignment: .center) {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(.orange)
-                                    .frame(width: 180, height: 40)
+//                                    .frame(width: 180, height: 40)
+                                    .frame(width: width * 0.5, height: height * 0.05)
                                 InterestRow(title: interest.title)
                                     .foregroundColor(.white)
                                     .font(.custom("Metropolis-SemiBold", size: 14))
@@ -197,8 +205,10 @@ extension EditProfileView {
                         .resizable()
                         .frame(width: 30, height: 30)
                         .scaledToFit()
-                        .padding(.leading, 20)
-                        .padding(.trailing, 7)
+//                        .padding(.leading, 20)
+//                        .padding(.trailing, 7)
+                        .padding(.leading, width * 0.05)
+                        .padding(.trailing, height * 0.01)
                     
                     ZStack {
                         TextField("Enter your username", text: $socialMedia1)
@@ -213,8 +223,8 @@ extension EditProfileView {
                         .resizable()
                         .frame(width: 30, height: 30)
                         .scaledToFit()
-                        .padding(.leading, 20)
-                        .padding(.trailing, 7)
+                        .padding(.leading, width * 0.05)
+                        .padding(.trailing, height * 0.01)
                     
                     ZStack {
                         TextField("Enter your username", text: $socialMedia2)
@@ -231,7 +241,8 @@ extension EditProfileView {
             } label: {
                 Text("Save")
                     .font(.custom("Metropolis-SemiBold", size: 14))
-                    .frame(width: 344, height: 32)
+//                    .frame(width: 344, height: 32)
+                    .frame(width: width * 0.86, height: height * 0.04)
             }
             .padding()
             .buttonStyle(.borderedProminent)
