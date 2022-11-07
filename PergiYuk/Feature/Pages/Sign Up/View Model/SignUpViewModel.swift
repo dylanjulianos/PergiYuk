@@ -37,12 +37,22 @@ class SignUpViewModel: ObservableObject {
             }
         } receiveValue: { _ in }
         .store(in: &cancelables)
-
     }
     
     
     func signUp(email: String, name: String, phoneNum: String, password: String, conf: String){
         signUpViewModelState = .loading
+        
+        if email == "" || name == "" || phoneNum == "" || password == "" {
+            self.errorMessage = "Please fill all of the fields above"
+            signUpViewModelState = .idle
+            return
+        }
+        if password != conf {
+            self.errorMessage = "Please match the password confirmation"
+            signUpViewModelState = .idle
+            return
+        }
         
         let newUser = User(email: email, name: name, password: password, phoneNumber: phoneNum)
         

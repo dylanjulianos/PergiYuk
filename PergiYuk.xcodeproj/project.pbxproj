@@ -18,12 +18,9 @@
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		264364C128F0076700E4BA1C /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264364C028F0076700E4BA1C /* BlueButton.swift */; };
-		266ACAEE291105CD005E7268 /* VacationPartyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266ACAED291105CD005E7268 /* VacationPartyRepository.swift */; };
-		266ACAF0291106AD005E7268 /* SeederCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266ACAEF291106AD005E7268 /* SeederCoreDataStore.swift */; };
 		267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */; };
 		267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9F290A872500B9BC78 /* ExploreView.swift */; };
 		267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA0290A872500B9BC78 /* TripCardRowView.swift */; };
-		267F0AA7290A872500B9BC78 /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA2290A872500B9BC78 /* TripCardModel.swift */; };
 		267F0AA8290A872500B9BC78 /* CreatePartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA3290A872500B9BC78 /* CreatePartyView.swift */; };
 		267F0AB1290A888800B9BC78 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AB0290A888800B9BC78 /* SignUpView.swift */; };
 		267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AB2290A889300B9BC78 /* SignInView.swift */; };
@@ -35,7 +32,12 @@
 		267F0AF5290A981B00B9BC78 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AF0290A981B00B9BC78 /* UserProfileView.swift */; };
 		267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AF1290A981B00B9BC78 /* ProfileTabBarView.swift */; };
 		267F0AF9290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AF8290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift */; };
-		26840147290FD8DE00CA1708 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26840146290FD8DE00CA1708 /* UserRepository.swift */; };
+		268917FD2914EC2900C7A89B /* UserRepositoryDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F42914EC2900C7A89B /* UserRepositoryDummy.swift */; };
+		268917FE2914EC2900C7A89B /* UserRepositoryCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F62914EC2900C7A89B /* UserRepositoryCoreData.swift */; };
+		268917FF2914EC2900C7A89B /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F72914EC2900C7A89B /* UserRepositoryProtocol.swift */; };
+		268918002914EC2900C7A89B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F82914EC2900C7A89B /* User.swift */; };
+		268918012914EC2900C7A89B /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FA2914EC2900C7A89B /* UserDataStore.swift */; };
+		268918022914EC2900C7A89B /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FC2914EC2900C7A89B /* TripCardModel.swift */; };
 		268F714428F56B8700BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		268F714628F56BA900BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
@@ -58,12 +60,9 @@
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		264364C028F0076700E4BA1C /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
-		266ACAED291105CD005E7268 /* VacationPartyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyRepository.swift; sourceTree = "<group>"; };
-		266ACAEF291106AD005E7268 /* SeederCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeederCoreDataStore.swift; sourceTree = "<group>"; };
 		267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardViewModel.swift; sourceTree = "<group>"; };
 		267F0A9F290A872500B9BC78 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		267F0AA0290A872500B9BC78 /* TripCardRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardRowView.swift; sourceTree = "<group>"; };
-		267F0AA2290A872500B9BC78 /* TripCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardModel.swift; sourceTree = "<group>"; };
 		267F0AA3290A872500B9BC78 /* CreatePartyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePartyView.swift; sourceTree = "<group>"; };
 		267F0AB0290A888800B9BC78 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		267F0AB2290A889300B9BC78 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -75,7 +74,12 @@
 		267F0AF0290A981B00B9BC78 /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		267F0AF1290A981B00B9BC78 /* ProfileTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabBarView.swift; sourceTree = "<group>"; };
 		267F0AF8290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsBarViewModel.swift; sourceTree = "<group>"; };
-		26840146290FD8DE00CA1708 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		268917F42914EC2900C7A89B /* UserRepositoryDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryDummy.swift; sourceTree = "<group>"; };
+		268917F62914EC2900C7A89B /* UserRepositoryCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryCoreData.swift; sourceTree = "<group>"; };
+		268917F72914EC2900C7A89B /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		268917F82914EC2900C7A89B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		268917FA2914EC2900C7A89B /* UserDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		268917FC2914EC2900C7A89B /* TripCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardModel.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,9 +194,8 @@
 		264364C728F0086000E4BA1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				26840145290FD89600CA1708 /* DataStore */,
-				26840144290FD88E00CA1708 /* Repository */,
-				267F0AA2290A872500B9BC78 /* TripCardModel.swift */,
+				268917FB2914EC2900C7A89B /* Trip */,
+				268917F12914EC2900C7A89B /* User */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,21 +402,56 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		26840144290FD88E00CA1708 /* Repository */ = {
+		268917F12914EC2900C7A89B /* User */ = {
 			isa = PBXGroup;
 			children = (
-				26840146290FD8DE00CA1708 /* UserRepository.swift */,
-				266ACAED291105CD005E7268 /* VacationPartyRepository.swift */,
+				268917F22914EC2900C7A89B /* Repository */,
+				268917F82914EC2900C7A89B /* User.swift */,
+				268917F92914EC2900C7A89B /* Datastore */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		268917F22914EC2900C7A89B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				268917F32914EC2900C7A89B /* Dummy */,
+				268917F52914EC2900C7A89B /* CoreData */,
+				268917F72914EC2900C7A89B /* UserRepositoryProtocol.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		26840145290FD89600CA1708 /* DataStore */ = {
+		268917F32914EC2900C7A89B /* Dummy */ = {
 			isa = PBXGroup;
 			children = (
-				266ACAEF291106AD005E7268 /* SeederCoreDataStore.swift */,
+				268917F42914EC2900C7A89B /* UserRepositoryDummy.swift */,
 			);
-			path = DataStore;
+			path = Dummy;
+			sourceTree = "<group>";
+		};
+		268917F52914EC2900C7A89B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				268917F62914EC2900C7A89B /* UserRepositoryCoreData.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		268917F92914EC2900C7A89B /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+				268917FA2914EC2900C7A89B /* UserDataStore.swift */,
+			);
+			path = Datastore;
+			sourceTree = "<group>";
+		};
+		268917FB2914EC2900C7A89B /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				268917FC2914EC2900C7A89B /* TripCardModel.swift */,
+			);
+			path = Trip;
 			sourceTree = "<group>";
 		};
 		26CC9E0128DDB07300CFBA06 = {
@@ -555,33 +593,35 @@
 				267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */,
 				26CF2DEE28E6F5C900B26B12 /* CoreDataManager.swift in Sources */,
 				26F37F20290FB69000F9E656 /* CreatePartyViewModel.swift in Sources */,
-				267F0AA7290A872500B9BC78 /* TripCardModel.swift in Sources */,
 				267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
+				268918012914EC2900C7A89B /* UserDataStore.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
-				26840147290FD8DE00CA1708 /* UserRepository.swift in Sources */,
 				1985285C28EADF34003AAEBF /* (null) in Sources */,
 				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
+				268917FE2914EC2900C7A89B /* UserRepositoryCoreData.swift in Sources */,
 				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
-				266ACAF0291106AD005E7268 /* SeederCoreDataStore.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
 				267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */,
 				267F0AF3290A981B00B9BC78 /* UserAboutMeView.swift in Sources */,
 				267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */,
 				267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */,
+				268917FF2914EC2900C7A89B /* UserRepositoryProtocol.swift in Sources */,
 				267F0AF9290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift in Sources */,
 				267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */,
 				064847212907E530003C4B5B /* PartyDetailView.swift in Sources */,
 				267F0AF4290A981B00B9BC78 /* UserHistoryView.swift in Sources */,
-				266ACAEE291105CD005E7268 /* VacationPartyRepository.swift in Sources */,
+				268917FD2914EC2900C7A89B /* UserRepositoryDummy.swift in Sources */,
 				267F0AB1290A888800B9BC78 /* SignUpView.swift in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
 				0648471F2907E4FB003C4B5B /* MyPartyView.swift in Sources */,
 				264364C128F0076700E4BA1C /* BlueButton.swift in Sources */,
 				267F0AF5290A981B00B9BC78 /* UserProfileView.swift in Sources */,
+				268918002914EC2900C7A89B /* User.swift in Sources */,
 				1985286528EC1DA5003AAEBF /* (null) in Sources */,
 				267F0AF2290A981B00B9BC78 /* EditProfileView.swift in Sources */,
+				268918022914EC2900C7A89B /* TripCardModel.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
