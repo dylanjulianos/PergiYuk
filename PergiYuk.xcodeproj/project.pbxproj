@@ -12,8 +12,6 @@
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
 		064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847242907E54E003C4B5B /* CommunityCardView.swift */; };
 		0672559A2910E95F00384C96 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067255992910E95F00384C96 /* TabBarView.swift */; };
-		06736F302912688400D2DEBC /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06736F2E2912687C00D2DEBC /* Metropolis-SemiBold.otf */; };
-		06D82E092913B015007B21E7 /* futura medium bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06D82E072913AFB5007B21E7 /* futura medium bt.ttf */; };
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
 		1985285C28EADF34003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1985286528EC1DA5003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -40,6 +38,7 @@
 		268918002914EC2900C7A89B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F82914EC2900C7A89B /* User.swift */; };
 		268918012914EC2900C7A89B /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FA2914EC2900C7A89B /* UserDataStore.swift */; };
 		268918022914EC2900C7A89B /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FC2914EC2900C7A89B /* TripCardModel.swift */; };
+		268918052919022600C7A89B /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268918042919022600C7A89B /* CloudKitManager.swift */; };
 		268F714428F56B8700BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		268F714628F56BA900BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
@@ -57,10 +56,6 @@
 		064847222907E53F003C4B5B /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
 		064847242907E54E003C4B5B /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
 		067255992910E95F00384C96 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		06736F2D2912686900D2DEBC /* FuturaMediumbt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaMediumbt.ttf; path = ../../futura/FuturaMediumbt.ttf; sourceTree = "<group>"; };
-		06736F2E2912687C00D2DEBC /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../../metropolis 3/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
-		06D82E072913AFB5007B21E7 /* futura medium bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura medium bt.ttf"; path = "../../futura/futura medium bt.ttf"; sourceTree = "<group>"; };
-		06D82E082913AFC6007B21E7 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../../metropolis/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		06FED7E9290FD759002AF4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -86,6 +81,8 @@
 		268917F82914EC2900C7A89B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		268917FA2914EC2900C7A89B /* UserDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		268917FC2914EC2900C7A89B /* TripCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardModel.swift; sourceTree = "<group>"; };
+		268918042919022600C7A89B /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		26891806291902EF00C7A89B /* PergiYukDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PergiYukDebug.entitlements; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +165,7 @@
 		264364C328F0080700E4BA1C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				268918032919021000C7A89B /* CloudKit */,
 				26EDC6C328F025C900B77B0A /* Core Data */,
 			);
 			path = Utilities;
@@ -460,13 +458,17 @@
 			path = Trip;
 			sourceTree = "<group>";
 		};
+		268918032919021000C7A89B /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				268918042919022600C7A89B /* CloudKitManager.swift */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
-				06D82E072913AFB5007B21E7 /* futura medium bt.ttf */,
-				06D82E082913AFC6007B21E7 /* Metropolis-SemiBold.otf */,
-				06736F2D2912686900D2DEBC /* FuturaMediumbt.ttf */,
-				06736F2E2912687C00D2DEBC /* Metropolis-SemiBold.otf */,
 				26CC9E0C28DDB07300CFBA06 /* PergiYuk */,
 				26CC9E0B28DDB07300CFBA06 /* Products */,
 			);
@@ -483,6 +485,7 @@
 		26CC9E0C28DDB07300CFBA06 /* PergiYuk */ = {
 			isa = PBXGroup;
 			children = (
+				26891806291902EF00C7A89B /* PergiYukDebug.entitlements */,
 				06FED7E9290FD759002AF4D1 /* Info.plist */,
 				264364C628F0086000E4BA1C /* Feature */,
 				264364C528F0082400E4BA1C /* Helper */,
@@ -583,8 +586,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D82E092913B015007B21E7 /* futura medium bt.ttf in Resources */,
-				06736F302912688400D2DEBC /* Metropolis-SemiBold.otf in Resources */,
 				26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */,
 				26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */,
 			);
@@ -635,6 +636,7 @@
 				267F0AF2290A981B00B9BC78 /* EditProfileView.swift in Sources */,
 				268918022914EC2900C7A89B /* TripCardModel.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
+				268918052919022600C7A89B /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PergiYuk/PergiYukDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PergiYuk/Preview Content\"";
@@ -778,7 +781,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnastasiaAgustine.PergiYuk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dumpling.PergiYuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
