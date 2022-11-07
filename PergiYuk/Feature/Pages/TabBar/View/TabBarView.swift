@@ -11,6 +11,19 @@ enum Tab: String, CaseIterable {
     case map
     case paperplane
     case person
+    
+    var nameValue: String {
+        switch self {
+        case .map:
+            return "Map"
+            
+        case .paperplane:
+            return "Party"
+            
+        case .person:
+            return "Profile"
+        }
+    }
 }
 
 struct TabBarView: View {
@@ -29,18 +42,18 @@ struct TabBarView: View {
     
     //MARK: - Selectors
     
-//    func returningView() -> AnyView {
-//        switch selectedTab {
-//        case .map:
-//            return AnyView(UserAboutMeView())
-//            
-//        case .paperplane:
-//            return AnyView(MyPartyView())
-//            
-//        case .person:
-//            return AnyView(UserProfileView())
-//        }
-//    }
+    func returningView() -> AnyView {
+        switch selectedTab {
+        case .map:
+            return AnyView(UserAboutMeView())
+            
+        case .paperplane:
+            return AnyView(MyPartyView())
+            
+        case .person:
+            return AnyView(UserProfileView())
+        }
+    }
     
     //MARK: - Lifecycle
     
@@ -63,7 +76,7 @@ struct TabBarView: View {
                                     }
                                 }
                             
-                            Text(selectedTab == tab ? iconName.capitalized : tab.rawValue.capitalized)
+                            Text(tab.nameValue)
                                 .foregroundColor(.white)
                                 .font(.custom("Metropolis-SemiBold", size: 10))
                                 .offset(y: 10)

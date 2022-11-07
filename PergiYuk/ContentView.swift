@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+enum TabBarr {
+    case map
+    case paperplane
+    case person
+}
 
 struct ContentView: View {
     
-    @State var selectedTab: Tab = .map
+    var selectedTab = TabBarr.person
 
     var body: some View {
         
@@ -27,21 +32,21 @@ struct ContentView: View {
 //            TabBarView()
 //        }
         
-        ZStack {
-            VStack {
-                TabView(selection: $selectedTab) {
-                    ForEach(Tab.allCases, id: \.rawValue) { tab in
-                        HStack {
-                            Image(systemName: tab.rawValue)
-                            Text("\(tab.rawValue.capitalized)")
-                                .animation(nil, value: selectedTab)
-                        }
-                        .tag(tab)
-                    }
-                }
-                TabBarView()
+        VStack {
+            switch selectedTab{
+            case .map:
+                UserAboutMeView()
+                
+            case .person:
+                UserProfileView(currentProgress: 0)
+                
+            case .paperplane:
+                MyPartyView()
             }
+            
+            TabBarView()
         }
+        
         
     }
 }
