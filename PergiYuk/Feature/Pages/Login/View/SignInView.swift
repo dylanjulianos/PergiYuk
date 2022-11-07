@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SignInView: View {
-    @ObservedObject var viewModel = SignInViewModel()
     
     @State var email: String = ""
     @State var pass: String = ""
@@ -26,17 +25,17 @@ struct SignInView: View {
                 HStack{
                     Spacer()
                     Button {
-                        viewModel.forgotPass()
+                        
                     } label: {
                         Text("Forgot Password?").bold()
                             .foregroundColor(.blue)
                     }
                 }.frame(width: 370)
                 Button {
-                    let result = viewModel.checkSignIn(email: email, password: pass)
-                    if result {
-                        routePosition.current = .explore
-                    }
+//                    let result = viewModel.checkSignIn(email: email, password: pass)
+//                    if result {
+//                        routePosition.current = .explore
+//                    }
                     
                 } label: {
 //                    Navigator.navigate(.explore){
@@ -57,11 +56,6 @@ struct SignInView: View {
             }.padding()
         }.navigationBarHidden(true)
     }
-
-    func signIn(){
-
-    }
-    
 }
 
 struct SignInView_Previews: PreviewProvider {
