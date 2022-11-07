@@ -148,13 +148,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1985285D28EC15A2003AAEBF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1985286728EC2F91003AAEBF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,33 +206,8 @@
 				267F0AAC290A882600B9BC78 /* Login */,
 				267F0A9B290A872500B9BC78 /* Home Page */,
 				0648471B2907E4C8003C4B5B /* My Party */,
-				264364CF28F009C300E4BA1C /* Verification */,
-				264364CE28F009B000E4BA1C /* On Boarding */,
-				264364CC28F0096300E4BA1C /* Vacation Party Detail */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		264364CC28F0096300E4BA1C /* Vacation Party Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Vacation Party Detail";
-			sourceTree = "<group>";
-		};
-		264364CE28F009B000E4BA1C /* On Boarding */ = {
-			isa = PBXGroup;
-			children = (
-				267F0A8C290A855100B9BC78 /* Home Page */,
-			);
-			path = "On Boarding";
-			sourceTree = "<group>";
-		};
-		264364CF28F009C300E4BA1C /* Verification */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Verification;
 			sourceTree = "<group>";
 		};
 		264364D028F00A3C00E4BA1C /* UI */ = {
@@ -249,14 +217,6 @@
 				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		267F0A8C290A855100B9BC78 /* Home Page */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Home Page";
-			path = "../../../../../../../Downloads/PergiYuk-Explore-updated/PergiYuk/Feature/Pages/Home Page";
 			sourceTree = "<group>";
 		};
 		267F0A9B290A872500B9BC78 /* Home Page */ = {
@@ -492,7 +452,6 @@
 				264364C428F0080E00E4BA1C /* Themes */,
 				264364C328F0080700E4BA1C /* Utilities */,
 				1985286728EC2F91003AAEBF /* Extensions */,
-				1985285D28EC15A2003AAEBF /* Views */,
 				26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */,
 				26CC9E0F28DDB07300CFBA06 /* ContentView.swift */,
 				19E9675428DDB3CF008FD86C /* Model.swift */,
