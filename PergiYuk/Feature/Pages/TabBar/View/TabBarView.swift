@@ -7,88 +7,55 @@
 
 import SwiftUI
 
-enum Tab: String, CaseIterable {
-    case map
-    case paperplane
-    case person
-    
-    var nameValue: String {
-        switch self {
-        case .map:
-            return "Map"
-            
-        case .paperplane:
-            return "Party"
-            
-        case .person:
-            return "Profile"
-        }
-    }
-}
-
 struct TabBarView: View {
     
-    //MARK: - Properties
-    
-    @State var selectedTab: Tab = .map
-    
-    private var fillImage: String {
-        selectedTab.rawValue + ".fill"
+    init() {
+        UITabBar.appearance().barTintColor = UIColor(named: "TMPrimaryColor")
+        UITabBar.appearance().unselectedItemTintColor = .white
     }
     
-    private var iconName: String {
-        return selectedTab.rawValue
-    }
-    
-    //MARK: - Selectors
-    
-    func returningView() -> AnyView {
-        switch selectedTab {
-        case .map:
-            return AnyView(UserAboutMeView())
-            
-        case .paperplane:
-            return AnyView(MyPartyView())
-            
-        case .person:
-            return AnyView(UserProfileView())
-        }
-    }
-    
-    //MARK: - Lifecycle
+    @State var selectedTab = "One"
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack {
-                HStack {
-                    ForEach(Tab.allCases, id: \.rawValue) { tab in
-                        Spacer()
-                        VStack {
-                            Spacer()
-                            Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
-                                .scaleEffect(selectedTab == tab ? 1.25 : 1.0)
-                                .foregroundColor(selectedTab == tab ? .white : .white)
-                                .font(.system(size: 24))
-                                .onTapGesture {
-                                    withAnimation(.easeIn(duration: 0.1)) {
-                                        selectedTab = tab
-                                    }
-                                }
-                            
-                            Text(tab.nameValue)
-                                .foregroundColor(.white)
-                                .font(.custom("Metropolis-SemiBold", size: 10))
-                                .offset(y: 10)
-                        }
-                        .padding(.top)
-                        Spacer()
+        
+        TabView(selection: $selectedTab) {
+            UserAboutMeView()
+                .tabItem {
+                    if selectedTab == "One" {
+                        Image(systemName: "map.fill")
+                    } else {
+                        Image(systemName: "map")
+                            .environment(\.symbolVariants, .none)
                     }
+                    Text("Explore")
                 }
-            }
-            .frame(width: UIScreen.main.bounds.width, height: 60)
-            .background(Color("TMPrimaryColor"))
+                .tag("One")
+
+            MyPartyView()
+                .tabItem {
+                    if selectedTab == "Two" {
+                        Image(systemName: "person.3.fill")
+                    } else {
+                        Image(systemName: "person.3")
+                            .environment(\.symbolVariants, .none)
+                    }
+                    Text("Party")
+                }
+                .tag("Two")
+
+            UserProfileView()
+                .tabItem {
+                    if selectedTab == "Three" {
+                        Image(systemName: "person.fill")
+                    } else {
+                        Image(systemName: "person")
+                            .environment(\.symbolVariants, .none)
+                    }
+                    Text("Profile")
+                }
+                .tag("Three")
         }
+        .accentColor(.white)
     }
 }
 
