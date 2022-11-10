@@ -49,10 +49,18 @@ struct ExploreView: View {
                         Spacer()
                     }
                     ScrollView{
-                        ForEach(tripCardViewModel.parties){
-                            party in TripCardRowView(card: party)
+                        switch tripCardViewModel.exploreViewModelState{
+                        case .partiesLoaded:
+                            ForEach(tripCardViewModel.parties2){ party in
+                                TripCardRowView(card: party)
+                            }
+                        case .loading:
+                            Text("Loading")
+                        case .error:
+                            Text("Error loading data")
+                        case .idle:
+                            Text("idle")
                         }
-                        Spacer()
                     }
                 }
                 .toolbar{
@@ -80,13 +88,16 @@ struct ExploreView: View {
                 }
             }
         }.navigationBarHidden(true)
+            .onAppear {
+                tripCardViewModel.dataStore.getAllVacationParty()
+            }
     }
 }
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
         ExploreView()
-            .environmentObject(TripCardViewModel())
+            .environmentObject(TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
     }
 }
 

@@ -20,7 +20,6 @@ class UserDataStore{
         repository.getUser(email: email).sink { status in
             switch status {
             case .finished:
-                print("\(status)")
                 self.user.send(completion: .finished)
             case .failure(let error):
                 self.user.send(completion: .failure(error))

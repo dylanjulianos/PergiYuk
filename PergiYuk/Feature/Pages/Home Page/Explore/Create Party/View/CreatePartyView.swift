@@ -108,9 +108,9 @@ struct CreatePartyView: View {
             }.padding(.vertical,4)
             
             Button {
-                createPressed()
+//                createPressed()
                 viewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
-                isDismiss.callAsFunction()
+//                isDismiss.callAsFunction()
             } label: {
 //                Navigator.navigate(.explore){
                     Text("Create Vacation Party")
@@ -122,15 +122,26 @@ struct CreatePartyView: View {
             Spacer()
         }
         .padding()
+        .onReceive(viewModel.$createPartyViewModelState) { state in
+            if state == .partyCreated{
+                print("Dismiss")
+                
+            }
+        }
+        .onChange(of: viewModel.createPartyViewModelState) { newValue in
+            if newValue == .partyCreated {
+                print("Dismiss")
+            }
+        }
     }
     
-    func createPressed(){
-        tripCardViewModel.createParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
-    }
+//    func createPressed(){
+//        tripCardViewModel.createParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
+//    }
 }
 
 struct CreatePartyView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePartyView()
+        CreatePartyView(viewModel: CreatePartyViewModel(dataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
     }
 }

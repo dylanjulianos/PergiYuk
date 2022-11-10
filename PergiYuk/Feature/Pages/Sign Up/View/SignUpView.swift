@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @ObservedObject var viewModel = SignUpViewModel()
+    @ObservedObject var viewModel: SignUpViewModel
+    
+    init(dataStore: UserDataStore) {
+        self.viewModel = SignUpViewModel(dataStore: dataStore)
+    }
     
     @State var name: String = ""
     @State var email: String = ""
@@ -78,11 +82,12 @@ struct SignUpView: View {
                 self.routePosition.current = .signIn
             }
         }
+        
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpView(dataStore: UserDataStore(repository: UserRepositoryDummyData()))
     }
 }
