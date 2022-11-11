@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062C2AD0291E432E0037BFC2 /* CreateCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C2ACF291E432E0037BFC2 /* CreateCommunityView.swift */; };
+		062C2AD3291E43EF0037BFC2 /* futura medium bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 062C2AD1291E43D90037BFC2 /* futura medium bt.ttf */; };
+		062C2AD4291E43F30037BFC2 /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 062C2AD2291E43E80037BFC2 /* Metropolis-SemiBold.otf */; };
 		0648471F2907E4FB003C4B5B /* MyPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648471E2907E4FB003C4B5B /* MyPartyView.swift */; };
 		064847212907E530003C4B5B /* PartyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847202907E530003C4B5B /* PartyDetailView.swift */; };
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062C2ACF291E432E0037BFC2 /* CreateCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityView.swift; sourceTree = "<group>"; };
+		062C2AD1291E43D90037BFC2 /* futura medium bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura medium bt.ttf"; path = "../Downloads/futura/futura medium bt.ttf"; sourceTree = "<group>"; };
+		062C2AD2291E43E80037BFC2 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../Downloads/metropolis 3/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		0648471E2907E4FB003C4B5B /* MyPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPartyView.swift; sourceTree = "<group>"; };
 		064847202907E530003C4B5B /* PartyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailView.swift; sourceTree = "<group>"; };
 		064847222907E53F003C4B5B /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
@@ -113,6 +119,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062C2ACB291E3D950037BFC2 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				062C2ACC291E3DA10037BFC2 /* CreateCommunity */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		062C2ACC291E3DA10037BFC2 /* CreateCommunity */ = {
+			isa = PBXGroup;
+			children = (
+				062C2ACD291E3DA80037BFC2 /* View */,
+				062C2ACE291E3DAD0037BFC2 /* ViewModel */,
+			);
+			path = CreateCommunity;
+			sourceTree = "<group>";
+		};
+		062C2ACD291E3DA80037BFC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				062C2ACF291E432E0037BFC2 /* CreateCommunityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		062C2ACE291E3DAD0037BFC2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0648471B2907E4C8003C4B5B /* My Party */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +247,7 @@
 		264364C828F0087700E4BA1C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				062C2ACB291E3D950037BFC2 /* Community */,
 				067255962910E92500384C96 /* TabBar */,
 				267F0AE1290A970E00B9BC78 /* Profile */,
 				267F0AAD290A883300B9BC78 /* Sign Up */,
@@ -473,6 +512,8 @@
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
+				062C2AD2291E43E80037BFC2 /* Metropolis-SemiBold.otf */,
+				062C2AD1291E43D90037BFC2 /* futura medium bt.ttf */,
 				26CC9E0C28DDB07300CFBA06 /* PergiYuk */,
 				26CC9E0B28DDB07300CFBA06 /* Products */,
 			);
@@ -589,6 +630,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062C2AD4291E43F30037BFC2 /* Metropolis-SemiBold.otf in Resources */,
+				062C2AD3291E43EF0037BFC2 /* futura medium bt.ttf in Resources */,
 				26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */,
 				26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */,
 			);
@@ -621,6 +664,7 @@
 				268917FE2914EC2900C7A89B /* UserRepositoryCoreData.swift in Sources */,
 				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
 				26B1063A291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift in Sources */,
+				062C2AD0291E432E0037BFC2 /* CreateCommunityView.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
 				267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */,
