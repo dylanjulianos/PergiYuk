@@ -26,6 +26,18 @@ class CreatePartyViewModel: ObservableObject {
     
     init(dataStore: VacationPartyDataStore){
         self.dataStore = dataStore
+        
+                dataStore.parties.sink { status in
+                    switch status{
+                    case .finished:
+                        self.createPartyViewModelState = .partyCreated
+                        print(self.createPartyViewModelState)
+                    case .failure(let error):
+                        self.createPartyViewModelState = .error
+                        self.errorMessage = error.localizedDescription
+                    }
+                } receiveValue: { _ in }
+                    .store(in: &cancelables)
     }
     
     func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
@@ -34,17 +46,7 @@ class CreatePartyViewModel: ObservableObject {
         let newParty = VacationParty(budget: budget, desc: "", destination: destination, endDate: endDate, image: image, maximumUser: 5, name: title, startDate: startDate)
         dataStore.addParty(newParty: newParty)
         
-        dataStore.parties.sink { status in
-            switch status{
-            case .finished:
-                self.createPartyViewModelState = .partyCreated
-                print(self.createPartyViewModelState)
-            case .failure(let error):
-                self.createPartyViewModelState = .error
-                self.errorMessage = error.localizedDescription
-            }
-        } receiveValue: { _ in }
-            .store(in: &cancelables)
+
     }
     
 }

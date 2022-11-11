@@ -45,7 +45,7 @@ struct MainContent: View{
             SignUpView(dataStore: userDataStore)
                 .animation(.easeInOut, value: routePosition.current)
         case .explore:
-            ExploreView().environmentObject(TripCardViewModel())
+            ExploreView().environmentObject(TripCardViewModel(selectedDataStore: partyDataStore))
         }
     }
 }

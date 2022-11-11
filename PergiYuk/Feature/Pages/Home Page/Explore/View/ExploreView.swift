@@ -88,16 +88,13 @@ struct ExploreView: View {
                 }
             }
         }.navigationBarHidden(true)
-            .onAppear {
-                tripCardViewModel.dataStore.getAllVacationParty()
-            }
     }
 }
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
         ExploreView()
-            .environmentObject(TripCardViewModel())
+            .environmentObject(TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
     }
 }
 
