@@ -24,14 +24,10 @@ class TripCardViewModel : ObservableObject{
     @Published var errorMessage: String = ""
     var cancelables: Set<AnyCancellable> = []
 //    var dataStore: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
-    var dataStore: VacationPartyDataStore 
+    var dataStore: VacationPartyDataStore = VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())
     
-    
-    init(selectedDataStore: VacationPartyDataStore){
-//        // yg lama
-//        getParties()
+    init(){
         
-        self.dataStore = selectedDataStore
         // coba implement data repo
         self.dataStore.parties.sink { status in
             switch status{
@@ -44,7 +40,6 @@ class TripCardViewModel : ObservableObject{
         } receiveValue: { party in
             self.parties2 = party
         }.store(in: &cancelables)
-
     }
 
 //    func getParties(){
@@ -59,9 +54,9 @@ class TripCardViewModel : ObservableObject{
 //    func deleteParty(indexSet: IndexSet){
 //        parties.remove(atOffsets: indexSet)
 //    }
-
-    func createParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
-        let newParty = TripCardModel(image: image, title: title, destination: destination, startDate: startDate, endDate: endDate, budget: budget)
-        parties.append(newParty)
-    }
+//
+//    func createParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
+//        let newParty = TripCardModel(image: image, title: title, destination: destination, startDate: startDate, endDate: endDate, budget: budget)
+//        parties.append(newParty)
+//    }
 }

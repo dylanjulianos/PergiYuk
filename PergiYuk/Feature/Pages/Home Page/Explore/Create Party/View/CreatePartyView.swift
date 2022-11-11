@@ -52,7 +52,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct CreatePartyView: View {
-    @EnvironmentObject var viewModel: CreatePartyViewModel
     @EnvironmentObject var tripCardViewModel: TripCardViewModel
     
     @State private var partyName: String = ""
@@ -108,8 +107,9 @@ struct CreatePartyView: View {
             }.padding(.vertical,4)
             
             Button {
+                print("Do something")
 //                createPressed()
-                viewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
+//                viewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
 //                isDismiss.callAsFunction()
             } label: {
 //                Navigator.navigate(.explore){
@@ -122,17 +122,17 @@ struct CreatePartyView: View {
             Spacer()
         }
         .padding()
-        .onReceive(viewModel.$createPartyViewModelState) { state in
-            if state == .partyCreated{
-                print("Dismiss")
-                
-            }
-        }
-        .onChange(of: viewModel.createPartyViewModelState) { newValue in
-            if newValue == .partyCreated {
-                print("Dismiss")
-            }
-        }
+//        .onReceive(viewModel.$createPartyViewModelState) { state in
+//            if state == .partyCreated{
+//                print("Dismiss")
+//
+//            }
+//        }
+//        .onChange(of: viewModel.createPartyViewModelState) { newValue in
+//            if newValue == .partyCreated {
+//                print("Dismiss")
+//            }
+//        }
     }
     
 //    func createPressed(){
@@ -142,6 +142,6 @@ struct CreatePartyView: View {
 
 struct CreatePartyView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePartyView(viewModel: CreatePartyViewModel(dataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
+        CreatePartyView()
     }
 }

@@ -24,9 +24,6 @@ class VacationPartyRepositoryDummyData: VacationPartyRepository{
         
         parties.append(contentsOf: [dummyParty1,dummyParty2,dummyParty3,dummyParty4])
         
-        for party in parties {
-            print(party.id)
-        }
     }
     
     func getAllParty() -> Future<[VacationParty], Error> {
