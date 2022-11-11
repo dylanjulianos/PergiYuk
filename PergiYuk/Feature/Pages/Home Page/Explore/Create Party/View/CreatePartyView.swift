@@ -52,7 +52,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct CreatePartyView: View {
-    @EnvironmentObject var viewModel: CreatePartyViewModel
     @EnvironmentObject var tripCardViewModel: TripCardViewModel
     
     @State private var partyName: String = ""
@@ -108,8 +107,8 @@ struct CreatePartyView: View {
             }.padding(.vertical,4)
             
             Button {
-                createPressed()
-                viewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
+//                createPressed()
+                tripCardViewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
                 isDismiss.callAsFunction()
             } label: {
 //                Navigator.navigate(.explore){
@@ -122,15 +121,17 @@ struct CreatePartyView: View {
             Spacer()
         }
         .padding()
+//        .onReceive(viewModel.$createPartyViewModelState) { state in
+//            if state == .partyCreated{
+//                print("Dismiss")
+//
+//            }
+//        }
     }
     
-    func createPressed(){
-        tripCardViewModel.createParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
-    }
+//    func createPressed(){
+//        tripCardViewModel.createParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
+//    }
 }
 
-struct CreatePartyView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreatePartyView()
-    }
-}
+

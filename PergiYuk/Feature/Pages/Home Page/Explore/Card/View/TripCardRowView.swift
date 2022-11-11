@@ -16,15 +16,15 @@ struct TripCardRowView: View {
 //    var endDate: String
 //    var budget: Int
     
-    let card: TripCardModel
+    let card: VacationParty
     var body: some View {
         VStack{
-            Image(card.image)
+            Image(card.image ?? "")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             HStack{
                 VStack(alignment: .leading){
-                    Text(card.title)
+                    Text(card.name)
                         .padding(.vertical,1)
                     Text(card.destination)
                         .padding(.vertical,1)
@@ -51,9 +51,9 @@ struct TripCardRowView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var card1 = TripCardModel(image: "Travel Buddy", title: "Trip Name", destination: "Destination", startDate: "21/10/2022", endDate: "25/10/2022", budget: 2000000)
-    
+    static var cardVacationParty = VacationParty(budget: 2500000, destination: "Jakarta", endDate: "5 Nov 2022", maximumUser: 4, name: "Trip Name", startDate: "1 Nov 2022")
     static var previews: some View {
-        TripCardRowView(card: card1)
+        TripCardRowView(card: cardVacationParty)
     }
 }
 

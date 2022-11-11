@@ -33,17 +33,19 @@ enum RoutePosition {
 struct MainContent: View{
 
     @EnvironmentObject var routePosition: Routing
-
+    var partyDataStore = VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())
+    var userDataStore: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
+    
     var body: some View{
         switch routePosition.current {
         case .signIn:
-            SignInView()
+            SignInView(dataStore: userDataStore)
                 .animation(.easeInOut, value: routePosition.current)
         case .signUp:
-            SignUpView()
+            SignUpView(dataStore: userDataStore)
                 .animation(.easeInOut, value: routePosition.current)
         case .explore:
-            ExploreView().environmentObject(TripCardViewModel())
+            ExploreView().environmentObject(TripCardViewModel(selectedDataStore: partyDataStore))
         }
     }
 }

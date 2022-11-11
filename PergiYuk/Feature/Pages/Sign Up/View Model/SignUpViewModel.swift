@@ -25,7 +25,8 @@ class SignUpViewModel: ObservableObject {
     
     var dataStore: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
     
-    init(){
+    init(dataStore: UserDataStore){
+        self.dataStore = dataStore
         // The subscribers doesnt need the return value
         dataStore.user.sink { status in
             switch status{

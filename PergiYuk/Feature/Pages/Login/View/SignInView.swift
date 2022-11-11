@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct SignInView: View {
-    @ObservedObject var viewModel = SignInViewModel()
+    @ObservedObject var viewModel: SignInViewModel
     
     @State var email: String = ""
     @State var pass: String = ""
     @State var isShowingExploreView: Bool = false
     @EnvironmentObject var routePosition: Routing
     
+    init(dataStore: UserDataStore){
+        self.viewModel = SignInViewModel(dataStore: dataStore)
+    }
 
     var body: some View {
         NavigationView {
@@ -41,7 +44,12 @@ struct SignInView: View {
                             .frame(width: 337)
                 }.buttonStyle(BlueButton())
                     .padding()
-                Text("\(viewModel.errorMessage)")
+                if viewModel.signInViewModelState == .error {
+                    Text("\(viewModel.errorMessage)")
+                        .foregroundColor(.red)
+                    Spacer().frame(width: 5, height: 10)
+                }
+                
                 HStack {
                     Text("New to Travel Buddy?")
                     Button {
@@ -63,6 +71,6 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(dataStore: UserDataStore(repository: UserRepositoryDummyData()))
     }
 }

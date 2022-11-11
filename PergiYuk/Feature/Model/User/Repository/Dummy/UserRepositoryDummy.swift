@@ -18,7 +18,7 @@ class UserRepositoryDummyData: UserRepository{
         
         let dummyUser3 = User(email: "ken@gmailc", name: "", password: "", phoneNumber: "")
         
-        let dummyUser4 = User(email: "admin@gmailc", name: "", password: "", phoneNumber: "")
+        let dummyUser4 = User(email: "admin@gmailc", name: "", password: "admin", phoneNumber: "")
         
         users.append(contentsOf: [dummyUser1,dummyUser2,dummyUser3, dummyUser4])
     }

@@ -38,10 +38,14 @@
 		268917FF2914EC2900C7A89B /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F72914EC2900C7A89B /* UserRepositoryProtocol.swift */; };
 		268918002914EC2900C7A89B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917F82914EC2900C7A89B /* User.swift */; };
 		268918012914EC2900C7A89B /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FA2914EC2900C7A89B /* UserDataStore.swift */; };
-		268918022914EC2900C7A89B /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FC2914EC2900C7A89B /* TripCardModel.swift */; };
 		268918052919022600C7A89B /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268918042919022600C7A89B /* CloudKitManager.swift */; };
+		2689180A2919108700C7A89B /* VacationPartyDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268918092919108700C7A89B /* VacationPartyDataStore.swift */; };
+		2689180D291910AF00C7A89B /* VacationParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689180C291910AF00C7A89B /* VacationParty.swift */; };
+		2689180F291910D800C7A89B /* VacationPartyRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689180E291910D800C7A89B /* VacationPartyRepositoryProtocol.swift */; };
 		268F714428F56B8700BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		268F714628F56BA900BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		26B1063A291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B10639291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift */; };
+		26B1063B291A41820044E8D0 /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FC2914EC2900C7A89B /* TripCardModel.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
 		26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0F28DDB07300CFBA06 /* ContentView.swift */; };
 		26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC9E1128DDB07300CFBA06 /* Assets.xcassets */; };
@@ -85,6 +89,10 @@
 		268917FC2914EC2900C7A89B /* TripCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardModel.swift; sourceTree = "<group>"; };
 		268918042919022600C7A89B /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		26891806291902EF00C7A89B /* PergiYukDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PergiYukDebug.entitlements; sourceTree = "<group>"; };
+		268918092919108700C7A89B /* VacationPartyDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyDataStore.swift; sourceTree = "<group>"; };
+		2689180C291910AF00C7A89B /* VacationParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationParty.swift; sourceTree = "<group>"; };
+		2689180E291910D800C7A89B /* VacationPartyRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyRepositoryProtocol.swift; sourceTree = "<group>"; };
+		26B10639291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyRepositoryDummy.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
 		26CC9E0F28DDB07300CFBA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		264364C728F0086000E4BA1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2689180729190E9E00C7A89B /* Vacation Party */,
 				268917FB2914EC2900C7A89B /* Trip */,
 				268917F12914EC2900C7A89B /* User */,
 			);
@@ -429,6 +438,41 @@
 			path = CloudKit;
 			sourceTree = "<group>";
 		};
+		2689180729190E9E00C7A89B /* Vacation Party */ = {
+			isa = PBXGroup;
+			children = (
+				2689180C291910AF00C7A89B /* VacationParty.swift */,
+				2689180B2919109F00C7A89B /* Repository */,
+				268918082919106E00C7A89B /* DataStore */,
+			);
+			path = "Vacation Party";
+			sourceTree = "<group>";
+		};
+		268918082919106E00C7A89B /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				268918092919108700C7A89B /* VacationPartyDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		2689180B2919109F00C7A89B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				26891810291912A100C7A89B /* Dummy */,
+				2689180E291910D800C7A89B /* VacationPartyRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		26891810291912A100C7A89B /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				26B10639291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
@@ -560,9 +604,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B1063B291A41820044E8D0 /* TripCardModel.swift in Sources */,
 				26F37F22290FCEE600F9E656 /* PergiYukDataModel.xcdatamodeld in Sources */,
+				2689180D291910AF00C7A89B /* VacationParty.swift in Sources */,
 				268F714428F56B8700BD0D40 /* (null) in Sources */,
 				0672559A2910E95F00384C96 /* TabBarView.swift in Sources */,
+				2689180A2919108700C7A89B /* VacationPartyDataStore.swift in Sources */,
 				064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */,
 				267F0AA8290A872500B9BC78 /* CreatePartyView.swift in Sources */,
 				267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */,
@@ -576,6 +623,7 @@
 				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
 				268917FE2914EC2900C7A89B /* UserRepositoryCoreData.swift in Sources */,
 				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
+				26B1063A291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
 				267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */,
@@ -587,6 +635,7 @@
 				267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */,
 				064847212907E530003C4B5B /* PartyDetailView.swift in Sources */,
 				267F0AF4290A981B00B9BC78 /* UserHistoryView.swift in Sources */,
+				2689180F291910D800C7A89B /* VacationPartyRepositoryProtocol.swift in Sources */,
 				268917FD2914EC2900C7A89B /* UserRepositoryDummy.swift in Sources */,
 				267F0AB1290A888800B9BC78 /* SignUpView.swift in Sources */,
 				06F2206928DDC01700128CAB /* Dylan.swift in Sources */,
@@ -597,7 +646,6 @@
 				06AE554B291A3DA200AB2148 /* Coba.swift in Sources */,
 				1985286528EC1DA5003AAEBF /* (null) in Sources */,
 				267F0AF2290A981B00B9BC78 /* EditProfileView.swift in Sources */,
-				268918022914EC2900C7A89B /* TripCardModel.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
 				268918052919022600C7A89B /* CloudKitManager.swift in Sources */,
 			);
