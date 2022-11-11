@@ -12,7 +12,6 @@
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
 		064847252907E54E003C4B5B /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847242907E54E003C4B5B /* CommunityCardView.swift */; };
 		0672559A2910E95F00384C96 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067255992910E95F00384C96 /* TabBarView.swift */; };
-		06AE554B291A3DA200AB2148 /* Coba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AE554A291A3DA200AB2148 /* Coba.swift */; };
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
 		1985285C28EADF34003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1985286528EC1DA5003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -61,7 +60,6 @@
 		064847222907E53F003C4B5B /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
 		064847242907E54E003C4B5B /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
 		067255992910E95F00384C96 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		06AE554A291A3DA200AB2148 /* Coba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coba.swift; sourceTree = "<group>"; };
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		06FED7E9290FD759002AF4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				067255992910E95F00384C96 /* TabBarView.swift */,
-				06AE554A291A3DA200AB2148 /* Coba.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,7 +640,6 @@
 				264364C128F0076700E4BA1C /* BlueButton.swift in Sources */,
 				267F0AF5290A981B00B9BC78 /* UserProfileView.swift in Sources */,
 				268918002914EC2900C7A89B /* User.swift in Sources */,
-				06AE554B291A3DA200AB2148 /* Coba.swift in Sources */,
 				1985286528EC1DA5003AAEBF /* (null) in Sources */,
 				267F0AF2290A981B00B9BC78 /* EditProfileView.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
