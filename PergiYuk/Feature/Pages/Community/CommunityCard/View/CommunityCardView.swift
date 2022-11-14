@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommunityCardView: View {
+    
     //MARK: - Properties
     
     var width = UIScreen.main.bounds.width
@@ -22,7 +23,7 @@ struct CommunityCardView: View {
                 NavigationView {
                     VStack(alignment: .leading) {
                         Text("Community")
-                            .font(.custom("FuturaMediumbt", size: 24))
+                            .font(.custom("futura medium bt", size: 24))
                             .padding(.bottom)
                         
                         Image("destination.lombok")
