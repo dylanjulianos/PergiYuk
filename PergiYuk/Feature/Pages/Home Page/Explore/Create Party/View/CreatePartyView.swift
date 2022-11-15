@@ -52,7 +52,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct CreatePartyView: View {
-    @EnvironmentObject var tripCardViewModel: TripCardViewModel
+    var tripCardViewModel: TripCardViewModel
     
     @State private var partyName: String = ""
     @State private var partyDestination: String = ""
@@ -67,57 +67,60 @@ struct CreatePartyView: View {
     
     var body: some View {
         
-        VStack{
-            Text("Create New Party")
-                .foregroundColor(.blue)
-                .font(.system(size: 30, weight: .semibold))
-                .padding()
-            Button {
-                showSheet = true
-            } label: {
-                Image(uiImage: self.image)
-                        .resizable()
-                        .cornerRadius(50)
-                        .padding(.all, 4)
-                        .frame(width: 360, height: 270)
-                        .background(Color.black.opacity(0.2))
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Rectangle())
-                        .padding(8)
-            }.sheet(isPresented: $showSheet) {
-                ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
-            }
+        ScrollView{
+            VStack{
 
-            VStack(alignment: .leading){
-                Text("Party Name")
-                    .padding(.horizontal)
-                CustomTextField(placeHolder: "Insert Party Name", value: $partyName)
-            }.padding(.vertical,9)
-            
-            VStack(alignment: .leading){
-                Text("Destination")
-                    .padding(.horizontal)
-                CustomTextField(placeHolder: "Insert Party Destination", value: $partyDestination)
-            }.padding(.vertical,4)
-            
-            VStack(alignment: .leading){
-                Text("Date")
-                    .padding(.horizontal)
-                CustomTextField(placeHolder: "Insert Party Date", value: $partyDate)
-            }.padding(.vertical,4)
-            
-            Button {
-//                createPressed()
-                tripCardViewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
-            } label: {
-//                Navigator.navigate(.explore){
-                    Text("Create Vacation Party")
-                        .frame(width: 337)
-//                }
-            }.buttonStyle(BlueButton())
-                .padding()
-            
-            Spacer()
+                Text("Create New Party")
+                    .foregroundColor(.blue)
+                    .font(.system(size: 30, weight: .semibold))
+                    .padding()
+                Button {
+                    showSheet = true
+                } label: {
+                    Image(uiImage: self.image)
+                            .resizable()
+                            .cornerRadius(50)
+                            .padding(.all, 4)
+                            .frame(width: 360, height: 270)
+                            .background(Color.black.opacity(0.2))
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Rectangle())
+                            .padding(8)
+                }.sheet(isPresented: $showSheet) {
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                }
+                Text("number of parties - \(tripCardViewModel.parties2.count)")
+                VStack(alignment: .leading){
+                    Text("Party Name")
+                        .padding(.horizontal)
+                    CustomTextField(placeHolder: "Insert Party Name", value: $partyName)
+                }.padding(.vertical,9)
+                
+                VStack(alignment: .leading){
+                    Text("Destination")
+                        .padding(.horizontal)
+                    CustomTextField(placeHolder: "Insert Party Destination", value: $partyDestination)
+                }.padding(.vertical,4)
+                
+                VStack(alignment: .leading){
+                    Text("Date")
+                        .padding(.horizontal)
+                    CustomTextField(placeHolder: "Insert Party Date", value: $partyDate)
+                }.padding(.vertical,4)
+                
+                Button {
+    //                createPressed()
+                    tripCardViewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
+                } label: {
+    //                Navigator.navigate(.explore){
+                        Text("Create Vacation Party")
+                            .frame(width: 337)
+    //                }
+                }.buttonStyle(BlueButton())
+                    .padding()
+                
+                Spacer()
+            }
         }
         .padding()
 //        .onReceive(viewModel.$createPartyViewModelState) { state in

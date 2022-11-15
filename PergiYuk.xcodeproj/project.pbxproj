@@ -47,6 +47,8 @@
 		2689180F291910D800C7A89B /* VacationPartyRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689180E291910D800C7A89B /* VacationPartyRepositoryProtocol.swift */; };
 		268F714428F56B8700BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		268F714628F56BA900BD0D40 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		269986312923840A003FE4BA /* futura medium bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2699862F292383F3003FE4BA /* futura medium bt.ttf */; };
+		269986322923840D003FE4BA /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 26998630292383F9003FE4BA /* Metropolis-SemiBold.otf */; };
 		26B1063A291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B10639291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift */; };
 		26B1063B291A41820044E8D0 /* TripCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268917FC2914EC2900C7A89B /* TripCardModel.swift */; };
 		26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */; };
@@ -60,8 +62,6 @@
 
 /* Begin PBXFileReference section */
 		062C2ACF291E432E0037BFC2 /* CreateCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityView.swift; sourceTree = "<group>"; };
-		062C2AD1291E43D90037BFC2 /* futura medium bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura medium bt.ttf"; path = "../Downloads/futura/futura medium bt.ttf"; sourceTree = "<group>"; };
-		062C2AD2291E43E80037BFC2 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "../Downloads/metropolis 3/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		0648471E2907E4FB003C4B5B /* MyPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPartyView.swift; sourceTree = "<group>"; };
 		064847202907E530003C4B5B /* PartyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailView.swift; sourceTree = "<group>"; };
 		064847222907E53F003C4B5B /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
@@ -100,6 +100,8 @@
 		268918092919108700C7A89B /* VacationPartyDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyDataStore.swift; sourceTree = "<group>"; };
 		2689180C291910AF00C7A89B /* VacationParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationParty.swift; sourceTree = "<group>"; };
 		2689180E291910D800C7A89B /* VacationPartyRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2699862F292383F3003FE4BA /* futura medium bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura medium bt.ttf"; path = "PergiYuk/futura medium bt.ttf"; sourceTree = "<group>"; };
+		26998630292383F9003FE4BA /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBold.otf"; path = "PergiYuk/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
 		26B10639291A3D040044E8D0 /* VacationPartyRepositoryDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPartyRepositoryDummy.swift; sourceTree = "<group>"; };
 		26CC9E0A28DDB07300CFBA06 /* PergiYuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PergiYuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC9E0D28DDB07300CFBA06 /* PergiYukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergiYukApp.swift; sourceTree = "<group>"; };
@@ -551,8 +553,8 @@
 		26CC9E0128DDB07300CFBA06 = {
 			isa = PBXGroup;
 			children = (
-				062C2AD2291E43E80037BFC2 /* Metropolis-SemiBold.otf */,
-				062C2AD1291E43D90037BFC2 /* futura medium bt.ttf */,
+				2699862F292383F3003FE4BA /* futura medium bt.ttf */,
+				26998630292383F9003FE4BA /* Metropolis-SemiBold.otf */,
 				26CC9E0C28DDB07300CFBA06 /* PergiYuk */,
 				26CC9E0B28DDB07300CFBA06 /* Products */,
 			);
@@ -669,6 +671,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269986322923840D003FE4BA /* Metropolis-SemiBold.otf in Resources */,
+				269986312923840A003FE4BA /* futura medium bt.ttf in Resources */,
 				26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */,
 				26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */,
 			);

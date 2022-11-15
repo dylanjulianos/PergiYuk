@@ -10,35 +10,35 @@ import Combine
 
 class VacationPartyDataStore{
     var repository: VacationPartyRepository
-    var parties = PassthroughSubject<[VacationParty],Error>()
+    var parties: CurrentValueSubject<[VacationParty],Error> = CurrentValueSubject([])
     
     init(repository: VacationPartyRepository) {
-        print("Data store created")
         self.repository = repository
+        
     }
     
     func getAllVacationParty(){
         repository.getAllParty().sink { status in
             switch status {
             case .finished:
-                self.parties.send(completion: .finished)
+                print("Finished")
             case .failure(let error):
-                self.parties.send(completion: .failure(error))
+                print("error data store \(error)")
+                
             }
         } receiveValue: { value in
             self.parties.send(value)
         }
+
     }
     
     func addParty(newParty: VacationParty){
         repository.addParty(party: newParty).sink { status in
-            print("Repository status: \(status)")
             switch status {
             case .finished:
-//                self.parties.send(completion: .finished)
-                print("Finish")
+                print("")
             case .failure(let error):
-                self.parties.send(completion: .failure(error))
+                print("error")
             }
         } receiveValue: { value in
             self.parties.send(value)

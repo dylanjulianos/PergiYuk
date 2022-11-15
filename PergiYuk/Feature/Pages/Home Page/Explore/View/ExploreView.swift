@@ -12,7 +12,13 @@ struct ExploreView: View {
     @State private var searchText: String = ""
     @State private var isEditing = false
     @State private var isShowingCreatePartyView = false
-    @EnvironmentObject var tripCardViewModel: TripCardViewModel
+    @ObservedObject var tripCardViewModel: TripCardViewModel = TripCardViewModel(
+        selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
+    
+    
+    init(){
+        tripCardViewModel.getAllParty()
+    }
     
     var body: some View {
         
@@ -44,23 +50,26 @@ struct ExploreView: View {
                         .cornerRadius(8))
                     .padding(.horizontal,30)
                     HStack{
-                        Text("For You")
+                        Text("For You - \(self.tripCardViewModel.dataStore.parties.value.count)")
                             .padding(.horizontal,40)
                         Spacer()
                     }
                     ScrollView{
-                        switch tripCardViewModel.exploreViewModelState{
-                        case .partiesLoaded:
-                            ForEach(tripCardViewModel.parties2){ party in
-                                TripCardRowView(card: party)
-                            }
-                        case .loading:
-                            Text("Loading")
-                        case .error:
-                            Text("Error loading data")
-                        case .idle:
-                            Text("idle")
+                        ForEach(tripCardViewModel.parties2){ party in
+                            TripCardRowView(card: party)
                         }
+//                        switch tripCardViewModel.exploreViewModelState{
+//                        case .partiesLoaded:
+//                            ForEach(tripCardViewModel.parties2){ party in
+//                                TripCardRowView(card: party)
+//                            }
+//                        case .loading:
+//                            Text("Loading")
+//                        case .error:
+//                            Text("Error loading data")
+//                        case .idle:
+//                            Text("idle")
+//                        }
                     }
                 }
                 .toolbar{
@@ -73,14 +82,14 @@ struct ExploreView: View {
                     
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
-
+                            tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: 12)
                         } label: {
                             Image(systemName: "bell.fill")
                                 .foregroundColor(.white)
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination: CreatePartyView().environmentObject(tripCardViewModel)) {
+                        NavigationLink(destination: CreatePartyView(tripCardViewModel: tripCardViewModel)) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.white)
                         }
@@ -88,9 +97,6 @@ struct ExploreView: View {
                 }
             }
         }.navigationBarHidden(true)
-            .onAppear{
-                print(tripCardViewModel.parties2.count)
-            }
     }
 }
 
