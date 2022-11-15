@@ -52,7 +52,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct CreatePartyView: View {
-    @EnvironmentObject var tripCardViewModel: TripCardViewModel
+    var tripCardViewModel: TripCardViewModel
     
     @State private var partyName: String = ""
     @State private var partyDestination: String = ""
@@ -68,6 +68,7 @@ struct CreatePartyView: View {
     var body: some View {
         
         VStack{
+
             Text("Create New Party")
                 .foregroundColor(.blue)
                 .font(.system(size: 30, weight: .semibold))
@@ -87,7 +88,7 @@ struct CreatePartyView: View {
             }.sheet(isPresented: $showSheet) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
             }
-
+            Text("number of parties - \(tripCardViewModel.parties2.count)")
             VStack(alignment: .leading){
                 Text("Party Name")
                     .padding(.horizontal)

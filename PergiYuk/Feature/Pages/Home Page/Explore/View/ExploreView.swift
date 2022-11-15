@@ -12,7 +12,8 @@ struct ExploreView: View {
     @State private var searchText: String = ""
     @State private var isEditing = false
     @State private var isShowingCreatePartyView = false
-    @EnvironmentObject var tripCardViewModel: TripCardViewModel
+    @ObservedObject var tripCardViewModel: TripCardViewModel = TripCardViewModel(
+        selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
     
     var body: some View {
         
@@ -80,7 +81,7 @@ struct ExploreView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination: CreatePartyView().environmentObject(tripCardViewModel)) {
+                        NavigationLink(destination: CreatePartyView(tripCardViewModel: tripCardViewModel)) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.white)
                         }

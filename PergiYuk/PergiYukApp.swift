@@ -49,7 +49,7 @@ struct MainContent: View{
             SignUpView(dataStore: userDataStore)
                 .animation(.easeInOut, value: routePosition.current)
         case .explore:
-            TabBarView().environmentObject(tripVM)
+            ExploreView().environmentObject(tripVM)
         }
     }
 }

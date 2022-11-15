@@ -72,8 +72,5 @@ class TripCardViewModel : ObservableObject{
 //            print(party)
 //            self.parties2 = party
 //        }.store(in: &cancelables2)
-
-        self.dataStore.getAllVacationParty()
-        
     }
 }
