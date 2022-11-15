@@ -80,7 +80,7 @@ struct ExploreView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination: CreatePartyView()) {
+                        NavigationLink(destination: CreatePartyView().environmentObject(tripCardViewModel)) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.white)
                         }
@@ -88,6 +88,9 @@ struct ExploreView: View {
                 }
             }
         }.navigationBarHidden(true)
+            .onAppear{
+                print(tripCardViewModel.parties2.count)
+            }
     }
 }
 

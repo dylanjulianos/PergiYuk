@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		062C2AD0291E432E0037BFC2 /* CreateCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C2ACF291E432E0037BFC2 /* CreateCommunityView.swift */; };
-		062C2AD3291E43EF0037BFC2 /* futura medium bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 062C2AD1291E43D90037BFC2 /* futura medium bt.ttf */; };
-		062C2AD4291E43F30037BFC2 /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 062C2AD2291E43E80037BFC2 /* Metropolis-SemiBold.otf */; };
 		0648471F2907E4FB003C4B5B /* MyPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648471E2907E4FB003C4B5B /* MyPartyView.swift */; };
 		064847212907E530003C4B5B /* PartyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847202907E530003C4B5B /* PartyDetailView.swift */; };
 		064847232907E53F003C4B5B /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847222907E53F003C4B5B /* PartyCardView.swift */; };
@@ -671,8 +669,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062C2AD4291E43F30037BFC2 /* Metropolis-SemiBold.otf in Resources */,
-				062C2AD3291E43EF0037BFC2 /* futura medium bt.ttf in Resources */,
 				26CC9E1528DDB07300CFBA06 /* Preview Assets.xcassets in Resources */,
 				26CC9E1228DDB07300CFBA06 /* Assets.xcassets in Resources */,
 			);

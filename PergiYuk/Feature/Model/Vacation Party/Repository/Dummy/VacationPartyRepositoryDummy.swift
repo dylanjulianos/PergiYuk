@@ -23,7 +23,6 @@ class VacationPartyRepositoryDummyData: VacationPartyRepository{
         let dummyParty4 = VacationParty(budget: 4000000, desc: "", destination: "Gunung Bromo", endDate: "30 Nov 2022", image: "destination.lombok", maximumUser: 8, name: "Holiday di Bromo", startDate: "28 Nov 2022")
         
         parties.append(contentsOf: [dummyParty1,dummyParty2,dummyParty3,dummyParty4])
-        
     }
     
     func getAllParty() -> Future<[VacationParty], Error> {

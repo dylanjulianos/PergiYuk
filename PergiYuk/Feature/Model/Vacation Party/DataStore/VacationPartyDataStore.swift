@@ -13,6 +13,7 @@ class VacationPartyDataStore{
     var parties = PassthroughSubject<[VacationParty],Error>()
     
     init(repository: VacationPartyRepository) {
+        print("Data store created")
         self.repository = repository
     }
     
@@ -31,9 +32,11 @@ class VacationPartyDataStore{
     
     func addParty(newParty: VacationParty){
         repository.addParty(party: newParty).sink { status in
+            print("Repository status: \(status)")
             switch status {
             case .finished:
-                self.parties.send(completion: .finished)
+//                self.parties.send(completion: .finished)
+                print("Finish")
             case .failure(let error):
                 self.parties.send(completion: .failure(error))
             }

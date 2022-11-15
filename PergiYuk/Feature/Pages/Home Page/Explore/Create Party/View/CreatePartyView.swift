@@ -109,7 +109,6 @@ struct CreatePartyView: View {
             Button {
 //                createPressed()
                 tripCardViewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
-                isDismiss.callAsFunction()
             } label: {
 //                Navigator.navigate(.explore){
                     Text("Create Vacation Party")

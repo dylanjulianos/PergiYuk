@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @EnvironmentObject var tripVM : TripCardViewModel
     
     init() {
         UITabBar.appearance().barTintColor = UIColor(named: "TMPrimaryColor")
@@ -19,7 +20,7 @@ struct TabBarView: View {
     var body: some View {
         
         TabView(selection: $selectedTab) {
-            UserAboutMeView()
+            ExploreView().environmentObject(tripVM)
                 .tabItem {
                     if selectedTab == "One" {
                         Image(systemName: "map.fill")
