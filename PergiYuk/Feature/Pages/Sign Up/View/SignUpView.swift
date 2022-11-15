@@ -21,24 +21,20 @@ struct SignUpView: View {
     @State var conf: String = ""
     @State private var willMoveToSignIn: Bool = false
     @EnvironmentObject var routePosition: Routing
- 
+    
     var body: some View {
-        NavigationView {
+        VStack{
+            Spacer()
+            Image("Travel Buddy")
+                .padding(.bottom,30)
             VStack{
-                Spacer()
-                Image("Travel Buddy")
-                    .padding(.bottom,30)
-                Group{
+                VStack(spacing: UIScreen.main.bounds.size.height*0.03){
                     CustomTextField(placeHolder: "Full Name", value: $name)
-                        .padding(.vertical,9)
                     CustomTextField(placeHolder: "Email Address", value: $email)
-                        .padding(.vertical,9)
                     CustomTextField(placeHolder: "Phone Number", value: $phone)
-                        .padding(.vertical,9)
                     CustomTextField(placeHolder: "Password", value: $pass)
                     CustomTextField(placeHolder: "Confirm Password", value: $conf)
                 }
-
                 Text("By signing up, you agree to our Terms & Conditions and Privacy Policy")
                     .padding(.horizontal,3.6)
                     .padding(.bottom)
@@ -56,7 +52,7 @@ struct SignUpView: View {
                         }
                         
                         Text("Sign Up")
-                            .frame(width: 335)
+                            .frame(width: UIScreen.main.bounds.size.width*0.75)
                     }
                 }.buttonStyle(BlueButton())
                 HStack{
@@ -68,20 +64,17 @@ struct SignUpView: View {
                             if viewModel.signUpViewModelState == .loading{
                                 ProgressView().progressViewStyle(CircularProgressViewStyle())
                             }
-                            
                             Text("Sign in")
-                                
                         }
                     }
-                }
-            }.padding()
-        }
-        .navigationBarHidden(true)
-        .onReceive(viewModel.$signUpViewModelState) { state in
-            if state == .userCreated{
-                self.routePosition.current = .signIn
+                }.frame(width: UIScreen.main.bounds.size.width*0.80)
             }
-        }
+        }.padding()
+        //            .onReceive(viewModel.$signUpViewModelState) { state in
+        //                if state == .userCreated{
+        //                    self.routePosition.current = .signIn
+        //                }
+        //            }
         
     }
 }

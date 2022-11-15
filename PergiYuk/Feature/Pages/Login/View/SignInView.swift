@@ -18,15 +18,15 @@ struct SignInView: View {
     init(dataStore: UserDataStore){
         self.viewModel = SignInViewModel(dataStore: dataStore)
     }
-
+    
     var body: some View {
         NavigationView {
             VStack{
                 Image("Travel Buddy")
-                    .padding()
-                CustomTextField(placeHolder: "Email Address", value: $email)
-                    .padding(.vertical,9)
-                CustomTextField(placeHolder: "Password", value: $pass)
+                VStack(spacing: UIScreen.main.bounds.size.height*0.02){
+                    CustomTextField(placeHolder: "Email Address", value: $email)
+                    CustomTextField(placeHolder: "Password", value: $pass)
+                }
                 HStack{
                     Spacer()
                     Button {
@@ -35,19 +35,21 @@ struct SignInView: View {
                         Text("Forgot Password?").bold()
                             .foregroundColor(.blue)
                     }
-                }.frame(width: 370)
+                }.frame(width: UIScreen.main.bounds.size.width*0.82)
                 Button {
                     self.viewModel.signIn(email: email, password: pass)
                     
                 } label: {
-                        Text("Sign in")
-                            .frame(width: 337)
+                    Text("Sign in")
+                        .frame(width: UIScreen.main.bounds.size.width*0.75)
                 }.buttonStyle(BlueButton())
                     .padding()
+                    
                 if viewModel.signInViewModelState == .error {
                     Text("\(viewModel.errorMessage)")
                         .foregroundColor(.red)
-                    Spacer().frame(width: 5, height: 10)
+                    Spacer()
+                        .frame(width: 5, height: 10)
                 }
                 
                 HStack {
@@ -57,7 +59,7 @@ struct SignInView: View {
                     } label: {
                         Text("Sign Up")
                     }
-
+                    
                 }
             }.padding()
         }.navigationBarHidden(true)

@@ -18,17 +18,14 @@ struct CustomTextField: View {
                 SecureInputView(placeHolder, text: $value)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.6)))
-                    .padding(.vertical,9)
-                    .padding(.horizontal,15)
                     .textInputAutocapitalization(.never)
-                    .font(.system(size: 16, weight: .regular))
+                    .frame(width: UIScreen.main.bounds.size.width*0.82)
             } else {
                 TextField(placeHolder, text: $value)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 15.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.6)))
-                    .padding(.vertical,9)
-                    .padding(.horizontal,15)
                     .textInputAutocapitalization(.never)
+                    .frame(width: UIScreen.main.bounds.size.width*0.82)
             }
         }
     }
