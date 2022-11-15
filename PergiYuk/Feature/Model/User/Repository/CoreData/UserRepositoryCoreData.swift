@@ -20,18 +20,18 @@ struct UserRepositoryCoreData: UserRepository{
             request.predicate = predicate
             request.fetchLimit = 1
             
-            do {
-                let cdUser = (try context.fetch(request)).first
-                let user = cdUser.map{ User(email: $0.email ?? "Need to change the xcdatamaodel email type to non optional", name: "", password: "", phoneNumber: "") }
-                if let user {
-                    promise(.success(user))
-                } else{
-                    promise(.failure(UserRepositoryError.UserNotFound))
-                }
-            } catch let error {
-                promise(.failure(error))
-                
-            }
+//            do {
+//                let cdUser = (try context.fetch(request)).first
+//                let user = cdUser.map{ User(email: $0.email ?? "Need to change the xcdatamaodel email type to non optional", name: "", password: "", phoneNumber: "") }
+//                if let user {
+//                    promise(.success(user))
+//                } else{
+//                    promise(.failure(UserRepositoryError.UserNotFound))
+//                }
+//            } catch let error {
+//                promise(.failure(error))
+//                
+//            }
             
         }
     }

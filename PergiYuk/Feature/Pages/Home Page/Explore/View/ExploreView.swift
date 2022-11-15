@@ -16,12 +16,11 @@ struct ExploreView: View {
         selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
     
     var body: some View {
-        
         NavigationView{
-            ZStack(alignment: .topLeading){
+            ZStack(alignment: .top){
                 Image("rectangle-home")
                     .resizable()
-                    .frame(width: 450, height: 240)
+                    .frame(width: UIScreen.main.bounds.size.width*1, height: UIScreen.main.bounds.size.height*0.25)
                     .ignoresSafeArea()
 
                 VStack{
@@ -35,18 +34,12 @@ struct ExploreView: View {
                                 self.isEditing = true
                             }
                     }
-                    
-                    .padding(9)
-                    .padding(.horizontal)
-                    .padding(.vertical,2.5)
                     .background(Rectangle()
                         .fill(.white)
                         .border(Color.gray, width: 1)
                         .cornerRadius(8))
-                    .padding(.horizontal,30)
                     HStack{
                         Text("For You")
-                            .padding(.horizontal,40)
                         Spacer()
                     }
                     ScrollView{
