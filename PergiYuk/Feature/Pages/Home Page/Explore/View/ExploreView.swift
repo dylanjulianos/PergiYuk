@@ -96,8 +96,11 @@ struct ExploreView: View {
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreView()
-            .environmentObject(TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
+        Group{
+            ExploreView()
+                .environmentObject(TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
+            ExploreView().previewDisplayName("Dark").preferredColorScheme(.dark)
+        }
     }
 }
 

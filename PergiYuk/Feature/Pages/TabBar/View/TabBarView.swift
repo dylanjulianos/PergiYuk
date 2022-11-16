@@ -20,7 +20,7 @@ struct TabBarView: View {
     var body: some View {
         
         TabView(selection: $selectedTab) {
-            ExploreView().environmentObject(tripVM)
+            ExploreView()
                 .tabItem {
                     if selectedTab == "One" {
                         Image(systemName: "map.fill")

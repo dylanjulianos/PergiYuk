@@ -22,6 +22,9 @@
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
 		19E9675528DDB3CF008FD86C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9675428DDB3CF008FD86C /* Model.swift */; };
 		264364C128F0076700E4BA1C /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264364C028F0076700E4BA1C /* BlueButton.swift */; };
+		2646C51C2924D4BB002A6670 /* CommunityDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646C51B2924D4BB002A6670 /* CommunityDataStore.swift */; };
+		2646C51E2924D4CF002A6670 /* CommunityRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646C51D2924D4CF002A6670 /* CommunityRepositoryProtocol.swift */; };
+		2646C5202924D4DE002A6670 /* CommunityRepositoryDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646C51F2924D4DE002A6670 /* CommunityRepositoryDummy.swift */; };
 		267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */; };
 		267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9F290A872500B9BC78 /* ExploreView.swift */; };
 		267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA0290A872500B9BC78 /* TripCardRowView.swift */; };
@@ -75,6 +78,9 @@
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		264364C028F0076700E4BA1C /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		2646C51B2924D4BB002A6670 /* CommunityDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDataStore.swift; sourceTree = "<group>"; };
+		2646C51D2924D4CF002A6670 /* CommunityRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2646C51F2924D4DE002A6670 /* CommunityRepositoryDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRepositoryDummy.swift; sourceTree = "<group>"; };
 		267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardViewModel.swift; sourceTree = "<group>"; };
 		267F0A9F290A872500B9BC78 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		267F0AA0290A872500B9BC78 /* TripCardRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardRowView.swift; sourceTree = "<group>"; };
@@ -229,6 +235,8 @@
 		06C4E770292228C90081EAEC /* CreateCommunity */ = {
 			isa = PBXGroup;
 			children = (
+				2646C51A2924D4A6002A6670 /* DataStore */,
+				2646C5182924D49A002A6670 /* Repository */,
 				06C4E771292228D90081EAEC /* CreateCommunity.swift */,
 			);
 			path = CreateCommunity;
@@ -306,6 +314,31 @@
 				1985286C28EC305B003AAEBF /* CustomTextField.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2646C5182924D49A002A6670 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2646C5192924D4A0002A6670 /* Dummy */,
+				2646C51D2924D4CF002A6670 /* CommunityRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2646C5192924D4A0002A6670 /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				2646C51F2924D4DE002A6670 /* CommunityRepositoryDummy.swift */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
+		2646C51A2924D4A6002A6670 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				2646C51B2924D4BB002A6670 /* CommunityDataStore.swift */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		267F0A9B290A872500B9BC78 /* Home Page */ = {
@@ -460,7 +493,7 @@
 			children = (
 				268917F22914EC2900C7A89B /* Repository */,
 				268917F82914EC2900C7A89B /* User.swift */,
-				268917F92914EC2900C7A89B /* Datastore */,
+				268917F92914EC2900C7A89B /* DataStore */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -491,12 +524,12 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		268917F92914EC2900C7A89B /* Datastore */ = {
+		268917F92914EC2900C7A89B /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
 				268917FA2914EC2900C7A89B /* UserDataStore.swift */,
 			);
-			path = Datastore;
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		268917FB2914EC2900C7A89B /* Trip */ = {
@@ -700,6 +733,7 @@
 				267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				268918012914EC2900C7A89B /* UserDataStore.swift in Sources */,
+				2646C51C2924D4BB002A6670 /* CommunityDataStore.swift in Sources */,
 				06C4E76F292227780081EAEC /* CreateCommunityViewModel.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				1985285C28EADF34003AAEBF /* (null) in Sources */,
@@ -710,6 +744,7 @@
 				062C2AD0291E432E0037BFC2 /* CreateCommunityView.swift in Sources */,
 				268F714628F56BA900BD0D40 /* (null) in Sources */,
 				064847232907E53F003C4B5B /* PartyCardView.swift in Sources */,
+				2646C5202924D4DE002A6670 /* CommunityRepositoryDummy.swift in Sources */,
 				267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */,
 				267F0AF3290A981B00B9BC78 /* UserAboutMeView.swift in Sources */,
 				267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */,
@@ -727,6 +762,7 @@
 				264364C128F0076700E4BA1C /* BlueButton.swift in Sources */,
 				267F0AF5290A981B00B9BC78 /* UserProfileView.swift in Sources */,
 				268918002914EC2900C7A89B /* User.swift in Sources */,
+				2646C51E2924D4CF002A6670 /* CommunityRepositoryProtocol.swift in Sources */,
 				1985286528EC1DA5003AAEBF /* (null) in Sources */,
 				267F0AF2290A981B00B9BC78 /* EditProfileView.swift in Sources */,
 				26CC9E0E28DDB07300CFBA06 /* PergiYukApp.swift in Sources */,
