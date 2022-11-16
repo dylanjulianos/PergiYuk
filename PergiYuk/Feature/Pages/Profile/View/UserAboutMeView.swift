@@ -21,40 +21,45 @@ struct UserAboutMeView: View {
         NavigationView {
             GeometryReader { _ in
                 VStack {
-                    
                     //Title for Interest
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .foregroundColor(.white)
-                        .padding([.leading, .trailing])
-//                        .frame(width: 360, height: 125)
-                        .frame(width: width * 0.92, height: height * 0.15)
-                        .shadow(radius: 1)
-                        .overlay(
-                        Text("Interest")
-                            .font(.custom("Metropolis-SemiBold", size: 14))
-                            .offset(y: -28)
-                        )
-                    Rectangle()
-                        .frame(width: 270, height: 1)
-                        .offset(y: -80)
-                        .foregroundColor(.gray)
+                    VStack {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .foregroundColor(.white)
+                            .padding([.leading, .trailing])
+                            .frame(width: width * 0.92, height: height * 0.15)
+                            .shadow(radius: 1)
+                            .overlay(
+                            Text("Interest")
+                                .font(.custom("Metropolis-SemiBold", size: 14))
+                                .offset(y: -width * 0.1)
+                                .background(
+                                    Divider()
+                                        .frame(width: width * 0.7, height: 2)
+                                        .offset(y: -width * 0.06)
+                                )
+                            )
+                        .padding(.bottom)
+                    }
                     
                     //Title for Badges
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .foregroundColor(.white)
-                        .padding([.leading, .trailing])
-//                        .frame(width: 360, height: 125)
-                        .frame(width: width * 0.92, height: height * 0.15)
-                        .shadow(radius: 1)
-                        .overlay(
-                        Text("Badges")
-                            .font(.custom("Metropolis-SemiBold", size: 14))
-                            .offset(y: -28)
-                        )
-                    Rectangle()
-                        .frame(width: 270, height: 1)
-                        .offset(y: -80)
-                        .foregroundColor(.gray)
+                    VStack {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .foregroundColor(.white)
+                            .padding([.leading, .trailing])
+                            .frame(width: width * 0.92, height: height * 0.15)
+                            .shadow(radius: 1)
+                            .overlay(
+                            Text("Badges")
+                                .font(.custom("Metropolis-SemiBold", size: 14))
+                                .offset(y: -width * 0.1)
+                                .background(
+                                    Divider()
+                                        .frame(width: width * 0.7, height: 2)
+                                        .offset(y: -width * 0.06)
+                                )
+                            )
+                        .padding(.bottom)
+                    }
                     
                     NavigationLink("Edit Profile", destination: EditProfileView())
                         .font(.custom("Metropolis-SemiBold", size: 14))
