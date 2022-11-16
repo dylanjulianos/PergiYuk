@@ -10,10 +10,6 @@ import Combine
 import SwiftUI
 
 class TripCardViewModel : ObservableObject{
-
-//    @Published var parties: [TripCardModel] = []
-    @Published var parties2: [VacationParty] = []
-    
     enum ExploreViewModelState{
         case idle
         case loading
@@ -21,24 +17,17 @@ class TripCardViewModel : ObservableObject{
         case partiesLoaded
     }
 
+    
+    @Published var parties2: [VacationParty] = []
     @Published var exploreViewModelState: ExploreViewModelState = .idle
     @Published var errorMessage: String = ""
-    var cancelables: Set<AnyCancellable> = []
-    var cancelables2: Set<AnyCancellable> = []
 
-    var dataStore: VacationPartyDataStore 
+    var cancelables: Set<AnyCancellable> = []
+    var dataStore: VacationPartyDataStore
     
     init(selectedDataStore: VacationPartyDataStore){
-//        // yg lama
-//        getParties()
-        
         self.dataStore = selectedDataStore
-        // coba implement data repo
-        
-        self.dataStore.parties
-            .receive(on: RunLoop.main)
-            .sink { status in
-                print(status)
+        self.dataStore.parties.sink { status in
             switch status{
             case .finished:
                 self.exploreViewModelState = .partiesLoaded
@@ -49,7 +38,9 @@ class TripCardViewModel : ObservableObject{
         } receiveValue: { party in
             self.parties2 = party
         }.store(in: &cancelables)
-        
+    }
+    
+    func getAllParty(){
         self.dataStore.getAllVacationParty()
     }
 
@@ -73,4 +64,6 @@ class TripCardViewModel : ObservableObject{
 //            self.parties2 = party
 //        }.store(in: &cancelables2)
     }
+    
+
 }

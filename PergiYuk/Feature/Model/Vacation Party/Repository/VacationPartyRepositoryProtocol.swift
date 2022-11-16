@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 protocol VacationPartyRepository{
-    func getAllParty() -> Future<[VacationParty],Error>
-    func addParty(party: VacationParty) -> Future<[VacationParty],Error>
-    func removeParty(party: VacationParty) -> Future<VacationParty,Error>
+    func getAllParty() -> AnyPublisher<[VacationParty],Error>
+    func addParty(party: VacationParty) -> AnyPublisher<[VacationParty],Error>
+    func removeParty(party: VacationParty) -> AnyPublisher<VacationParty,Error>
 }
 
 // Ini apa aja ya?

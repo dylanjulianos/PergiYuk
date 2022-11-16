@@ -25,26 +25,27 @@ class VacationPartyRepositoryDummyData: VacationPartyRepository{
         parties.append(contentsOf: [dummyParty1,dummyParty2,dummyParty3,dummyParty4])
     }
     
-    func getAllParty() -> Future<[VacationParty], Error> {
+    func getAllParty() -> AnyPublisher<[VacationParty], Error> {
         return Future<[VacationParty], Error> { promise in
             let partiesResult: [VacationParty] = self.parties
             
             promise(.success(partiesResult))
-        }
+        }.eraseToAnyPublisher()
     }
     
-    func addParty(party: VacationParty) -> Future<[VacationParty], Error> {
+    func addParty(party: VacationParty) -> AnyPublisher<[VacationParty], Error> {
         return Future<[VacationParty], Error> { promise in
             if self.parties.contains(where: {$0.id == party.id }) {
                 promise(.failure(VacationPartyRepositoryError.PartyAlreadyExists))
             }
             
-            self.parties.append(party)
+            self.parties.insert(party, at: 0)
             promise(.success(self.parties))
         }
+        .eraseToAnyPublisher()
     }
     
-    func removeParty(party: VacationParty) -> Future<VacationParty, Error> {
+    func removeParty(party: VacationParty) -> AnyPublisher<VacationParty, Error> {
         return Future<VacationParty, Error> { promise in
             guard let partyIndex = self.parties.firstIndex( where: {
                 eachParty in
@@ -57,6 +58,7 @@ class VacationPartyRepositoryDummyData: VacationPartyRepository{
             let removedParty = self.parties.remove(at: partyIndex)
             promise(.success(removedParty))
         }
+        .eraseToAnyPublisher()
     }
     
     

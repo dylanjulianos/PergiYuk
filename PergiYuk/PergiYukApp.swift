@@ -14,16 +14,12 @@ class Routing: ObservableObject{
 
 @main
 struct PergiYukApp: App {
-    //    var partyDataStore = VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())
-        
-
     @ObservedObject var route: Routing = Routing()
-    var exploreViewModel: TripCardViewModel = TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
+    
     
     var body: some Scene {
         WindowGroup {
             MainContent().environmentObject(route)
-                .environmentObject(exploreViewModel)
         }
     }
 }
@@ -38,7 +34,7 @@ struct MainContent: View{
 
     @EnvironmentObject var routePosition: Routing
     var userDataStore: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
-    @EnvironmentObject var tripVM : TripCardViewModel
+    
     
     var body: some View{
         switch routePosition.current {
@@ -49,7 +45,7 @@ struct MainContent: View{
             SignUpView(dataStore: userDataStore)
                 .animation(.easeInOut, value: routePosition.current)
         case .explore:
-            ExploreView().environmentObject(tripVM)
+            ExploreView()
         }
     }
 }

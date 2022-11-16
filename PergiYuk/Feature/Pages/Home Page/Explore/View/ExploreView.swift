@@ -15,6 +15,11 @@ struct ExploreView: View {
     @ObservedObject var tripCardViewModel: TripCardViewModel = TripCardViewModel(
         selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
     
+    
+    init(){
+        tripCardViewModel.getAllParty()
+    }
+    
     var body: some View {
         NavigationView{
             ZStack(alignment: .top){
@@ -39,22 +44,26 @@ struct ExploreView: View {
                         .border(Color.gray, width: 1)
                         .cornerRadius(8))
                     HStack{
-                        Text("For You")
+                        Text("For You - \(self.tripCardViewModel.dataStore.parties.value.count)")
+                            .padding(.horizontal,40)
                         Spacer()
                     }
                     ScrollView{
-                        switch tripCardViewModel.exploreViewModelState{
-                        case .partiesLoaded:
-                            ForEach(tripCardViewModel.parties2){ party in
-                                TripCardRowView(card: party)
-                            }
-                        case .loading:
-                            Text("Loading")
-                        case .error:
-                            Text("Error loading data")
-                        case .idle:
-                            Text("idle")
+                        ForEach(tripCardViewModel.parties2){ party in
+                            TripCardRowView(card: party)
                         }
+//                        switch tripCardViewModel.exploreViewModelState{
+//                        case .partiesLoaded:
+//                            ForEach(tripCardViewModel.parties2){ party in
+//                                TripCardRowView(card: party)
+//                            }
+//                        case .loading:
+//                            Text("Loading")
+//                        case .error:
+//                            Text("Error loading data")
+//                        case .idle:
+//                            Text("idle")
+//                        }
                     }
                 }
                 .toolbar{
@@ -67,7 +76,7 @@ struct ExploreView: View {
                     
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
-
+                            tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: 12)
                         } label: {
                             Image(systemName: "bell.fill")
                                 .foregroundColor(.white)
@@ -82,9 +91,6 @@ struct ExploreView: View {
                 }
             }
         }.navigationBarHidden(true)
-            .onAppear{
-                print(tripCardViewModel.parties2.count)
-            }
     }
 }
 
