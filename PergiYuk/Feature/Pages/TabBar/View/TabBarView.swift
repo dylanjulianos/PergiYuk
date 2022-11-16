@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @EnvironmentObject var tripVM : TripCardViewModel
     
     init() {
         UITabBar.appearance().barTintColor = UIColor(named: "TMPrimaryColor")

@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class VacationPartyRepositoryDummyData: VacationPartyRepository{
-    static let shared = VacationPartyRepositoryDummyData()
     
     var parties: [VacationParty] = []
     

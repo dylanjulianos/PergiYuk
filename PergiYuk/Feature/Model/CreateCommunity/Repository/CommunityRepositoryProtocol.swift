@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import Combine
+
+protocol CommunityRepository{
+    func getAllCommunity() -> AnyPublisher<[CreateCommunity],Error>
+    func addCommunity(community: CreateCommunity) -> AnyPublisher<[CreateCommunity],Error>
+}
+
+enum CommunityRepositoryError: Error{
+    case CommunityNotFound
+    case CommunityAlreadyExists
+    case CommunityNotValid
+}

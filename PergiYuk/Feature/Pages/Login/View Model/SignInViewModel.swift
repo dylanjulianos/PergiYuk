@@ -33,7 +33,7 @@ class SignInViewModel: ObservableObject {
                 self.signInViewModelState = .dataLoaded
             case .failure(let error):
                 self.signInViewModelState = .error
-                self.errorMessage = error.localizedDescription
+                self.errorMessage = "Error: \(error.localizedDescription) - \(error)"
             }
         } receiveValue: { value in
             self.fetchedUser = value
@@ -51,6 +51,10 @@ class SignInViewModel: ObservableObject {
         }
         
         dataStore.getUserDataBy(email: email)
+        
+        if fetchedUser == nil {
+            return
+        }
         
         if password == fetchedUser?.password{
             signInViewModelState = .userLoggedIn

@@ -31,12 +31,16 @@ class SignUpViewModel: ObservableObject {
         dataStore.user.sink { status in
             switch status{
             case .finished:
-                self.signUpViewModelState = .userCreated
+                print(status)
             case .failure(let error):
                 self.signUpViewModelState = .error
-                self.errorMessage = error.localizedDescription
+                print(error)
+                self.errorMessage = "Error: \(error)"
             }
-        } receiveValue: { _ in }
+        } receiveValue: { value in
+            print(value)
+            self.signUpViewModelState = .userCreated
+        }
         .store(in: &cancelables)
     }
     

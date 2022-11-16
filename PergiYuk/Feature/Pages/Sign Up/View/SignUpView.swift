@@ -69,13 +69,13 @@ struct SignUpView: View {
                     }
                 }.frame(width: UIScreen.main.bounds.size.width*0.80)
             }
-        }.padding()
-        //            .onReceive(viewModel.$signUpViewModelState) { state in
-        //                if state == .userCreated{
-        //                    self.routePosition.current = .signIn
-        //                }
-        //            }
-        
+        }
+        .padding()
+        .onReceive(viewModel.$signUpViewModelState) { state in
+            if state == .userCreated{
+                self.routePosition.current = .signIn
+            }
+        }
     }
 }
 

@@ -41,6 +41,7 @@ class UserRepositoryDummyData: UserRepository{
             
             if self.users.contains(where: { $0.email == user.email }){
                 promise(.failure(UserRepositoryError.UserAlreadyExists))
+                return
             }
             
             self.users.append(user)
