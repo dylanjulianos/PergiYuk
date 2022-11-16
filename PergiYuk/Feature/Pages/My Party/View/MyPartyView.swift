@@ -14,52 +14,54 @@ struct MyPartyView: View {
     var width = UIScreen.main.bounds.width
     
     //MARK: - Lifecycle
-    
     var body: some View {
-        VStack {
-            HStack {
-                Text("My Party")
-                    .font(.custom("futura medium bt", size: 34))
-                    .foregroundColor(Color("TMPrimaryColor"))
-                Spacer()
-                
-                Menu {
-                    Button("Create a party", action: createParty)
-                    Button("Create a community", action: createCommunity)
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.black)
-                        .imageScale(.large)
+        NavigationView{
+            VStack {
+                HStack {
+                    Text("My Party")
+                        .font(.custom("futura medium bt", size: 34))
+                        .foregroundColor(Color("TMPrimaryColor"))
+                    Spacer()
+                    
+                    Menu {
+//                        Button("Create a party", action: createParty)
+                        NavigationLink("Create a party", destination: CreatePartyView(tripCardViewModel: TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))))
+                        NavigationLink("Create a community", destination: CreateCommunityView())
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.black)
+                            .imageScale(.large)
+                    }
                 }
-            }
-            .padding()
-            
-            Option(selected: self.$selected)
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                if self.selected == 0 {
-                    PartyCardView(card: MyPartyView.cardD)
-                    
-                    Divider()
-                        .frame(width: width * 0.5, height: 1)
-                        .background(Color.gray)
-                        .padding(.top)
-                    
-                    CommunityCardView()
-                } else {
-                    PartyCardView(card: MyPartyView.cardD)
-                    
-                    Divider()
-                        .frame(width: width * 0.5, height: 1)
-                        .background(Color.gray)
-                        .padding(.top)
+                .padding()
+                
+                Option(selected: self.$selected)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    if self.selected == 0 {
+                        PartyCardView(card: MyPartyView.cardD)
+                        
+                        Divider()
+                            .frame(width: width * 0.5, height: 1)
+                            .background(Color.gray)
+                            .padding(.top)
+                        
+                        CommunityCardView()
+                    } else {
+                        PartyCardView(card: MyPartyView.cardD)
+                        
+                        Divider()
+                            .frame(width: width * 0.5, height: 1)
+                            .background(Color.gray)
+                            .padding(.top)
+                    }
                 }
             }
         }
     }
     
-    func createParty() {}
-    func createCommunity() {}
+//    func createParty() {}
+//    func createCommunity() {}
 }
 
 struct Option: View {

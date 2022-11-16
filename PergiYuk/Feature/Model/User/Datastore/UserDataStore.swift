@@ -20,9 +20,12 @@ class UserDataStore{
         repository.getUser(email: email).sink { status in
             switch status {
             case .finished:
-                self.user.send(completion: .finished)
+                print("Get User Data By Email (Data Store): Finish")
             case .failure(let error):
+                print("Data Store Error:")
+                print(error)
                 self.user.send(completion: .failure(error))
+                return
             }
         } receiveValue: { user in
             self.user.send(user)
@@ -34,7 +37,7 @@ class UserDataStore{
         repository.addUser(user: newUser).sink { status in
             switch status{
             case .finished:
-                self.user.send(completion: .finished)
+                print("Successfully added user")
             case .failure(let error):
                 self.user.send(completion: .failure(error))
             }
@@ -45,6 +48,3 @@ class UserDataStore{
     }
 
 }
-
-
-    
