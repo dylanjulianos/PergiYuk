@@ -25,6 +25,7 @@
 		2646C51C2924D4BB002A6670 /* CommunityDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646C51B2924D4BB002A6670 /* CommunityDataStore.swift */; };
 		2646C51E2924D4CF002A6670 /* CommunityRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646C51D2924D4CF002A6670 /* CommunityRepositoryProtocol.swift */; };
 		2646C5202924D4DE002A6670 /* CommunityRepositoryDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646C51F2924D4DE002A6670 /* CommunityRepositoryDummy.swift */; };
+		2661983129261D4700FA84AF /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2661983029261D4700FA84AF /* UserDataStore.swift */; };
 		267F0AA4290A872500B9BC78 /* TripCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */; };
 		267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0A9F290A872500B9BC78 /* ExploreView.swift */; };
 		267F0AA6290A872500B9BC78 /* TripCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F0AA0290A872500B9BC78 /* TripCardRowView.swift */; };
@@ -80,6 +81,7 @@
 		2646C51B2924D4BB002A6670 /* CommunityDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDataStore.swift; sourceTree = "<group>"; };
 		2646C51D2924D4CF002A6670 /* CommunityRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRepositoryProtocol.swift; sourceTree = "<group>"; };
 		2646C51F2924D4DE002A6670 /* CommunityRepositoryDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRepositoryDummy.swift; sourceTree = "<group>"; };
+		2661983029261D4700FA84AF /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		267F0A9E290A872500B9BC78 /* TripCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardViewModel.swift; sourceTree = "<group>"; };
 		267F0A9F290A872500B9BC78 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		267F0AA0290A872500B9BC78 /* TripCardRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardRowView.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 		268917F92914EC2900C7A89B /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				2661983029261D4700FA84AF /* UserDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				06C4E76F292227780081EAEC /* CreateCommunityViewModel.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				1985285C28EADF34003AAEBF /* (null) in Sources */,
+				2661983129261D4700FA84AF /* UserDataStore.swift in Sources */,
 				1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */,
 				268917FE2914EC2900C7A89B /* UserRepositoryCoreData.swift in Sources */,
 				267F0ABB290A89A300B9BC78 /* SignUpViewModel.swift in Sources */,
