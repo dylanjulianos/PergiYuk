@@ -10,6 +10,7 @@ import Foundation
 struct VacationParty: Identifiable{
     let id: String = UUID().uuidString
     var budget: Int
+    var currentUser: [User]?
     var desc: String?
     var destination: String
     var endDate: String

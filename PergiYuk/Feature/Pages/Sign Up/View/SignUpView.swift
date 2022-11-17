@@ -42,6 +42,7 @@ struct SignUpView: View {
                     .frame(width: 340)
                 
                 Text("\(viewModel.errorMessage)")
+                    .foregroundColor(.red)
                 
                 Button {
                     self.viewModel.signUp(email: email, name: name, phoneNum: phone, password: pass, conf: conf)
@@ -81,6 +82,10 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(dataStore: UserDataStore(repository: UserRepositoryDummyData()))
+        Group {
+            SignUpView(dataStore: UserDataStore(repository: UserRepositoryDummyData()))
+            SignUpView(dataStore: UserDataStore(repository: UserRepositoryDummyData())).previewDisplayName("Iphone")
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13 Mini"))
+        }
     }
 }

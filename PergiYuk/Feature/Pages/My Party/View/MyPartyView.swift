@@ -36,8 +36,6 @@ struct MyPartyView: View {
                             navigateTo = AnyView(CreateCommunityView())
                             isActive = true
                         }
-//                        NavigationLink("Create a party", destination: ExploreView())
-//                        NavigationLink("Create a community", destination: CreateCommunityView())
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .foregroundColor(.black)

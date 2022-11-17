@@ -12,6 +12,8 @@ class UserDataStore{
     var repository: UserRepository
     var user = PassthroughSubject<User,Error>()
     
+    static let shared: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
+    
     init(repository: UserRepository) {
         self.repository = repository
     }
@@ -24,7 +26,7 @@ class UserDataStore{
             case .failure(let error):
                 print("Data Store Error:")
                 print(error)
-                self.user.send(completion: .failure(error))
+//                self.user.send(completion: .failure(error))
                 return
             }
         } receiveValue: { user in
@@ -39,9 +41,12 @@ class UserDataStore{
             case .finished:
                 print("Successfully added user")
             case .failure(let error):
-                self.user.send(completion: .failure(error))
+//                self.user.send(completion: .failure(error))
+                print("Data store error: \(error)")
+                return
             }
         } receiveValue: { newUser in
+            print("Data store received value: \(newUser)")
             self.user.send(newUser)
         }
     

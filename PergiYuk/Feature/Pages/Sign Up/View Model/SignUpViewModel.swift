@@ -38,7 +38,6 @@ class SignUpViewModel: ObservableObject {
                 self.errorMessage = "Error: \(error)"
             }
         } receiveValue: { value in
-            print(value)
             self.signUpViewModelState = .userCreated
         }
         .store(in: &cancelables)
@@ -62,6 +61,7 @@ class SignUpViewModel: ObservableObject {
         let newUser = User(email: email, name: name, password: password, phoneNumber: phoneNum)
         
         dataStore.addNew(newUser: newUser)
+        signUpViewModelState = .idle
     }
 }
 

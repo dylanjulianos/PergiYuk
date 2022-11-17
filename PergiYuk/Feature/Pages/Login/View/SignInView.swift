@@ -36,6 +36,12 @@ struct SignInView: View {
                             .foregroundColor(.blue)
                     }
                 }.frame(width: UIScreen.main.bounds.size.width*0.82)
+                
+                Spacer()
+                    .frame(width: 5, height: 25)
+                Text("\(viewModel.errorMessage)")
+                    .foregroundColor(.red)
+                
                 Button {
                     self.viewModel.signIn(email: email, password: pass)
                     
@@ -44,13 +50,6 @@ struct SignInView: View {
                         .frame(width: UIScreen.main.bounds.size.width*0.75)
                 }.buttonStyle(BlueButton())
                     .padding()
-                    
-                if viewModel.signInViewModelState == .error {
-                    Text("\(viewModel.errorMessage)")
-                        .foregroundColor(.red)
-                    Spacer()
-                        .frame(width: 5, height: 10)
-                }
                 
                 HStack {
                     Text("New to Travel Buddy?")

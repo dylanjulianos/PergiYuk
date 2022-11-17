@@ -33,8 +33,7 @@ enum RoutePosition {
 struct MainContent: View{
 
     @EnvironmentObject var routePosition: Routing
-    var userDataStore: UserDataStore = UserDataStore(repository: UserRepositoryDummyData())
-    
+    var userDataStore = UserDataStore.shared
     
     var body: some View{
         switch routePosition.current {
