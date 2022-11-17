@@ -17,6 +17,8 @@
 		06C4E772292228D90081EAEC /* CreateCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C4E771292228D90081EAEC /* CreateCommunity.swift */; };
 		06C4E77429222E1B0081EAEC /* CommunityCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C4E77329222E1B0081EAEC /* CommunityCardViewModel.swift */; };
 		06F2206928DDC01700128CAB /* Dylan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2206828DDC01700128CAB /* Dylan.swift */; };
+		1985209129262D4D00BCD22E /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985209029262D4D00BCD22E /* CardDetailView.swift */; };
+		19852095292631D700BCD22E /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19852094292631D700BCD22E /* CardDetailViewModel.swift */; };
 		1985285C28EADF34003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1985286528EC1DA5003AAEBF /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1985286D28EC305B003AAEBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985286C28EC305B003AAEBF /* CustomTextField.swift */; };
@@ -75,6 +77,8 @@
 		06C4E77329222E1B0081EAEC /* CommunityCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardViewModel.swift; sourceTree = "<group>"; };
 		06F2206828DDC01700128CAB /* Dylan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dylan.swift; sourceTree = "<group>"; };
 		06FED7E9290FD759002AF4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1985209029262D4D00BCD22E /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		19852094292631D700BCD22E /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 		1985286C28EC305B003AAEBF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		19E9675428DDB3CF008FD86C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		264364C028F0076700E4BA1C /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
@@ -242,6 +246,31 @@
 			path = CreateCommunity;
 			sourceTree = "<group>";
 		};
+		1985208E29262D3600BCD22E /* Card Detail */ = {
+			isa = PBXGroup;
+			children = (
+				19852092292631BC00BCD22E /* View Model */,
+				1985208F29262D4000BCD22E /* View */,
+			);
+			path = "Card Detail";
+			sourceTree = "<group>";
+		};
+		1985208F29262D4000BCD22E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1985209029262D4D00BCD22E /* CardDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19852092292631BC00BCD22E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				19852094292631D700BCD22E /* CardDetailViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		1985286728EC2F91003AAEBF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +381,7 @@
 		267F0A9C290A872500B9BC78 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				1985208E29262D3600BCD22E /* Card Detail */,
 				267F0AC2290A8B3200B9BC78 /* Create Party */,
 				267F0ABF290A8A6500B9BC78 /* Card */,
 				267F0ABE290A8A5700B9BC78 /* View */,
@@ -733,6 +763,7 @@
 				267F0AF6290A981B00B9BC78 /* ProfileTabBarView.swift in Sources */,
 				19E9675528DDB3CF008FD86C /* Model.swift in Sources */,
 				2646C51C2924D4BB002A6670 /* CommunityDataStore.swift in Sources */,
+				1985209129262D4D00BCD22E /* CardDetailView.swift in Sources */,
 				06C4E76F292227780081EAEC /* CreateCommunityViewModel.swift in Sources */,
 				26CC9E1028DDB07300CFBA06 /* ContentView.swift in Sources */,
 				1985285C28EADF34003AAEBF /* (null) in Sources */,
@@ -750,6 +781,7 @@
 				267F0ABD290A89C700B9BC78 /* SignInViewModel.swift in Sources */,
 				267F0AA5290A872500B9BC78 /* ExploreView.swift in Sources */,
 				268917FF2914EC2900C7A89B /* UserRepositoryProtocol.swift in Sources */,
+				19852095292631D700BCD22E /* CardDetailViewModel.swift in Sources */,
 				267F0AF9290A98FE00B9BC78 /* ProfileDetailsBarViewModel.swift in Sources */,
 				267F0AB3290A889300B9BC78 /* SignInView.swift in Sources */,
 				064847212907E530003C4B5B /* PartyDetailView.swift in Sources */,

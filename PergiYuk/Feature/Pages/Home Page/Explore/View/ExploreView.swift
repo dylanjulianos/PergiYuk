@@ -25,29 +25,31 @@ struct ExploreView: View {
             ZStack(alignment: .top){
                 Image("rectangle-home")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width*1, height: UIScreen.main.bounds.size.height*0.25)
+                    .frame(width: UIScreen.main.bounds.size.width*1, height: UIScreen.main.bounds.size.height*0.18)
                     .ignoresSafeArea()
 
                 VStack{
-                    Text("Where are you going?")
-                        .font(.system(size: 35, weight: .semibold))
-                        .foregroundColor(.white)
                     HStack{
                         Image(systemName: "magnifyingglass")
-                        TextField("Search", text: $searchText)
+                        TextField("Search all trips", text: $searchText)
                             .onTapGesture {
                                 self.isEditing = true
                             }
                     }
+                    .padding(.horizontal,UIScreen.main.bounds.size.width*0.1)
+                    .padding(.vertical, UIScreen.main.bounds.size.height*0.01)
                     .background(Rectangle()
                         .fill(.white)
-                        .border(Color.gray, width: 1)
-                        .cornerRadius(8))
-                    HStack{
-                        Text("For You - \(self.tripCardViewModel.dataStore.parties.value.count)")
-                            .padding(.horizontal,40)
-                        Spacer()
-                    }
+                        .border(Color.gray, width: 2)
+                        .cornerRadius(8)
+                        .padding(.horizontal,UIScreen.main.bounds.size.width*0.07)
+                        )
+                    
+//                    HStack{
+//                        Text("For You - \(self.tripCardViewModel.dataStore.parties.value.count)")
+//                            .padding(.horizontal,40)
+//                        Spacer()
+//                    }
                     ScrollView{
                         ForEach(tripCardViewModel.parties2){ party in
                             TripCardRowView(card: party)
@@ -68,7 +70,8 @@ struct ExploreView: View {
                 }
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
-                        Text("Travel Mates")
+                        Text("TravelMates")
+                            .font(.custom("Metropolis-SemiBold", size: 25))
                             .foregroundColor(.white)
                             .bold()
                     }
@@ -79,12 +82,8 @@ struct ExploreView: View {
                             tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: 12)
                         } label: {
                             Image(systemName: "bell.fill")
-                                .foregroundColor(.white)
-                        }
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination: CreatePartyView(tripCardViewModel: tripCardViewModel)) {
-                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                
                                 .foregroundColor(.white)
                         }
                     }

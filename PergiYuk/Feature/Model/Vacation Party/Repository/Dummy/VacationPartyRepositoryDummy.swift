@@ -13,9 +13,9 @@ class VacationPartyRepositoryDummyData: VacationPartyRepository{
     var parties: [VacationParty] = []
     
     init() {
-        let dummyParty1 = VacationParty(budget: 5000000, desc: "", destination: "Bali", endDate: "23 Nov 2022", image: "Travel Buddy", maximumUser: 4, name: "Pergi hiling di Bali", startDate: "19 Nov 2022")
+        let dummyParty1 = VacationParty(budget: 5000000, desc: "", destination: "Bali", endDate: "23 Nov 2022", image: "destination.lombok", maximumUser: 4, name: "Pergi hiling di Bali", startDate: "19 Nov 2022")
         
-        let dummyParty2 = VacationParty(budget: 2500000, desc: "", destination: "Puncak Bogor, Cisarua", endDate: "20 Nov 2022", image: "Travel Buddy", maximumUser: 4, name: "Trip to Puncak Bogor", startDate: "17 Nov 2022")
+        let dummyParty2 = VacationParty(budget: 2500000, desc: "", destination: "Puncak Bogor, Cisarua", endDate: "20 Nov 2022", image: "destination.lombok", maximumUser: 4, name: "Trip to Puncak Bogor", startDate: "17 Nov 2022")
         
         let dummyParty3 = VacationParty(budget: 4000000, desc: "", destination: "Bali", endDate: "8 Nov 2022", image: "destination.lombok", maximumUser: 5, name: "Wisata Kuliner ke Bali", startDate: "3 Nov 2022")
         

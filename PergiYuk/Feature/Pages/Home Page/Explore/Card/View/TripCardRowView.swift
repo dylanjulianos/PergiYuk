@@ -17,11 +17,14 @@ struct TripCardRowView: View {
 //    var budget: Int
     
     let card: VacationParty
+    var width = UIScreen.main.bounds.width
     var body: some View {
         VStack{
             Image(card.image ?? "")
                 .resizable()
+                .cornerRadius(15)
                 .aspectRatio(contentMode: .fit)
+                
             HStack{
                 VStack(alignment: .leading){
                     Text(card.name)
@@ -35,13 +38,17 @@ struct TripCardRowView: View {
                 }
                 Spacer()
             }
-            
+//            NavigationLink(destination: CardDetailView(card: VacationParty))
             Button {
                 print("Hello")
             } label: {
                 Text("Join")
-                    .frame(width:303)
+                    .frame(width: width*0.7)
             }.buttonStyle(BlueButton())
+            Divider()
+                .frame(width: width * 0.5, height: 1)
+                .background(Color.gray)
+                .padding(.top)
         }
         .padding(.horizontal,50)
         .padding(.vertical,50)
