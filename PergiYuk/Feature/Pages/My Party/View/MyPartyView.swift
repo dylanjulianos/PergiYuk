@@ -12,6 +12,10 @@ struct MyPartyView: View {
     static var cardD = TripCardModel(image: "destination.lombok", title: "Hiking Community", destination: "Lombok Island", startDate: "20/10/2022", endDate: "23/10/2022", budget: 4000000)
     @State var selected = 0
     var width = UIScreen.main.bounds.width
+    @State private var navigateTo: AnyView?
+    @State private var isActive = false
+    @ObservedObject var tripCardViewModel: TripCardViewModel = TripCardViewModel(
+        selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
     
     //MARK: - Lifecycle
     var body: some View {
@@ -24,14 +28,25 @@ struct MyPartyView: View {
                     Spacer()
                     
                     Menu {
-//                        Button("Create a party", action: createParty)
-                        NavigationLink("Create a party", destination: CreatePartyView(tripCardViewModel: TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))))
-                        NavigationLink("Create a community", destination: CreateCommunityView())
+                        Button("Create a party"){
+                            navigateTo = AnyView(CreatePartyView(tripCardViewModel: tripCardViewModel))
+                            isActive = true
+                        }
+                        Button("Create a community") {
+                            navigateTo = AnyView(CreateCommunityView())
+                            isActive = true
+                        }
+//                        NavigationLink("Create a party", destination: ExploreView())
+//                        NavigationLink("Create a community", destination: CreateCommunityView())
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .foregroundColor(.black)
                             .imageScale(.large)
-                    }
+                    }.background(
+                        NavigationLink(destination: navigateTo, isActive: $isActive, label: {
+                            EmptyView()
+                        })
+                    )
                 }
                 .padding()
                 

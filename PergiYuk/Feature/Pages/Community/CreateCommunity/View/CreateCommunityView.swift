@@ -125,7 +125,7 @@ struct CreateCommunityView: View {
             }
             
             Button {
-                communityCardViewModel.createNewCommunity(image: communityImage, name: communityName, description: communityDescription, location: communityLocation)
+//                communityCardViewModel.createNewCommunity(image: communityImage, name: communityName, description: communityDescription, location: communityLocation)
                 isDismiss.callAsFunction()
             } label: {
                     Text("Create Community")
