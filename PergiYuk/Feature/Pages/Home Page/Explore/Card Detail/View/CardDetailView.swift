@@ -57,12 +57,12 @@ struct CardDetailView: View {
                             }.padding(.horizontal, width*0.03)
                         }
                     } else {
-                        PartyCardView(card: MyPartyView.cardD)
-                        
-                        Divider()
-                            .frame(width: width * 0.5, height: 1)
-                            .background(Color.gray)
-                            .padding(.top)
+//                        PartyCardView(card: MyPartyView.cardD)
+//                        
+//                        Divider()
+//                            .frame(width: width * 0.5, height: 1)
+//                            .background(Color.gray)
+//                            .padding(.top)
                     }
                 }
                 .font(.custom("Metropolis-SemiBold", size: 16))

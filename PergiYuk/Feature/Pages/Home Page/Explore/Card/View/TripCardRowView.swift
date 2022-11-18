@@ -15,6 +15,8 @@ struct TripCardRowView: View {
 //    var startDate: String
 //    var endDate: String
 //    var budget: Int
+    @ObservedObject var cardDetailViewModel: CardDetailViewModel = CardDetailViewModel(
+        selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData()))
     
     let card: VacationParty
     var width = UIScreen.main.bounds.width
@@ -38,7 +40,7 @@ struct TripCardRowView: View {
                 }
                 Spacer()
             }
-//            NavigationLink(destination: CardDetailView(card: VacationParty))
+//            NavigationLink(destination: CardDetailViewModel(selectedDataStore: VacationPartyDataStore))
             Button {
                 print("Hello")
             } label: {
