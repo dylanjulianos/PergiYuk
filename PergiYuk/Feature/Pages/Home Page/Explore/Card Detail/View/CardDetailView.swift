@@ -45,14 +45,19 @@ struct CardDetailView: View {
                                     Text(card.destination)
                                 }
                                 VStack(alignment: .leading, spacing: 10){
-                                    Text("Date")
+                                    Text("Start Date")
                                         .foregroundColor(.blue)
-                                    Text(card.startDate)
+                                    Text(card.startDate.formatted())
+                                }
+                                VStack(alignment: .leading, spacing: 10){
+                                    Text("End Date")
+                                        .foregroundColor(.blue)
+                                    Text(card.endDate.formatted())
                                 }
                                 VStack(alignment: .leading, spacing: 10){
                                     Text("Budget")
                                         .foregroundColor(.blue)
-                                    Text(String(card.budget))
+                                    Text("IDR \(card.budget)")
                                 }
                             }.padding(.horizontal, width*0.03)
                         }
@@ -66,13 +71,20 @@ struct CardDetailView: View {
                     }
                 }
                 .font(.custom("Metropolis-SemiBold", size: 16))
+                
+                Button {
+                    
+                } label: {
+                    Text("Join")
+                        .frame(width: width*0.7)
+                }.buttonStyle(BlueButton())
             }
         }
     }
 }
 
 struct CardDetailView_Previews: PreviewProvider {
-    static var cardsVacationParty = VacationParty(budget: 2500000, destination: "Jakarta", endDate: "5 Nov 2022", maximumUser: 4, name: "Trip Name", startDate: "1 Nov 2022")
+    static var cardsVacationParty = VacationParty(budget: 2500000, destination: "Jakarta", endDate: Date(), maximumUser: 4, name: "Trip Name", startDate: Date())
     static var previews: some View {
         CardDetailView(card: cardsVacationParty)
     }

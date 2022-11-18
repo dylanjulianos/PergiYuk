@@ -25,31 +25,35 @@ struct ExploreView: View {
             ZStack(alignment: .top){
                 Image("rectangle-home")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width*1, height: UIScreen.main.bounds.size.height*0.18)
+                    .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height*0.17)
                     .ignoresSafeArea()
 
                 VStack{
                     HStack{
                         Image(systemName: "magnifyingglass")
-                        TextField("Search all trips", text: $searchText)
+                            .padding()
+                            .foregroundColor(.gray)
+                        
+                        TextField("Search", text: $searchText)
+                            .font(.custom("Metropolis-SemiBold", size: 14))
                             .onTapGesture {
                                 self.isEditing = true
                             }
                     }
-                    .padding(.horizontal,UIScreen.main.bounds.size.width*0.1)
-                    .padding(.vertical, UIScreen.main.bounds.size.height*0.01)
-                    .background(Rectangle()
-                        .fill(.white)
-                        .border(Color.gray, width: 2)
-                        .cornerRadius(8)
-                        .padding(.horizontal,UIScreen.main.bounds.size.width*0.07)
-                        )
+                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.05)
+                    .background(RoundedRectangle(cornerRadius: 10)
+                        .fill(.white))
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
                     
-//                    HStack{
-//                        Text("For You - \(self.tripCardViewModel.dataStore.parties.value.count)")
-//                            .padding(.horizontal,40)
-//                        Spacer()
-//                    }
+                    
+                    HStack{
+                        Text("For You")
+                            .padding(10)
+                            .font(.custom("Metropolis-SemiBold", size: 16))
+                            .frame(width: UIScreen.main.bounds.width, alignment: .center)
+                        Spacer()
+                    }
+                    
                     ScrollView{
                         ForEach(tripCardViewModel.parties2){ party in
                             TripCardRowView(card: party)
@@ -59,25 +63,34 @@ struct ExploreView: View {
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
                         Text("TravelMates")
-                            .font(.custom("Metropolis-SemiBold", size: 25))
                             .foregroundColor(.white)
-                            .bold()
+                            .font(.custom("futura medium bt", size: 24))
+                            .padding(.leading)
+                            .padding(.top)
                     }
                     
-   
+                    
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
-                            tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: "12")
+//                            tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: 12)
                         } label: {
                             Image(systemName: "bell.fill")
-                                .resizable()
-                                
                                 .foregroundColor(.white)
+                                .padding(.top)
+                                .padding(.trailing)
                         }
                     }
+//                    ToolbarItem(placement: .navigationBarTrailing){
+//                        NavigationLink(destination: CreatePartyView(tripCardViewModel: tripCardViewModel)) {
+//                            Image(systemName: "plus.circle.fill")
+//                                .foregroundColor(.white)
+//                        }
+//                    }
                 }
+                .padding(.top, UIScreen.main.bounds.height * 0.03)
             }
         }.navigationBarHidden(true)
+            .accentColor(.blue)
     }
 }
 
@@ -90,4 +103,3 @@ struct ExploreView_Previews: PreviewProvider {
         }
     }
 }
-

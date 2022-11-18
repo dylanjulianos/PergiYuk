@@ -43,27 +43,6 @@ class CardDetailViewModel : ObservableObject{
     func getAllParty(){
         self.dataStore.getAllVacationParty()
     }
-
-    func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
-        
-        let newParty = VacationParty(budget: budget, desc: "", destination: destination, endDate: endDate, image: image, maximumUser: 5, name: title, startDate: startDate)
-        dataStore.addParty(newParty: newParty)
-        
-//        self.dataStore.parties
-//            .sink { status in
-//                print(status)
-//            switch status{
-//            case .finished:
-//                self.exploreViewModelState = .partiesLoaded
-//            case .failure(let error):
-//                self.exploreViewModelState = .error
-//                self.errorMessage = error.localizedDescription
-//            }
-//        } receiveValue: { party in
-//            print(party)
-//            self.parties2 = party
-//        }.store(in: &cancelables2)
-    }
     
 
 }

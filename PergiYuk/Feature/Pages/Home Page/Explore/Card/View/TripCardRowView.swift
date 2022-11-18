@@ -11,6 +11,8 @@ struct TripCardRowView: View {
     
     let card: VacationParty
     var width = UIScreen.main.bounds.width
+    @State private var isActive = false
+    
     var body: some View {
         VStack{
             Image(card.image ?? "")
@@ -34,6 +36,7 @@ struct TripCardRowView: View {
 //            NavigationLink(destination: CardDetailViewModel(selectedDataStore: VacationPartyDataStore))
             Button {
                 print("Hello")
+                isActive = true
             } label: {
                 Text("Join")
                     .frame(width: width*0.7)
@@ -43,6 +46,9 @@ struct TripCardRowView: View {
                 .background(Color.gray)
                 .padding(.top)
         }
+        .background(
+            NavigationLink(destination: CardDetailView(card: card), isActive: $isActive, label: { EmptyView()})
+        )
         .padding(.horizontal,50)
         .padding(.vertical,50)
         .font(.system(size: 15, weight: .medium))
