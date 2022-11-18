@@ -22,7 +22,6 @@ struct PartyCardView: View {
         RoundedRectangle(cornerRadius: 12)
             .foregroundColor(.clear)
             .overlay(
-                NavigationView {
                     VStack(alignment: .leading) {
                         Text("Party")
                             .font(.custom("FuturaMediumbt", size: 24))
@@ -58,7 +57,6 @@ struct PartyCardView: View {
                             .background(Color("TMPrimaryColor"))
                             .cornerRadius(8)
                     }
-                }
             )
             .frame(width: width * 0.9, height: height * 0.55)
     }

@@ -20,7 +20,6 @@ struct CommunityCardView: View {
         RoundedRectangle(cornerRadius: 12)
             .foregroundColor(.clear)
             .overlay(
-                NavigationView {
                     VStack(alignment: .leading) {
                         Text("Community")
                             .font(.custom("futura medium bt", size: 24))
@@ -48,7 +47,6 @@ struct CommunityCardView: View {
                             .background(Color("TMPrimaryColor"))
                             .cornerRadius(8)
                     }
-                }
             )
             .frame(width: width * 0.9, height: height * 0.5)
     }

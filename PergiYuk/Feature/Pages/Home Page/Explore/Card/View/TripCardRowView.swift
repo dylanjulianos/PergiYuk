@@ -33,7 +33,6 @@ struct TripCardRowView: View {
                 }
                 Spacer()
             }
-//            NavigationLink(destination: CardDetailViewModel(selectedDataStore: VacationPartyDataStore))
             Button {
                 print("Hello")
                 isActive = true
