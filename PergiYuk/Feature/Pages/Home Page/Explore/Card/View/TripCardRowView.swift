@@ -9,13 +9,6 @@ import SwiftUI
 
 struct TripCardRowView: View {
     
-//    var image: String
-//    var title: String
-//    var destination: String
-//    var startDate: String
-//    var endDate: String
-//    var budget: Int
-    
     let card: VacationParty
     var body: some View {
         VStack{
@@ -28,7 +21,7 @@ struct TripCardRowView: View {
                         .padding(.vertical,1)
                     Text(card.destination)
                         .padding(.vertical,1)
-                    Text("\(card.startDate) - \(card.endDate) (... days)")
+                    Text("\(card.startDate.formatted(date: .abbreviated, time: .omitted)) - \(card.endDate.formatted(date: .abbreviated, time: .omitted)) (\(Int(card.endDate-card.startDate)/(3600*24)) days) ")
                         .padding(.vertical,1)
                     Text("IDR \(card.budget)")
                         .padding(.vertical,1)
@@ -50,8 +43,8 @@ struct TripCardRowView: View {
 }
 
 struct CardView_Previews: PreviewProvider {
-    static var card1 = TripCardModel(image: "Travel Buddy", title: "Trip Name", destination: "Destination", startDate: "21/10/2022", endDate: "25/10/2022", budget: 2000000)
-    static var cardVacationParty = VacationParty(budget: 2500000, destination: "Jakarta", endDate: "5 Nov 2022", maximumUser: 4, name: "Trip Name", startDate: "1 Nov 2022")
+    
+    static var cardVacationParty = VacationParty(budget: 2500000, destination: "Jakarta", endDate: Date() , maximumUser: 4, name: "Trip Name", startDate: Date())
     static var previews: some View {
         TripCardRowView(card: cardVacationParty)
     }

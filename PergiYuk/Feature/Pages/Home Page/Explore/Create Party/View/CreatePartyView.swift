@@ -61,7 +61,7 @@ struct CreatePartyView: View {
     @State private var image = UIImage()
     @State private var showSheet = false
     @State private var partyImage: String = ""
-    @State private var budget: Int = 0
+    @State private var budget: String = ""
     @Environment(\.dismiss) var isDismiss
     
     
@@ -105,18 +105,27 @@ struct CreatePartyView: View {
                 VStack(alignment: .leading){
                     Text("Date")
                         .padding(.horizontal)
-                    CustomTextField(placeHolder: "Insert Party Date", value: $partyDate)
+                    CustomTextField(placeHolder: "(Day/Month/Year)", value: $partyDate)
                 }.padding(.vertical,4)
                 
+                VStack(alignment: .leading){
+                    Text("End Date")
+                        .padding(.horizontal)
+                    CustomTextField(placeHolder: "(Day/Month/Year)", value: $partyEndDate)
+                }.padding(.vertical,4)
+                
+                VStack(alignment: .leading){
+                    Text("Budget")
+                        .padding(.horizontal)
+                    CustomTextField(placeHolder: "Insert Budget", value: $budget)
+                }.padding(.vertical,4)
                 Button {
     //                createPressed()
                     tripCardViewModel.createNewParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
                     isDismiss.callAsFunction()
                 } label: {
-    //                Navigator.navigate(.explore){
                         Text("Create Vacation Party")
                             .frame(width: 337)
-    //                }
                 }.buttonStyle(BlueButton())
                     .padding()
                 
@@ -124,17 +133,11 @@ struct CreatePartyView: View {
             }
         }
         .padding()
-//        .onReceive(viewModel.$createPartyViewModelState) { state in
-//            if state == .partyCreated{
-//                print("Dismiss")
-//
-//            }
-//        }
     }
-    
-//    func createPressed(){
-//        tripCardViewModel.createParty(image: partyImage, title: partyName, destination: partyDestination, startDate: partyDate, endDate: partyEndDate, budget: budget)
-//    }
 }
-
+struct CreatePartyView_Previews: PreviewProvider {
+    static var previews: some View {
+        CreatePartyView(tripCardViewModel: TripCardViewModel(selectedDataStore: VacationPartyDataStore(repository: VacationPartyRepositoryDummyData())))
+    }
+}
 

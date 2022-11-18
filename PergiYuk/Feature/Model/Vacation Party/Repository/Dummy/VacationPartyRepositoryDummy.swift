@@ -13,13 +13,17 @@ class VacationPartyRepositoryDummyData: VacationPartyRepository{
     var parties: [VacationParty] = []
     
     init() {
-        let dummyParty1 = VacationParty(budget: 5000000, desc: "", destination: "Bali", endDate: "23 Nov 2022", image: "Travel Buddy", maximumUser: 4, name: "Pergi hiling di Bali", startDate: "19 Nov 2022")
         
-        let dummyParty2 = VacationParty(budget: 2500000, desc: "", destination: "Puncak Bogor, Cisarua", endDate: "20 Nov 2022", image: "Travel Buddy", maximumUser: 4, name: "Trip to Puncak Bogor", startDate: "17 Nov 2022")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+
+        let dummyParty1 = VacationParty(budget: 5000000, desc: "", destination: "Bali", endDate: dateFormatter.date(from: "23/11/2022") ?? Date(), image: "Travel Buddy", maximumUser: 4, name: "Pergi hiling di Bali", startDate: dateFormatter.date(from: "19/11/2022") ?? Date())
         
-        let dummyParty3 = VacationParty(budget: 4000000, desc: "", destination: "Bali", endDate: "8 Nov 2022", image: "destination.lombok", maximumUser: 5, name: "Wisata Kuliner ke Bali", startDate: "3 Nov 2022")
+        let dummyParty2 = VacationParty(budget: 2500000, desc: "", destination: "Puncak Bogor, Cisarua", endDate: dateFormatter.date(from: "20/11/2022") ?? Date(), image: "Travel Buddy", maximumUser: 4, name: "Trip to Puncak Bogor", startDate:  dateFormatter.date(from: "17/11/2022") ?? Date())
         
-        let dummyParty4 = VacationParty(budget: 4000000, desc: "", destination: "Gunung Bromo", endDate: "30 Nov 2022", image: "destination.lombok", maximumUser: 8, name: "Holiday di Bromo", startDate: "28 Nov 2022")
+        let dummyParty3 = VacationParty(budget: 4000000, desc: "", destination: "Bali", endDate: dateFormatter.date(from: "8/11/2022") ?? Date(), image: "destination.lombok", maximumUser: 5, name: "Wisata Kuliner ke Bali", startDate: dateFormatter.date(from: "3/11/2022")  ?? Date())
+        
+        let dummyParty4 = VacationParty(budget: 4000000, desc: "", destination: "Gunung Bromo", endDate: dateFormatter.date(from: "30/11/2022") ?? Date(), image: "destination.lombok", maximumUser: 8, name: "Holiday di Bromo", startDate: dateFormatter.date(from: "28 Nov 2022") ?? Date())
         
         parties.append(contentsOf: [dummyParty1,dummyParty2,dummyParty3,dummyParty4])
     }

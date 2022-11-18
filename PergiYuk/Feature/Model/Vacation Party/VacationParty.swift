@@ -13,9 +13,9 @@ struct VacationParty: Identifiable{
     var currentUser: [User]?
     var desc: String?
     var destination: String
-    var endDate: String
+    var endDate: Date
     var image: String?
     var maximumUser: Int
     var name: String
-    var startDate: String
+    var startDate: Date
 }

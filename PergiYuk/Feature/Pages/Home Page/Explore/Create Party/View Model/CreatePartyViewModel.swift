@@ -43,7 +43,16 @@ class CreatePartyViewModel: ObservableObject {
     func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
         createPartyViewModelState = .loading
         
-        let newParty = VacationParty(budget: budget, desc: "", destination: destination, endDate: endDate, image: image, maximumUser: 5, name: title, startDate: startDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        
+        guard let  formattedStartDate = dateFormatter.date(from: startDate) else {return}
+        guard let formattedEndDate = dateFormatter.date(from: endDate) else {return}
+        
+        
+        print(formattedEndDate - formattedStartDate)
+        
+        let newParty = VacationParty(budget: budget, desc: "", destination: destination, endDate: formattedEndDate, image: image, maximumUser: 5, name: title, startDate: formattedStartDate)
         dataStore.addParty(newParty: newParty)
         
 

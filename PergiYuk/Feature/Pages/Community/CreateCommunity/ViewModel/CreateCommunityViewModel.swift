@@ -41,15 +41,6 @@ class CreateCommunityViewModel: ObservableObject {
                     .store(in: &cancelables)
     }
     
-    func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
-        createCommunityViewModelState = .loading
-        
-        let newParty = VacationParty(budget: budget, desc: "", destination: destination, endDate: endDate, image: image, maximumUser: 5, name: title, startDate: startDate)
-        dataStore.addParty(newParty: newParty)
-        
-
-    }
-    
     func createNewCommunity(image: String, name: String, desc: String, location: String) {
         createCommunityViewModelState = .loading
         

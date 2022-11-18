@@ -44,9 +44,16 @@ class TripCardViewModel : ObservableObject{
         self.dataStore.getAllVacationParty()
     }
 
-    func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: Int){
+    func createNewParty(image: String, title: String, destination: String, startDate: String, endDate: String, budget: String){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
         
-        let newParty = VacationParty(budget: budget, desc: "", destination: destination, endDate: endDate, image: image, maximumUser: 5, name: title, startDate: startDate)
+        guard let  formattedStartDate = dateFormatter.date(from: startDate) else {return}
+        guard let formattedEndDate = dateFormatter.date(from: endDate) else {return}
+        guard let formattedBudget = Int(budget) else {return}
+        let newParty = VacationParty(budget: formattedBudget, desc: "", destination: destination, endDate: formattedEndDate, image: image, maximumUser: 5, name: title, startDate: formattedStartDate)
+        
+        
         dataStore.addParty(newParty: newParty)
         
 //        self.dataStore.parties

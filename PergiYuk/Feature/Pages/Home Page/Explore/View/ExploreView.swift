@@ -52,18 +52,6 @@ struct ExploreView: View {
                         ForEach(tripCardViewModel.parties2){ party in
                             TripCardRowView(card: party)
                         }
-//                        switch tripCardViewModel.exploreViewModelState{
-//                        case .partiesLoaded:
-//                            ForEach(tripCardViewModel.parties2){ party in
-//                                TripCardRowView(card: party)
-//                            }
-//                        case .loading:
-//                            Text("Loading")
-//                        case .error:
-//                            Text("Error loading data")
-//                        case .idle:
-//                            Text("idle")
-//                        }
                     }
                 }
                 .toolbar{
@@ -73,10 +61,10 @@ struct ExploreView: View {
                             .bold()
                     }
                     
-                    
+   
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
-                            tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: 12)
+                            tripCardViewModel.createNewParty(image: "asd", title: "asd", destination: "Asd", startDate: "asd", endDate: "Asd", budget: "12")
                         } label: {
                             Image(systemName: "bell.fill")
                                 .foregroundColor(.white)
