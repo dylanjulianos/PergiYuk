@@ -9,11 +9,15 @@ import SwiftUI
 import PhotosUI
 
 struct ImagePickerCreateCommunity: UIViewControllerRepresentable {
+    
+    //MARK: - Properties
     // To go back to view hierarchy - presentationMode
     @Environment(\.presentationMode) var presentationModeCreateCommunity
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @Binding var selectedImage: UIImage
 
+    //MARK: - Selector
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerCreateCommunity>) -> UIImagePickerController {
 
         let imagePicker = UIImagePickerController()
@@ -79,16 +83,6 @@ struct CreateCommunityView: View {
             Button {
                 showSheet = true
             } label: {
-//                Image(uiImage: self.image)
-//                        .resizable()
-//                        .cornerRadius(10)
-//                        .frame(width: width * 0.85, height: height * 0.24)
-//                        .background(
-//                            Image(systemName: "photo").foregroundColor(.black)
-//                                .background(Color.black.opacity(0.2))
-//                        )
-//                        .aspectRatio(contentMode: .fill)
-//                        .clipShape(RoundedRectangle(cornerRadius: 10))
                 ZStack {
                     Image(uiImage: self.image)
                         .resizable()
@@ -97,10 +91,6 @@ struct CreateCommunityView: View {
                         .background(Color.black.opacity(0.2))
                         .aspectRatio(contentMode: .fill)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
-//                    Image(systemName: "photo")
-//                        .resizable()
-//                        .frame(width: width * 0.20, height: height * 0.08)
-//                        .foregroundColor(.black)
                 }
             }.sheet(isPresented: $showSheet) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
