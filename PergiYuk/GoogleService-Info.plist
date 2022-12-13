@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>109415457130-4f9jnfi1m0adkbi5muvmcufn6n1lr0fh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.109415457130-4f9jnfi1m0adkbi5muvmcufn6n1lr0fh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCt23HnYGIgHvvIu7RkHwTrTbfRWDp-6ho</string>
+	<key>GCM_SENDER_ID</key>
+	<string>109415457130</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>djs.MessageApp</string>
+	<key>PROJECT_ID</key>
+	<string>travelmates-372ab</string>
+	<key>STORAGE_BUCKET</key>
+	<string>travelmates-372ab.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:109415457130:ios:310dc4e39badfb0edac513</string>
+</dict>
+</plist>

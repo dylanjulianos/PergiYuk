@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 
 class Routing: ObservableObject{
     @Published var current: RoutePosition = .signIn
@@ -16,6 +16,9 @@ class Routing: ObservableObject{
 struct PergiYukApp: App {
     @ObservedObject var route: Routing = Routing()
     
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
